@@ -25,6 +25,7 @@ class MainViewController: UIViewController {
         dataSource.didFinishLoadedHandler = {
             self.tableView.reloadData()
         }
+        
         tableView.dataSource = dataSource
         tableView.delegate = self
     }
@@ -39,6 +40,7 @@ extension MainViewController: UITableViewDelegate
             .instantiateViewController(withIdentifier: "MiningDashboardViewController") as? MiningDashboardViewController
             else { return }
         
+        tableView.deselectRow(at: indexPath, animated: true)
         self.navigationController?.pushViewController(miningDashboardViewController, animated: true)
     }
 }

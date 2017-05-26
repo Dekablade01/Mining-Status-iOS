@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		467DD3B499D258BFC8A8654A /* Pods_Mining_Status.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB8520DA125CA7FEA4555EA /* Pods_Mining_Status.framework */; };
+		9E6BF1361ED8D4A0008E3327 /* AddPoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6BF1351ED8D4A0008E3327 /* AddPoolViewController.swift */; };
 		9EAB5E891ED5D3CF00C95BA1 /* MiningDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB5E881ED5D3CF00C95BA1 /* MiningDashboardViewController.swift */; };
 		9EAB5E8C1ED5D62600C95BA1 /* DashboardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB5E8B1ED5D62600C95BA1 /* DashboardResponse.swift */; };
 		9EAB5E8F1ED61D6B00C95BA1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB5E8E1ED61D6B00C95BA1 /* MainViewController.swift */; };
@@ -69,6 +70,7 @@
 /* Begin PBXFileReference section */
 		15FA054AF8EF8042250E29B6 /* Pods-Mining-Status.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mining-Status.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mining-Status/Pods-Mining-Status.debug.xcconfig"; sourceTree = "<group>"; };
 		4744D7251DAF7895A364521B /* Pods-Mining-Status.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mining-Status.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mining-Status/Pods-Mining-Status.release.xcconfig"; sourceTree = "<group>"; };
+		9E6BF1351ED8D4A0008E3327 /* AddPoolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddPoolViewController.swift; path = UIViewControllers/AddPoolViewController.swift; sourceTree = "<group>"; };
 		9EAB5E881ED5D3CF00C95BA1 /* MiningDashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MiningDashboardViewController.swift; path = UIViewControllers/MiningDashboardViewController.swift; sourceTree = "<group>"; };
 		9EAB5E8B1ED5D62600C95BA1 /* DashboardResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashboardResponse.swift; path = Enum/DashboardResponse.swift; sourceTree = SOURCE_ROOT; };
 		9EAB5E8E1ED61D6B00C95BA1 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = UIViewControllers/MainViewController.swift; sourceTree = "<group>"; };
@@ -92,7 +94,7 @@
 		9EAB5ECC1ED7925600C95BA1 /* MiningDashBoardResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MiningDashBoardResponse.swift; path = Response/MiningDashBoardResponse.swift; sourceTree = "<group>"; };
 		9EAB5ECE1ED7942600C95BA1 /* RemoteMiningDashBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RemoteMiningDashBoard.swift; path = Remote/RemoteMiningDashBoard.swift; sourceTree = "<group>"; };
 		9EAB5ED01ED806CE00C95BA1 /* CellContentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellContentModel.swift; path = Model/CellContentModel.swift; sourceTree = "<group>"; };
-		9EB909701ED5D2F000BB533A /* Mining-Status.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mining-Status.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EB909701ED5D2F000BB533A /* eMiner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eMiner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EB909731ED5D2F000BB533A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9EB909781ED5D2F000BB533A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9EB9097A1ED5D2F000BB533A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -220,7 +222,7 @@
 		9EB909711ED5D2F000BB533A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9EB909701ED5D2F000BB533A /* Mining-Status.app */,
+				9EB909701ED5D2F000BB533A /* eMiner.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -266,6 +268,7 @@
 			children = (
 				9EAB5E881ED5D3CF00C95BA1 /* MiningDashboardViewController.swift */,
 				9EAB5E8E1ED61D6B00C95BA1 /* MainViewController.swift */,
+				9E6BF1351ED8D4A0008E3327 /* AddPoolViewController.swift */,
 			);
 			name = UIViewControllers;
 			sourceTree = "<group>";
@@ -290,9 +293,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9EB9096F1ED5D2F000BB533A /* Mining-Status */ = {
+		9EB9096F1ED5D2F000BB533A /* eMiner */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9EB909821ED5D2F000BB533A /* Build configuration list for PBXNativeTarget "Mining-Status" */;
+			buildConfigurationList = 9EB909821ED5D2F000BB533A /* Build configuration list for PBXNativeTarget "eMiner" */;
 			buildPhases = (
 				975059E03C146DDB534F891E /* [CP] Check Pods Manifest.lock */,
 				9EB9096C1ED5D2F000BB533A /* Sources */,
@@ -307,9 +310,9 @@
 			);
 			dependencies = (
 			);
-			name = "Mining-Status";
+			name = eMiner;
 			productName = "Mining-Status";
-			productReference = 9EB909701ED5D2F000BB533A /* Mining-Status.app */;
+			productReference = 9EB909701ED5D2F000BB533A /* eMiner.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -329,7 +332,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9EB9096B1ED5D2F000BB533A /* Build configuration list for PBXProject "Mining-Status" */;
+			buildConfigurationList = 9EB9096B1ED5D2F000BB533A /* Build configuration list for PBXProject "eMiner" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -342,7 +345,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9EB9096F1ED5D2F000BB533A /* Mining-Status */,
+				9EB9096F1ED5D2F000BB533A /* eMiner */,
 			);
 		};
 /* End PBXProject section */
@@ -442,6 +445,7 @@
 				9EAB5E891ED5D3CF00C95BA1 /* MiningDashboardViewController.swift in Sources */,
 				9EAB5EB31ED6D27700C95BA1 /* Color.swift in Sources */,
 				9EAB5EA11ED6227000C95BA1 /* Remote.swift in Sources */,
+				9E6BF1361ED8D4A0008E3327 /* AddPoolViewController.swift in Sources */,
 				9EAB5ECF1ED7942600C95BA1 /* RemoteMiningDashBoard.swift in Sources */,
 				9EAB5EAC1ED6C68B00C95BA1 /* DashboardCollectionViewCell.swift in Sources */,
 				9EAB5EA91ED6C56C00C95BA1 /* MiningDashboardCollectionViewDataSource.swift in Sources */,
@@ -610,7 +614,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9EB9096B1ED5D2F000BB533A /* Build configuration list for PBXProject "Mining-Status" */ = {
+		9EB9096B1ED5D2F000BB533A /* Build configuration list for PBXProject "eMiner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9EB909801ED5D2F000BB533A /* Debug */,
@@ -619,7 +623,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9EB909821ED5D2F000BB533A /* Build configuration list for PBXNativeTarget "Mining-Status" */ = {
+		9EB909821ED5D2F000BB533A /* Build configuration list for PBXNativeTarget "eMiner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9EB909831ED5D2F000BB533A /* Debug */,

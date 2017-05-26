@@ -15,6 +15,8 @@ class MiningDashboardViewController: UIViewController
     let dataSource = MiningDashboardCollectionViewDataSource()
     
     var isAddedConstraint = false
+    let refresher = UIRefreshControl()
+
     
     var collectionView = UICollectionView(frame: CGRect.zero,
                                                collectionViewLayout: UICollectionViewFlowLayout())
@@ -24,6 +26,7 @@ class MiningDashboardViewController: UIViewController
     
     {
         super.viewDidLoad()
+        loadData()
         initialCollectionView(collectionView)
         self.view.addSubview(collectionView)
         self.view.setNeedsUpdateConstraints()
@@ -36,7 +39,7 @@ class MiningDashboardViewController: UIViewController
             collectionView.snp.makeConstraints(){
                 $0.centerY.equalTo(view)
                 $0.height.equalTo(view)
-                $0.width.equalTo(view).inset(5)
+                $0.width.equalTo(view).inset(15)
                 $0.centerX.equalTo(view)
                 
             }
@@ -44,8 +47,20 @@ class MiningDashboardViewController: UIViewController
         }
         super.updateViewConstraints()
     }
+    func loadData(){
+        dataSource.loadData()
+        stopRefresher()
+    }
+    
+    func stopRefresher()
+    {
+        refresher.endRefreshing()
+    }
     func initialCollectionView (_ collectionView: UICollectionView)
     {
+        collectionView.alwaysBounceVertical = true
+        refresher.addTarget(self, action: #selector(self.loadData), for: .valueChanged)
+        collectionView.addSubview(refresher)
         collectionView.alpha = 0
         collectionView.collectionViewLayout = collectionViewLayout
         
@@ -53,7 +68,7 @@ class MiningDashboardViewController: UIViewController
         collectionView.backgroundColor = .white
         collectionView.delegate = delegate
         
-        dataSource.loadData()
+        
         dataSource.didFinishLoadedHandler = {
             collectionView.reloadData()
             

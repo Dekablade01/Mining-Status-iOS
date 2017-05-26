@@ -17,12 +17,14 @@ class MiningDashboardCollectionViewDataSource: NSObject, UICollectionViewDataSou
     
     func loadData ()
     {
+        contentArray.removeAll()
         RemoteFactory
             .remoteFactory
             .remoteMiningDashBoard
             .loadDetail(){
                 self.miningDashBoardResponse = $0
                 self.addContentsToArray()
+                self.didFinishLoadedHandler?()
         }
     }
     
@@ -36,14 +38,21 @@ class MiningDashboardCollectionViewDataSource: NSObject, UICollectionViewDataSou
     }
     
     func addContentsToArray() {
-        addContentToArray(address, miningDashBoardResponse.address)
-        addContentToArray(numberOfWorkers, String(miningDashBoardResponse.numberOfRunningWorkers))
-        addContentToArray(currentHashRate, String(miningDashBoardResponse.currentRashRate))
-        addContentToArray(averageHashRate, String(miningDashBoardResponse.averageHashRate))
-        addContentToArray(unpaidBalance, String(miningDashBoardResponse.unpaidBalance))
-        addContentToArray(unpaidBalanceInBTC, String(miningDashBoardResponse.unpaidBalanceInBTC))
-        addContentToArray(unpaidBalanceInOther, String(miningDashBoardResponse.unpaidBalanceInOther))
-        self.didFinishLoadedHandler?()
+        
+        addContentToArray(address,
+                          miningDashBoardResponse.address)
+        addContentToArray(numberOfWorkers,
+                          String(miningDashBoardResponse.numberOfRunningWorkers))
+        addContentToArray(currentHashRate,
+                          String(miningDashBoardResponse.currentRashRate))
+        addContentToArray(averageHashRate,
+                          String(miningDashBoardResponse.averageHashRate))
+        addContentToArray(unpaidBalance,
+                          String(miningDashBoardResponse.unpaidBalance))
+        addContentToArray(unpaidBalanceInBTC,
+                          String(miningDashBoardResponse.unpaidBalanceInBTC))
+        addContentToArray(unpaidBalanceInOther,
+                          String(miningDashBoardResponse.unpaidBalanceInOther))
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
@@ -58,8 +67,13 @@ class MiningDashboardCollectionViewDataSource: NSObject, UICollectionViewDataSou
         }
         if( indexPath.item != contentArray.count)
         {
+            print(cell.alpha)
             cell.contentValue = contentArray[indexPath.item].cellValue
             cell.heading = contentArray[indexPath.item].cellHeadingName
+        }
+        else if ( indexPath.item == contentArray.count && indexPath.item != 0 )
+        {
+            cell.alpha = 0
         }
         
         return cell

@@ -10,14 +10,17 @@ import UIKit
 
 class MiningDashboardCollectionViewDelegate: NSObject, UICollectionViewDelegateFlowLayout
 {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize
     {
         let width = collectionView.bounds.width
-        let height = width/3 * (2/3)
+        let height = width/3 * (2.5/3)
 
         if (indexPath.item == 0) // 1:1
         {
-            let size = CGSize(width: width, height: height)
+            let size = CGSize(width: width,
+                              height: height)
             print(size)
             return size
         }

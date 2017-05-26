@@ -12,14 +12,14 @@ import UIKit
 enum Server
 {
     static let localhost = "http://localhost:5000/api/"
-    static let heroku = "https://salty-fortress-22218.herokuapp.com/api/"
+    static let heroku = "https://eminer-server.herokuapp.com/api/"
 }
 
 
 
 enum API
 {
-    static let server = Server.localhost
+    static let server = Server.heroku
     static let poolList = API.server + "pool-list"
     static let dashboard = API.server + "flypool/t1ax38iJtcS6cp6Tcx3N4B8akQ9NTEkhDdS/thb"
 }

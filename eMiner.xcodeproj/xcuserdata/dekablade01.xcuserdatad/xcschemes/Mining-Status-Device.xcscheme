@@ -17,7 +17,7 @@
                BlueprintIdentifier = "9EB9096F1ED5D2F000BB533A"
                BuildableName = "Mining-Status.app"
                BlueprintName = "Mining-Status"
-               ReferencedContainer = "container:Mining-Status.xcodeproj">
+               ReferencedContainer = "container:eMiner.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
             BlueprintIdentifier = "9EB9096F1ED5D2F000BB533A"
             BuildableName = "Mining-Status.app"
             BlueprintName = "Mining-Status"
-            ReferencedContainer = "container:Mining-Status.xcodeproj">
+            ReferencedContainer = "container:eMiner.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -58,7 +58,7 @@
             BlueprintIdentifier = "9EB9096F1ED5D2F000BB533A"
             BuildableName = "Mining-Status.app"
             BlueprintName = "Mining-Status"
-            ReferencedContainer = "container:Mining-Status.xcodeproj">
+            ReferencedContainer = "container:eMiner.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -77,7 +77,7 @@
             BlueprintIdentifier = "9EB9096F1ED5D2F000BB533A"
             BuildableName = "Mining-Status.app"
             BlueprintName = "Mining-Status"
-            ReferencedContainer = "container:Mining-Status.xcodeproj">
+            ReferencedContainer = "container:eMiner.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
