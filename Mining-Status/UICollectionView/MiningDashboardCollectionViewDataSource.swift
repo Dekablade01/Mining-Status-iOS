@@ -22,7 +22,6 @@ class MiningDashboardCollectionViewDataSource: NSObject, UICollectionViewDataSou
             .remoteMiningDashBoard
             .loadDetail(){
                 self.miningDashBoardResponse = $0
-                self.didFinishLoadedHandler?()
                 self.addContentsToArray()
         }
     }
@@ -44,11 +43,12 @@ class MiningDashboardCollectionViewDataSource: NSObject, UICollectionViewDataSou
         addContentToArray(unpaidBalance, String(miningDashBoardResponse.unpaidBalance))
         addContentToArray(unpaidBalanceInBTC, String(miningDashBoardResponse.unpaidBalanceInBTC))
         addContentToArray(unpaidBalanceInOther, String(miningDashBoardResponse.unpaidBalanceInOther))
+        self.didFinishLoadedHandler?()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        return contentArray.count
+        return contentArray.count + 1
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
@@ -56,9 +56,12 @@ class MiningDashboardCollectionViewDataSource: NSObject, UICollectionViewDataSou
             else {
             return collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
         }
+        if( indexPath.item != contentArray.count)
+        {
+            cell.contentValue = contentArray[indexPath.item].cellValue
+            cell.heading = contentArray[indexPath.item].cellHeadingName
+        }
         
-        cell.contentValue = contentArray[indexPath.item].cellValue
-        cell.heading = contentArray[indexPath.item].cellHeadingName
         return cell
     }
 
@@ -67,10 +70,11 @@ class MiningDashboardCollectionViewDataSource: NSObject, UICollectionViewDataSou
 extension MiningDashboardCollectionViewDataSource
 {
     var address:String { return "Address" }
-    var numberOfWorkers:String { return "Running Workers" }
+    var numberOfWorkers:String { return "Workers" }
     var currentHashRate:String { return "HashRate" }
     var averageHashRate:String { return "Avg HashRate" }
-    var unpaidBalance:String { return "Unpaid Balance" }
-    var unpaidBalanceInBTC:String { return "Unpaid In BTC" }
-    var unpaidBalanceInOther:String { return "Unpaid In Other" }
+    var unpaidBalance:String { return "Balance" }
+    var unpaidBalanceInBTC:String { return "In BTC" }
+    var unpaidBalanceInOther:String { return "In " + requestedCurrency }
+    var requestedCurrency: String { return miningDashBoardResponse.requestedCurrency }
 }

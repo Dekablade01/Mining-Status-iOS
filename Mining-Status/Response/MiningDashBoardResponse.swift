@@ -18,7 +18,7 @@ class MiningDashBoardResponse: Mappable {
     var unpaidBalance: Double = 0
     var unpaidBalanceInBTC: Double = 0
     var unpaidBalanceInOther: Double = 0
-    var numberOfBlock: Int = 0
+    var requestedCurrency: String = ""
     
     var expectCurrency: String = ""
 
@@ -35,8 +35,10 @@ class MiningDashBoardResponse: Mappable {
         averageHashRate <- map["averageHashRate"]
         unpaidBalance <- map["unpaidBalance"]
         unpaidBalanceInBTC <- map["unpaidBalanceInBTC"]
-        unpaidBalanceInOther <- map[expectCurrency]
-        numberOfBlock <- map["block"]
+        requestedCurrency <- map["requestedCurrency"]
+        unpaidBalanceInOther <- map["unpaidBalanceIn\(requestedCurrency)"]
+        
+        print(requestedCurrency)
     }
     
 }

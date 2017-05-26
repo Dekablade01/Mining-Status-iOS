@@ -9,16 +9,19 @@
 import UIKit
 
 
-enum server
+enum Server
 {
     static let localhost = "http://localhost:5000/api/"
     static let heroku = "https://salty-fortress-22218.herokuapp.com/api/"
 }
 
+
+
 enum API
 {
-    static let poolList = server.heroku + "pool-list"
-    static let dashboard = server.heroku + "flypool/t1ax38iJtcS6cp6Tcx3N4B8akQ9NTEkhDdS/usd"
+    static let server = Server.localhost
+    static let poolList = API.server + "pool-list"
+    static let dashboard = API.server + "flypool/t1ax38iJtcS6cp6Tcx3N4B8akQ9NTEkhDdS/thb"
 }
 
 class RemoteFactory: NSObject

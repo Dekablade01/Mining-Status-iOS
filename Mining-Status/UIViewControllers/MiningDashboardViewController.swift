@@ -18,8 +18,10 @@ class MiningDashboardViewController: UIViewController
     
     var collectionView = UICollectionView(frame: CGRect.zero,
                                                collectionViewLayout: UICollectionViewFlowLayout())
+    var collectionViewLayout = UICollectionViewFlowLayout()
     
     override func viewDidLoad()
+    
     {
         super.viewDidLoad()
         initialCollectionView(collectionView)
@@ -44,12 +46,23 @@ class MiningDashboardViewController: UIViewController
     }
     func initialCollectionView (_ collectionView: UICollectionView)
     {
+        collectionView.alpha = 0
+        collectionView.collectionViewLayout = collectionViewLayout
+        
         collectionView.register(DashboardCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         collectionView.backgroundColor = .white
         collectionView.delegate = delegate
         
         dataSource.loadData()
-        dataSource.didFinishLoadedHandler = { collectionView.reloadData() }
+        dataSource.didFinishLoadedHandler = {
+            collectionView.reloadData()
+            
+            UIView.animate(withDuration: 0.4)
+            {
+                collectionView.alpha = 1
+            }
+            
+        }
         collectionView.dataSource = dataSource
         
     }
