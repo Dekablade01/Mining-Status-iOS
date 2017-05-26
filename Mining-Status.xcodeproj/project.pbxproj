@@ -11,7 +11,6 @@
 		9EAB5E891ED5D3CF00C95BA1 /* MiningDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB5E881ED5D3CF00C95BA1 /* MiningDashboardViewController.swift */; };
 		9EAB5E8C1ED5D62600C95BA1 /* DashboardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB5E8B1ED5D62600C95BA1 /* DashboardResponse.swift */; };
 		9EAB5E8F1ED61D6B00C95BA1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB5E8E1ED61D6B00C95BA1 /* MainViewController.swift */; };
-		9EAB5E911ED61DB100C95BA1 /* MainTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB5E901ED61DB100C95BA1 /* MainTableViewDataSource.swift */; };
 		9EAB5E961ED621A000C95BA1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAB5E931ED621A000C95BA1 /* Alamofire.framework */; };
 		9EAB5E971ED621A000C95BA1 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAB5E931ED621A000C95BA1 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9EAB5E981ED621A000C95BA1 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAB5E941ED621A000C95BA1 /* RxSwift.framework */; };
@@ -19,8 +18,28 @@
 		9EAB5E9A1ED621A000C95BA1 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAB5E951ED621A000C95BA1 /* RxCocoa.framework */; };
 		9EAB5E9B1ED621A000C95BA1 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAB5E951ED621A000C95BA1 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9EAB5EA11ED6227000C95BA1 /* Remote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB5EA01ED6227000C95BA1 /* Remote.swift */; };
+		9EAB5EA41ED6C36400C95BA1 /* MainTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB5EA31ED6C36400C95BA1 /* MainTableViewDataSource.swift */; };
+		9EAB5EA71ED6C3D500C95BA1 /* MiningDashboardCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB5EA61ED6C3D500C95BA1 /* MiningDashboardCollectionViewDelegate.swift */; };
+		9EAB5EA91ED6C56C00C95BA1 /* MiningDashboardCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB5EA81ED6C56C00C95BA1 /* MiningDashboardCollectionViewDataSource.swift */; };
+		9EAB5EAC1ED6C68B00C95BA1 /* DashboardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB5EAB1ED6C68B00C95BA1 /* DashboardCollectionViewCell.swift */; };
+		9EAB5EAE1ED6CB9700C95BA1 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAB5EAD1ED6CB9700C95BA1 /* SnapKit.framework */; };
+		9EAB5EAF1ED6CB9700C95BA1 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAB5EAD1ED6CB9700C95BA1 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9EAB5EB31ED6D27700C95BA1 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB5EB21ED6D27700C95BA1 /* Color.swift */; };
+		9EAB5EB91ED74F1700C95BA1 /* Alamofire+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB5EB81ED74F1700C95BA1 /* Alamofire+RxSwift.swift */; };
+		9EAB5EBB1ED7516900C95BA1 /* RemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB5EBA1ED7516900C95BA1 /* RemoteService.swift */; };
+		9EAB5EBE1ED7546100C95BA1 /* ServiceListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB5EBD1ED7546100C95BA1 /* ServiceListResponse.swift */; };
+		9EAB5EC11ED755E700C95BA1 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAB5EBF1ED755E700C95BA1 /* SwiftyJSON.framework */; };
+		9EAB5EC21ED755E700C95BA1 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAB5EBF1ED755E700C95BA1 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9EAB5EC31ED755E700C95BA1 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAB5EC01ED755E700C95BA1 /* ObjectMapper.framework */; };
+		9EAB5EC41ED755E700C95BA1 /* ObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAB5EC01ED755E700C95BA1 /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9EAB5EC71ED7809C00C95BA1 /* Then.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAB5EC61ED7809C00C95BA1 /* Then.framework */; };
+		9EAB5EC81ED7809C00C95BA1 /* Then.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAB5EC61ED7809C00C95BA1 /* Then.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9EAB5ECA1ED7810100C95BA1 /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAB5EC91ED7810100C95BA1 /* AlamofireObjectMapper.framework */; };
+		9EAB5ECB1ED7810100C95BA1 /* AlamofireObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAB5EC91ED7810100C95BA1 /* AlamofireObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9EAB5ECD1ED7925600C95BA1 /* MiningDashBoardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB5ECC1ED7925600C95BA1 /* MiningDashBoardResponse.swift */; };
+		9EAB5ECF1ED7942600C95BA1 /* RemoteMiningDashBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB5ECE1ED7942600C95BA1 /* RemoteMiningDashBoard.swift */; };
+		9EAB5ED11ED806CE00C95BA1 /* CellContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB5ED01ED806CE00C95BA1 /* CellContentModel.swift */; };
 		9EB909741ED5D2F000BB533A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB909731ED5D2F000BB533A /* AppDelegate.swift */; };
-		9EB909761ED5D2F000BB533A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB909751ED5D2F000BB533A /* ViewController.swift */; };
 		9EB909791ED5D2F000BB533A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EB909771ED5D2F000BB533A /* Main.storyboard */; };
 		9EB9097B1ED5D2F000BB533A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EB9097A1ED5D2F000BB533A /* Assets.xcassets */; };
 		9EB9097E1ED5D2F000BB533A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EB9097C1ED5D2F000BB533A /* LaunchScreen.storyboard */; };
@@ -33,9 +52,14 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				9EAB5EC41ED755E700C95BA1 /* ObjectMapper.framework in Embed Frameworks */,
+				9EAB5EC81ED7809C00C95BA1 /* Then.framework in Embed Frameworks */,
 				9EAB5E9B1ED621A000C95BA1 /* RxCocoa.framework in Embed Frameworks */,
 				9EAB5E991ED621A000C95BA1 /* RxSwift.framework in Embed Frameworks */,
 				9EAB5E971ED621A000C95BA1 /* Alamofire.framework in Embed Frameworks */,
+				9EAB5EAF1ED6CB9700C95BA1 /* SnapKit.framework in Embed Frameworks */,
+				9EAB5EC21ED755E700C95BA1 /* SwiftyJSON.framework in Embed Frameworks */,
+				9EAB5ECB1ED7810100C95BA1 /* AlamofireObjectMapper.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -48,14 +72,28 @@
 		9EAB5E881ED5D3CF00C95BA1 /* MiningDashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MiningDashboardViewController.swift; path = UIViewControllers/MiningDashboardViewController.swift; sourceTree = "<group>"; };
 		9EAB5E8B1ED5D62600C95BA1 /* DashboardResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashboardResponse.swift; path = Enum/DashboardResponse.swift; sourceTree = SOURCE_ROOT; };
 		9EAB5E8E1ED61D6B00C95BA1 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = UIViewControllers/MainViewController.swift; sourceTree = "<group>"; };
-		9EAB5E901ED61DB100C95BA1 /* MainTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTableViewDataSource.swift; path = UITableViewDataSource/MainTableViewDataSource.swift; sourceTree = "<group>"; };
 		9EAB5E931ED621A000C95BA1 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		9EAB5E941ED621A000C95BA1 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		9EAB5E951ED621A000C95BA1 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		9EAB5EA01ED6227000C95BA1 /* Remote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Remote.swift; path = Remote/Remote.swift; sourceTree = "<group>"; };
+		9EAB5EA31ED6C36400C95BA1 /* MainTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTableViewDataSource.swift; path = UITableView/MainTableViewDataSource.swift; sourceTree = "<group>"; };
+		9EAB5EA61ED6C3D500C95BA1 /* MiningDashboardCollectionViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MiningDashboardCollectionViewDelegate.swift; path = UICollectionView/MiningDashboardCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		9EAB5EA81ED6C56C00C95BA1 /* MiningDashboardCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MiningDashboardCollectionViewDataSource.swift; path = UICollectionView/MiningDashboardCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		9EAB5EAB1ED6C68B00C95BA1 /* DashboardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashboardCollectionViewCell.swift; path = UICollectionViewCell/DashboardCollectionViewCell.swift; sourceTree = "<group>"; };
+		9EAB5EAD1ED6CB9700C95BA1 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		9EAB5EB21ED6D27700C95BA1 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Color.swift; path = Enum/Color.swift; sourceTree = "<group>"; };
+		9EAB5EB81ED74F1700C95BA1 /* Alamofire+RxSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Alamofire+RxSwift.swift"; path = "Extensions/Alamofire/Alamofire+RxSwift.swift"; sourceTree = "<group>"; };
+		9EAB5EBA1ED7516900C95BA1 /* RemoteService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RemoteService.swift; path = Remote/RemoteService.swift; sourceTree = "<group>"; };
+		9EAB5EBD1ED7546100C95BA1 /* ServiceListResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceListResponse.swift; path = Model/ServiceListResponse.swift; sourceTree = "<group>"; };
+		9EAB5EBF1ED755E700C95BA1 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		9EAB5EC01ED755E700C95BA1 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
+		9EAB5EC61ED7809C00C95BA1 /* Then.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Then.framework; path = Carthage/Build/iOS/Then.framework; sourceTree = "<group>"; };
+		9EAB5EC91ED7810100C95BA1 /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
+		9EAB5ECC1ED7925600C95BA1 /* MiningDashBoardResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MiningDashBoardResponse.swift; path = Response/MiningDashBoardResponse.swift; sourceTree = "<group>"; };
+		9EAB5ECE1ED7942600C95BA1 /* RemoteMiningDashBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RemoteMiningDashBoard.swift; path = Remote/RemoteMiningDashBoard.swift; sourceTree = "<group>"; };
+		9EAB5ED01ED806CE00C95BA1 /* CellContentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellContentModel.swift; path = Model/CellContentModel.swift; sourceTree = "<group>"; };
 		9EB909701ED5D2F000BB533A /* Mining-Status.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mining-Status.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EB909731ED5D2F000BB533A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9EB909751ED5D2F000BB533A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9EB909781ED5D2F000BB533A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9EB9097A1ED5D2F000BB533A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9EB9097D1ED5D2F000BB533A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -69,9 +107,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EAB5E9A1ED621A000C95BA1 /* RxCocoa.framework in Frameworks */,
+				9EAB5EC71ED7809C00C95BA1 /* Then.framework in Frameworks */,
 				467DD3B499D258BFC8A8654A /* Pods_Mining_Status.framework in Frameworks */,
+				9EAB5EC11ED755E700C95BA1 /* SwiftyJSON.framework in Frameworks */,
+				9EAB5ECA1ED7810100C95BA1 /* AlamofireObjectMapper.framework in Frameworks */,
 				9EAB5E961ED621A000C95BA1 /* Alamofire.framework in Frameworks */,
 				9EAB5E981ED621A000C95BA1 /* RxSwift.framework in Frameworks */,
+				9EAB5EAE1ED6CB9700C95BA1 /* SnapKit.framework in Frameworks */,
+				9EAB5EC31ED755E700C95BA1 /* ObjectMapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,28 +125,19 @@
 			isa = PBXGroup;
 			children = (
 				9EAB5E8B1ED5D62600C95BA1 /* DashboardResponse.swift */,
+				9EAB5EB21ED6D27700C95BA1 /* Color.swift */,
 			);
 			name = Enum;
-			sourceTree = "<group>";
-		};
-		9EAB5E8D1ED61A7700C95BA1 /* UICollectionViewDataSource */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = UICollectionViewDataSource;
-			sourceTree = "<group>";
-		};
-		9EAB5E921ED61DBE00C95BA1 /* UITableViewDataSource */ = {
-			isa = PBXGroup;
-			children = (
-				9EAB5E901ED61DB100C95BA1 /* MainTableViewDataSource.swift */,
-			);
-			name = UITableViewDataSource;
 			sourceTree = "<group>";
 		};
 		9EAB5E9D1ED621A400C95BA1 /* Carthage */ = {
 			isa = PBXGroup;
 			children = (
+				9EAB5EC91ED7810100C95BA1 /* AlamofireObjectMapper.framework */,
+				9EAB5EC61ED7809C00C95BA1 /* Then.framework */,
+				9EAB5EBF1ED755E700C95BA1 /* SwiftyJSON.framework */,
+				9EAB5EC01ED755E700C95BA1 /* ObjectMapper.framework */,
+				9EAB5EAD1ED6CB9700C95BA1 /* SnapKit.framework */,
 				9EAB5E931ED621A000C95BA1 /* Alamofire.framework */,
 				9EAB5E941ED621A000C95BA1 /* RxSwift.framework */,
 				9EAB5E951ED621A000C95BA1 /* RxCocoa.framework */,
@@ -111,12 +145,65 @@
 			name = Carthage;
 			sourceTree = "<group>";
 		};
-		9EAB5E9F1ED6226100C95BA1 /* New Group */ = {
+		9EAB5E9F1ED6226100C95BA1 /* Remote */ = {
 			isa = PBXGroup;
 			children = (
 				9EAB5EA01ED6227000C95BA1 /* Remote.swift */,
+				9EAB5EBA1ED7516900C95BA1 /* RemoteService.swift */,
+				9EAB5ECE1ED7942600C95BA1 /* RemoteMiningDashBoard.swift */,
 			);
-			name = "New Group";
+			name = Remote;
+			sourceTree = "<group>";
+		};
+		9EAB5EA21ED6C35600C95BA1 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				9EAB5EA31ED6C36400C95BA1 /* MainTableViewDataSource.swift */,
+			);
+			name = UITableView;
+			sourceTree = "<group>";
+		};
+		9EAB5EA51ED6C38900C95BA1 /* UICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				9EAB5EA61ED6C3D500C95BA1 /* MiningDashboardCollectionViewDelegate.swift */,
+				9EAB5EA81ED6C56C00C95BA1 /* MiningDashboardCollectionViewDataSource.swift */,
+			);
+			name = UICollectionView;
+			sourceTree = "<group>";
+		};
+		9EAB5EAA1ED6C66A00C95BA1 /* UICollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				9EAB5EAB1ED6C68B00C95BA1 /* DashboardCollectionViewCell.swift */,
+			);
+			name = UICollectionViewCell;
+			sourceTree = "<group>";
+		};
+		9EAB5EB41ED74DFA00C95BA1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9EAB5EB81ED74F1700C95BA1 /* Alamofire+RxSwift.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		9EAB5EBC1ED7545000C95BA1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9EAB5EC51ED77E3100C95BA1 /* Response */,
+				9EAB5ED01ED806CE00C95BA1 /* CellContentModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9EAB5EC51ED77E3100C95BA1 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				9EAB5EBD1ED7546100C95BA1 /* ServiceListResponse.swift */,
+				9EAB5ECC1ED7925600C95BA1 /* MiningDashBoardResponse.swift */,
+			);
+			name = Response;
 			sourceTree = "<group>";
 		};
 		9EB909671ED5D2F000BB533A = {
@@ -141,14 +228,17 @@
 		9EB909721ED5D2F000BB533A /* Mining-Status */ = {
 			isa = PBXGroup;
 			children = (
-				9EAB5E9F1ED6226100C95BA1 /* New Group */,
-				9EAB5E8D1ED61A7700C95BA1 /* UICollectionViewDataSource */,
+				9EAB5EBC1ED7545000C95BA1 /* Model */,
+				9EAB5EB41ED74DFA00C95BA1 /* Extensions */,
+				9EAB5EAA1ED6C66A00C95BA1 /* UICollectionViewCell */,
+				9EAB5EA51ED6C38900C95BA1 /* UICollectionView */,
+				9EAB5EA21ED6C35600C95BA1 /* UITableView */,
+				9EAB5E9F1ED6226100C95BA1 /* Remote */,
 				9EAB5E8A1ED5D60E00C95BA1 /* Enum */,
 				9EB909871ED5D31800BB533A /* UIViewControllers */,
 				9EB909861ED5D30800BB533A /* Supporting Files */,
 				9EB909851ED5D2FA00BB533A /* Storyboard */,
 				9EB9097A1ED5D2F000BB533A /* Assets.xcassets */,
-				9EAB5E921ED61DBE00C95BA1 /* UITableViewDataSource */,
 			);
 			path = "Mining-Status";
 			sourceTree = "<group>";
@@ -174,7 +264,6 @@
 		9EB909871ED5D31800BB533A /* UIViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				9EB909751ED5D2F000BB533A /* ViewController.swift */,
 				9EAB5E881ED5D3CF00C95BA1 /* MiningDashboardViewController.swift */,
 				9EAB5E8E1ED61D6B00C95BA1 /* MainViewController.swift */,
 			);
@@ -311,6 +400,11 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Then.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireObjectMapper.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -341,13 +435,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EB909761ED5D2F000BB533A /* ViewController.swift in Sources */,
+				9EAB5EBE1ED7546100C95BA1 /* ServiceListResponse.swift in Sources */,
+				9EAB5ECD1ED7925600C95BA1 /* MiningDashBoardResponse.swift in Sources */,
+				9EAB5EA41ED6C36400C95BA1 /* MainTableViewDataSource.swift in Sources */,
 				9EAB5E8C1ED5D62600C95BA1 /* DashboardResponse.swift in Sources */,
 				9EAB5E891ED5D3CF00C95BA1 /* MiningDashboardViewController.swift in Sources */,
+				9EAB5EB31ED6D27700C95BA1 /* Color.swift in Sources */,
 				9EAB5EA11ED6227000C95BA1 /* Remote.swift in Sources */,
+				9EAB5ECF1ED7942600C95BA1 /* RemoteMiningDashBoard.swift in Sources */,
+				9EAB5EAC1ED6C68B00C95BA1 /* DashboardCollectionViewCell.swift in Sources */,
+				9EAB5EA91ED6C56C00C95BA1 /* MiningDashboardCollectionViewDataSource.swift in Sources */,
+				9EAB5EBB1ED7516900C95BA1 /* RemoteService.swift in Sources */,
 				9EB909741ED5D2F000BB533A /* AppDelegate.swift in Sources */,
 				9EAB5E8F1ED61D6B00C95BA1 /* MainViewController.swift in Sources */,
-				9EAB5E911ED61DB100C95BA1 /* MainTableViewDataSource.swift in Sources */,
+				9EAB5ED11ED806CE00C95BA1 /* CellContentModel.swift in Sources */,
+				9EAB5EA71ED6C3D500C95BA1 /* MiningDashboardCollectionViewDelegate.swift in Sources */,
+				9EAB5EB91ED74F1700C95BA1 /* Alamofire+RxSwift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -26,12 +26,19 @@ class MainViewController: UIViewController {
             self.tableView.reloadData()
         }
         tableView.dataSource = dataSource
-        
+        tableView.delegate = self
     }
 
 }
 
 extension MainViewController: UITableViewDelegate
 {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        guard let miningDashboardViewController = storyBoard
+            .instantiateViewController(withIdentifier: "MiningDashboardViewController") as? MiningDashboardViewController
+            else { return }
+        
+        self.navigationController?.pushViewController(miningDashboardViewController, animated: true)
+    }
 }
