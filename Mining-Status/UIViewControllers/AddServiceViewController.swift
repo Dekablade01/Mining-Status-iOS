@@ -53,7 +53,7 @@ class AddServiceViewController: UIViewController
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool
     {
-        guard let pool = selectedPool else { return false }
+        guard (selectedPool != nil) else { return false }
 
         return true
     }

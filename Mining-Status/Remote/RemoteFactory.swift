@@ -17,7 +17,7 @@ enum Server
 
 enum API
 {
-    static let server = Server.localhost
+    static let server = Server.heroku
     static let poolList = API.server + "pool-list"
     static let dashboard = API.server + "flypool/t1ax38iJtcS6cp6Tcx3N4B8akQ9NTEkhDdS/thb"
 }
