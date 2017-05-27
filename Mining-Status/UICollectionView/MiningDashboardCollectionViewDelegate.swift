@@ -21,13 +21,11 @@ class MiningDashboardCollectionViewDelegate: NSObject, UICollectionViewDelegateF
         {
             let size = CGSize(width: width,
                               height: height)
-            print(size)
             return size
         }
         else if (indexPath.item >= 1 && indexPath.item < 7) // 1:3
         {
             let size = CGSize(width: (width/3) - 7, height: height)
-            print(size)
             return size
         }
 

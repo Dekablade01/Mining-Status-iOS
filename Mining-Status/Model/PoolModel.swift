@@ -1,25 +1,24 @@
 //
-//  CellContentModel.swift
-//  Mining-Status
+//  PoolModel.swift
+//  eMiner
 //
-//  Created by Issarapong Poesua on 5/26/2560 BE.
+//  Created by Issarapong Poesua on 5/27/2560 BE.
 //  Copyright © 2560 Issarapong Poesua. All rights reserved.
 //
 
 import UIKit
 import ObjectMapper
-
-class CellContentModel: Mappable
+class PoolModel: Mappable
 {
-    var name: String = ""
-    var value: String = ""
+    var name = ""
+    var currencies: [String] = []
     
     func mapping(map: Map) {
         name <- map["name"]
-        value <- map["value"]
+        currencies <- map ["currencies"]
     }
     required init?(map: Map) {
         
     }
-
+    
 }

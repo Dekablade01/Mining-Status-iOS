@@ -12,16 +12,16 @@ import AlamofireObjectMapper
 
 class RemoteMiningDashBoard: NSObject {
     
-    func loadDetail(_ callback: ((MiningDashBoardResponse)->())?)
+    func loadDetail(_ callback: (([CellContentModel])->())?)
     {
         Alamofire.request(API.dashboard)
-            .responseObject() { (response: DataResponse<MiningDashBoardResponse>) in
-            
-            guard let miningDashBoardResponse = response.result.value
-                else { return } 
-            
-            callback?(miningDashBoardResponse)
-
+            .responseArray() { (res: DataResponse<[CellContentModel]>) in
+        
+                guard let contents = res.result.value
+                    else { return }
+                
+                callback?(contents)
+                
         }
     }
 

@@ -17,11 +17,12 @@ class MiningDashboardViewController: UIViewController
     var isAddedConstraint = false
     let refresher = UIRefreshControl()
 
-    
     var collectionView = UICollectionView(frame: CGRect.zero,
                                                collectionViewLayout: UICollectionViewFlowLayout())
     var collectionViewLayout = UICollectionViewFlowLayout()
     
+    let actInd: UIActivityIndicatorView = UIActivityIndicatorView()
+
     override func viewDidLoad()
     
     {
@@ -31,6 +32,19 @@ class MiningDashboardViewController: UIViewController
         self.view.addSubview(collectionView)
         self.view.setNeedsUpdateConstraints()
         
+    }
+    func showIndicator ()
+    {
+        actInd.frame = CGRect(x: view.center.x, y: view.center.y, width: 80, height: 80)
+        actInd.center = self.view.center
+        actInd.hidesWhenStopped = true
+        actInd.activityIndicatorViewStyle = .whiteLarge
+        actInd.layer.cornerRadius = 10
+        actInd.backgroundColor = .black
+        actInd.alpha = 0.7
+        self.view.addSubview(actInd)
+        
+        actInd.startAnimating()
     }
     override func updateViewConstraints() {
         
@@ -48,6 +62,7 @@ class MiningDashboardViewController: UIViewController
         super.updateViewConstraints()
     }
     func loadData(){
+        showIndicator()
         dataSource.loadData()
         stopRefresher()
     }
@@ -62,6 +77,7 @@ class MiningDashboardViewController: UIViewController
         refresher.addTarget(self, action: #selector(self.loadData), for: .valueChanged)
         collectionView.addSubview(refresher)
         collectionView.alpha = 0
+        collectionView.contentInset = UIEdgeInsetsMake(CGFloat((self.navigationController?.navigationBar.bounds.height)! + 35), 0, 0, 0)
         collectionView.collectionViewLayout = collectionViewLayout
         
         collectionView.register(DashboardCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
@@ -71,12 +87,12 @@ class MiningDashboardViewController: UIViewController
         
         dataSource.didFinishLoadedHandler = {
             collectionView.reloadData()
+            self.actInd.stopAnimating()
             
             UIView.animate(withDuration: 0.4)
             {
                 collectionView.alpha = 1
             }
-            
         }
         collectionView.dataSource = dataSource
         

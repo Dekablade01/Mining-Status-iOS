@@ -15,24 +15,25 @@ class MainTableViewDataSource: NSObject, UITableViewDataSource
 {
     var didFinishLoadedHandler: (()->())?
     
-    var serviceList = ServiceListResponse()
+    var pools: [PoolModel] = []
+    
     func loadData()
     {
         RemoteFactory
             .remoteFactory
             .remoteService
-            .loadService(){ self.serviceList = $0; self.didFinishLoadedHandler?() }
+            .loadService(){ self.pools = $0; self.didFinishLoadedHandler?() }
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return serviceList.items.count
+        return pools.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let serviceName = serviceList.items[indexPath.item]
-        cell.textLabel?.text = serviceName
-        
+        let pool = pools[indexPath.item]
+
+        cell.textLabel?.text = pool.name
         return cell
     }
 

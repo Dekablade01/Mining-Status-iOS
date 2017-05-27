@@ -13,14 +13,18 @@ import Alamofire
 
 class RemoteService: NSObject {
 
-    func loadService(_ callback: ((ServiceListResponse)->())?)
+    func loadService(_ callback: (([PoolModel])->())?)
     {
-        Alamofire.request(API.poolList).responseObject() { (response: DataResponse<ServiceListResponse>) in
-            
-            if let serviceListResponse = response.result.value
-            {
-                callback?(serviceListResponse)
+        Alamofire.request(API.poolList).responseArray() { (response: DataResponse<[PoolModel]>) in
+        
+            guard let poolModels = response.result.value
+                else { return print("parsing poolModel Fail")}
+            callback?(poolModels)
+            for pool in poolModels {
+                print(pool.currencies)
             }
+            
+            
         }
     }
     

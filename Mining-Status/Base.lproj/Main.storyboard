@@ -57,7 +57,7 @@
                     <navigationItem key="navigationItem" id="Bns-V4-KiG">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="tUa-Yy-P21">
                             <connections>
-                                <segue destination="rTf-lC-aVR" kind="presentation" id="GSP-dV-mHs"/>
+                                <segue destination="EFU-T0-2LA" kind="presentation" id="W8c-NR-Do0"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -89,15 +89,13 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qX4-NH-jYP">
                                                 <rect key="frame" x="9" y="3.5" width="164.5" height="67"/>
-                                                <state key="normal" title="Cancel">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
+                                                <state key="normal" title="Cancel"/>
                                                 <connections>
                                                     <action selector="dismissViewController:" destination="rTf-lC-aVR" eventType="touchUpInside" id="fDP-me-NsP"/>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="qX4-NH-jYP" firstAttribute="centerX" secondItem="mDU-46-sAb" secondAttribute="centerX" id="1mD-Gb-LJb"/>
                                             <constraint firstItem="qX4-NH-jYP" firstAttribute="width" secondItem="mDU-46-sAb" secondAttribute="width" multiplier="90:100" id="D0T-1r-E2l"/>
@@ -110,12 +108,10 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbq-sk-QXr">
                                                 <rect key="frame" x="9" y="3" width="164" height="66.5"/>
-                                                <state key="normal" title="OK">
-                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
+                                                <state key="normal" title="OK"/>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="jbq-sk-QXr" firstAttribute="width" secondItem="3vx-gt-WMK" secondAttribute="width" multiplier="90:100" id="8Wj-iL-FT7"/>
                                             <constraint firstItem="jbq-sk-QXr" firstAttribute="centerY" secondItem="3vx-gt-WMK" secondAttribute="centerY" id="CRN-CL-L8J"/>
@@ -124,7 +120,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="3vx-gt-WMK" secondAttribute="trailing" id="2B8-Xp-r49"/>
                                     <constraint firstAttribute="bottom" secondItem="mDU-46-sAb" secondAttribute="bottom" id="7JB-dx-Zjh"/>
@@ -179,10 +175,10 @@
             </objects>
             <point key="canvasLocation" x="713" y="833"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Service View Controller-->
         <scene sceneID="b5P-zN-fGx">
             <objects>
-                <viewController id="IYE-sr-JGr" sceneMemberID="viewController">
+                <viewController id="IYE-sr-JGr" customClass="AddServiceViewController" customModule="eMiner" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Baa-K5-iUi"/>
                         <viewControllerLayoutGuide type="bottom" id="fig-q4-fhP"/>
@@ -192,10 +188,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="lOe-BW-ggG">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="6Xy-1q-DBr">
+                            <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="dismissViewController:" destination="IYE-sr-JGr" id="ajb-f2-SxQ"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="pAi-is-bml"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sv7-uN-E1x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1936.8" y="137.18140929535232"/>
+            <point key="canvasLocation" x="1652" y="-549.17541229385313"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lmY-DG-Ll9">
@@ -214,6 +219,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Io-O6-Vde" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-836" y="137.18140929535232"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ztI-Uw-uwh">
+            <objects>
+                <navigationController storyboardIdentifier="AddServiceViewController" automaticallyAdjustsScrollViewInsets="NO" id="EFU-T0-2LA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="D4x-wV-g8d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IYE-sr-JGr" kind="relationship" relationship="rootViewController" id="hen-qg-Z77"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ga-bA-B0U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="712.79999999999995" y="-549.17541229385313"/>
         </scene>
     </scenes>
 </document>
