@@ -34,6 +34,7 @@ class MainTableViewDataSource: NSObject, UITableViewDataSource
         let pool = pools[indexPath.item]
 
         cell.textLabel?.text = pool.name
+        cell.detailTextLabel?.text = pool.currencies.first
         return cell
     }
 

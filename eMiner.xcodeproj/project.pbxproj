@@ -8,9 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		467DD3B499D258BFC8A8654A /* Pods_Mining_Status.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB8520DA125CA7FEA4555EA /* Pods_Mining_Status.framework */; };
-		9E6BF1361ED8D4A0008E3327 /* AddPoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6BF1351ED8D4A0008E3327 /* AddPoolViewController.swift */; };
 		9E6BF13A1ED991CC008E3327 /* PoolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6BF1391ED991CC008E3327 /* PoolModel.swift */; };
 		9E6BF13C1ED9AE43008E3327 /* AddServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6BF13B1ED9AE43008E3327 /* AddServiceViewController.swift */; };
+		9E6BF13E1ED9B893008E3327 /* PoolListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6BF13D1ED9B893008E3327 /* PoolListTableViewDataSource.swift */; };
+		9E6BF1401ED9BE7A008E3327 /* SelectCoinFromPoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6BF13F1ED9BE7A008E3327 /* SelectCoinFromPoolViewController.swift */; };
+		9E6BF1421ED9BEF8008E3327 /* CurrencyListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6BF1411ED9BEF8008E3327 /* CurrencyListTableViewDataSource.swift */; };
+		9E6BF1441ED9CC63008E3327 /* SingleonPools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6BF1431ED9CC63008E3327 /* SingleonPools.swift */; };
+		9E6BF1471ED9D529008E3327 /* AddPoolTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6BF1461ED9D529008E3327 /* AddPoolTableViewDelegate.swift */; };
 		9EAB5E891ED5D3CF00C95BA1 /* MiningDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB5E881ED5D3CF00C95BA1 /* MiningDashboardViewController.swift */; };
 		9EAB5E8C1ED5D62600C95BA1 /* DashboardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB5E8B1ED5D62600C95BA1 /* DashboardResponse.swift */; };
 		9EAB5E8F1ED61D6B00C95BA1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB5E8E1ED61D6B00C95BA1 /* MainViewController.swift */; };
@@ -70,9 +74,13 @@
 /* Begin PBXFileReference section */
 		15FA054AF8EF8042250E29B6 /* Pods-Mining-Status.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mining-Status.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mining-Status/Pods-Mining-Status.debug.xcconfig"; sourceTree = "<group>"; };
 		4744D7251DAF7895A364521B /* Pods-Mining-Status.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mining-Status.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mining-Status/Pods-Mining-Status.release.xcconfig"; sourceTree = "<group>"; };
-		9E6BF1351ED8D4A0008E3327 /* AddPoolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddPoolViewController.swift; path = UIViewControllers/AddPoolViewController.swift; sourceTree = "<group>"; };
 		9E6BF1391ED991CC008E3327 /* PoolModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PoolModel.swift; path = Model/PoolModel.swift; sourceTree = "<group>"; };
 		9E6BF13B1ED9AE43008E3327 /* AddServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddServiceViewController.swift; path = UIViewControllers/AddServiceViewController.swift; sourceTree = "<group>"; };
+		9E6BF13D1ED9B893008E3327 /* PoolListTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PoolListTableViewDataSource.swift; path = UITableView/PoolListTableViewDataSource.swift; sourceTree = "<group>"; };
+		9E6BF13F1ED9BE7A008E3327 /* SelectCoinFromPoolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectCoinFromPoolViewController.swift; path = UIViewControllers/SelectCoinFromPoolViewController.swift; sourceTree = "<group>"; };
+		9E6BF1411ED9BEF8008E3327 /* CurrencyListTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CurrencyListTableViewDataSource.swift; path = UITableView/CurrencyListTableViewDataSource.swift; sourceTree = "<group>"; };
+		9E6BF1431ED9CC63008E3327 /* SingleonPools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SingleonPools.swift; path = Singleton/SingleonPools.swift; sourceTree = "<group>"; };
+		9E6BF1461ED9D529008E3327 /* AddPoolTableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddPoolTableViewDelegate.swift; path = UITableView/AddPoolTableViewDelegate.swift; sourceTree = "<group>"; };
 		9EAB5E881ED5D3CF00C95BA1 /* MiningDashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MiningDashboardViewController.swift; path = UIViewControllers/MiningDashboardViewController.swift; sourceTree = "<group>"; };
 		9EAB5E8B1ED5D62600C95BA1 /* DashboardResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashboardResponse.swift; path = Enum/DashboardResponse.swift; sourceTree = SOURCE_ROOT; };
 		9EAB5E8E1ED61D6B00C95BA1 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = UIViewControllers/MainViewController.swift; sourceTree = "<group>"; };
@@ -123,6 +131,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E6BF1451ED9CE3E008E3327 /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				9E6BF1431ED9CC63008E3327 /* SingleonPools.swift */,
+			);
+			name = Singleton;
+			sourceTree = "<group>";
+		};
 		9EAB5E8A1ED5D60E00C95BA1 /* Enum */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +177,9 @@
 			isa = PBXGroup;
 			children = (
 				9EAB5EA31ED6C36400C95BA1 /* MainTableViewDataSource.swift */,
+				9E6BF13D1ED9B893008E3327 /* PoolListTableViewDataSource.swift */,
+				9E6BF1411ED9BEF8008E3327 /* CurrencyListTableViewDataSource.swift */,
+				9E6BF1461ED9D529008E3327 /* AddPoolTableViewDelegate.swift */,
 			);
 			name = UITableView;
 			sourceTree = "<group>";
@@ -232,6 +251,7 @@
 				9EB909861ED5D30800BB533A /* Supporting Files */,
 				9EB909851ED5D2FA00BB533A /* Storyboard */,
 				9EB9097A1ED5D2F000BB533A /* Assets.xcassets */,
+				9E6BF1451ED9CE3E008E3327 /* Singleton */,
 			);
 			path = "Mining-Status";
 			sourceTree = "<group>";
@@ -259,8 +279,8 @@
 			children = (
 				9EAB5E881ED5D3CF00C95BA1 /* MiningDashboardViewController.swift */,
 				9EAB5E8E1ED61D6B00C95BA1 /* MainViewController.swift */,
-				9E6BF1351ED8D4A0008E3327 /* AddPoolViewController.swift */,
 				9E6BF13B1ED9AE43008E3327 /* AddServiceViewController.swift */,
+				9E6BF13F1ED9BE7A008E3327 /* SelectCoinFromPoolViewController.swift */,
 			);
 			name = UIViewControllers;
 			sourceTree = "<group>";
@@ -432,18 +452,22 @@
 			files = (
 				9EAB5EA41ED6C36400C95BA1 /* MainTableViewDataSource.swift in Sources */,
 				9EAB5E8C1ED5D62600C95BA1 /* DashboardResponse.swift in Sources */,
+				9E6BF1401ED9BE7A008E3327 /* SelectCoinFromPoolViewController.swift in Sources */,
 				9EAB5E891ED5D3CF00C95BA1 /* MiningDashboardViewController.swift in Sources */,
 				9E6BF13A1ED991CC008E3327 /* PoolModel.swift in Sources */,
+				9E6BF1421ED9BEF8008E3327 /* CurrencyListTableViewDataSource.swift in Sources */,
 				9EAB5EB31ED6D27700C95BA1 /* Color.swift in Sources */,
 				9EAB5EA11ED6227000C95BA1 /* RemoteFactory.swift in Sources */,
-				9E6BF1361ED8D4A0008E3327 /* AddPoolViewController.swift in Sources */,
 				9EAB5ECF1ED7942600C95BA1 /* RemoteMiningDashBoard.swift in Sources */,
+				9E6BF1441ED9CC63008E3327 /* SingleonPools.swift in Sources */,
 				9EAB5EAC1ED6C68B00C95BA1 /* DashboardCollectionViewCell.swift in Sources */,
 				9E6BF13C1ED9AE43008E3327 /* AddServiceViewController.swift in Sources */,
 				9EAB5EA91ED6C56C00C95BA1 /* MiningDashboardCollectionViewDataSource.swift in Sources */,
 				9EAB5EBB1ED7516900C95BA1 /* RemoteService.swift in Sources */,
+				9E6BF13E1ED9B893008E3327 /* PoolListTableViewDataSource.swift in Sources */,
 				9EB909741ED5D2F000BB533A /* AppDelegate.swift in Sources */,
 				9EAB5E8F1ED61D6B00C95BA1 /* MainViewController.swift in Sources */,
+				9E6BF1471ED9D529008E3327 /* AddPoolTableViewDelegate.swift in Sources */,
 				9EAB5ED11ED806CE00C95BA1 /* CellContentModel.swift in Sources */,
 				9EAB5EA71ED6C3D500C95BA1 /* MiningDashboardCollectionViewDelegate.swift in Sources */,
 				9EAB5EB91ED74F1700C95BA1 /* Alamofire+RxSwift.swift in Sources */,

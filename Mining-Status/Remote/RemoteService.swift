@@ -19,10 +19,9 @@ class RemoteService: NSObject {
         
             guard let poolModels = response.result.value
                 else { return print("parsing poolModel Fail")}
+            SingleonPools.singletonPools.pools = poolModels
             callback?(poolModels)
-            for pool in poolModels {
-                print(pool.currencies)
-            }
+
             
             
         }
