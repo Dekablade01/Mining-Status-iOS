@@ -10,17 +10,7 @@ import UIKit
 
 class CurrencyListTableViewDataSource: NSObject, UITableViewDataSource
 {
-    var selectedPool: PoolModel! {
-        didSet
-        {
-            guard let pool = selectedPool
-                else { print("selectedPool is nil:\(selectedPool == nil)")
-                    return
-            }
-            print("receivedPool: \(pool.name), currencies: \(pool.currencies)")
-            reloadDataHandler?()
-        }
-    }
+    var selectedPool: PoolModel! { didSet { reloadDataHandler?() } }
     
     
     var reloadDataHandler: (()->())?
@@ -28,7 +18,7 @@ class CurrencyListTableViewDataSource: NSObject, UITableViewDataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         guard let pool = self.selectedPool
-            else { print("selectedPool is nil : \(self.selectedPool == nil)"); return 0 }
+            else { print("selectedPool is nil : \(self.selectedPool == nil) when reloadData self \(self)"); return 0 }
         
         return pool.currencies.count
         

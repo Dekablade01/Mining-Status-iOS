@@ -46,8 +46,9 @@ class AddServiceViewController: UIViewController
         guard let pool = selectedPool else { return }
         if (segue.identifier == "ShowCurrenyList")
         {
-            let viewController = SelectCoinFromPoolViewController()
-            viewController.selectedPool = pool
+            guard let  viewController = segue.destination as? SelectCoinFromPoolViewController
+                else { return }
+                viewController.selectedPool = pool
         }
     }
     
@@ -63,8 +64,10 @@ extension AddServiceViewController: UITableViewDelegate
 {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        tableView.deselectRow(at: indexPath, animated: true)
         self.selectedPool = self.pools[indexPath.item]
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
         self.performSegue(withIdentifier: "ShowCurrenyList", sender: self)
     }
 
