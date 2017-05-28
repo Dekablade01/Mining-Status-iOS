@@ -8,17 +8,6 @@
 
 import UIKit
 
-class AddServiceSingleton: NSObject
-{
-    static var sharedInstance = AddServiceSingleton()
-    
-    var serviceModel = ServiceModel()
-    
-    func clear()
-    {
-        serviceModel.address = ""
-        serviceModel.currency = ""
-        serviceModel.poolname = ""
-    }
+class AddServiceSingleton: NSObject {
 
 }

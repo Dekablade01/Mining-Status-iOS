@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		467DD3B499D258BFC8A8654A /* Pods_Mining_Status.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB8520DA125CA7FEA4555EA /* Pods_Mining_Status.framework */; };
 		8A678943C37FC7FAF932541B /* Pods_eMiner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA13DEDF7335674FCFA8A32 /* Pods_eMiner.framework */; };
+		9E5F6EF71EDAF89F00902610 /* AddServiceSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5F6EF61EDAF89F00902610 /* AddServiceSingleton.swift */; };
 		9E6BF13A1ED991CC008E3327 /* PoolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6BF1391ED991CC008E3327 /* PoolModel.swift */; };
 		9E6BF13C1ED9AE43008E3327 /* AddServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6BF13B1ED9AE43008E3327 /* AddServiceViewController.swift */; };
 		9E6BF13E1ED9B893008E3327 /* PoolListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6BF13D1ED9B893008E3327 /* PoolListTableViewDataSource.swift */; };
@@ -85,6 +86,7 @@
 		1D087784BF964A61CBF01A16 /* Pods-eMiner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eMiner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eMiner/Pods-eMiner.debug.xcconfig"; sourceTree = "<group>"; };
 		2EA13DEDF7335674FCFA8A32 /* Pods_eMiner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eMiner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4744D7251DAF7895A364521B /* Pods-Mining-Status.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mining-Status.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mining-Status/Pods-Mining-Status.release.xcconfig"; sourceTree = "<group>"; };
+		9E5F6EF61EDAF89F00902610 /* AddServiceSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddServiceSingleton.swift; path = Singleton/AddServiceSingleton.swift; sourceTree = "<group>"; };
 		9E6BF1391ED991CC008E3327 /* PoolModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PoolModel.swift; path = Model/PoolModel.swift; sourceTree = "<group>"; };
 		9E6BF13B1ED9AE43008E3327 /* AddServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddServiceViewController.swift; path = UIViewControllers/AddServiceViewController.swift; sourceTree = "<group>"; };
 		9E6BF13D1ED9B893008E3327 /* PoolListTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PoolListTableViewDataSource.swift; path = UITableView/PoolListTableViewDataSource.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				9E6BF1431ED9CC63008E3327 /* SingletonPools.swift */,
+				9E5F6EF61EDAF89F00902610 /* AddServiceSingleton.swift */,
 			);
 			name = Singleton;
 			sourceTree = "<group>";
@@ -260,18 +263,18 @@
 		9EB909721ED5D2F000BB533A /* Mining-Status */ = {
 			isa = PBXGroup;
 			children = (
-				9EAB5EBC1ED7545000C95BA1 /* Model */,
-				9EAB5EB41ED74DFA00C95BA1 /* Extensions */,
-				9EAB5EAA1ED6C66A00C95BA1 /* UICollectionViewCell */,
-				9EAB5EA51ED6C38900C95BA1 /* UICollectionView */,
-				9EAB5EA21ED6C35600C95BA1 /* UITableView */,
-				9EAB5E9F1ED6226100C95BA1 /* Remote */,
-				9EAB5E8A1ED5D60E00C95BA1 /* Enum */,
-				9EB909871ED5D31800BB533A /* UIViewControllers */,
-				9EB909861ED5D30800BB533A /* Supporting Files */,
-				9EB909851ED5D2FA00BB533A /* Storyboard */,
 				9EB9097A1ED5D2F000BB533A /* Assets.xcassets */,
+				9EAB5E8A1ED5D60E00C95BA1 /* Enum */,
+				9EAB5EB41ED74DFA00C95BA1 /* Extensions */,
+				9EAB5EBC1ED7545000C95BA1 /* Model */,
+				9EAB5E9F1ED6226100C95BA1 /* Remote */,
 				9E6BF1451ED9CE3E008E3327 /* Singleton */,
+				9EB909851ED5D2FA00BB533A /* Storyboard */,
+				9EB909861ED5D30800BB533A /* Supporting Files */,
+				9EAB5EA51ED6C38900C95BA1 /* UICollectionView */,
+				9EAB5EAA1ED6C66A00C95BA1 /* UICollectionViewCell */,
+				9EAB5EA21ED6C35600C95BA1 /* UITableView */,
+				9EB909871ED5D31800BB533A /* UIViewControllers */,
 			);
 			path = "Mining-Status";
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 				9EAB5E891ED5D3CF00C95BA1 /* MiningDashboardViewController.swift in Sources */,
 				9E6BF13A1ED991CC008E3327 /* PoolModel.swift in Sources */,
 				9E6BF1491EDAC2B3008E3327 /* ServiceModel.swift in Sources */,
+				9E5F6EF71EDAF89F00902610 /* AddServiceSingleton.swift in Sources */,
 				9E6BF1421ED9BEF8008E3327 /* CurrencyListTableViewDataSource.swift in Sources */,
 				9EAB5EB31ED6D27700C95BA1 /* Color.swift in Sources */,
 				9EAB5EA11ED6227000C95BA1 /* RemoteFactory.swift in Sources */,
