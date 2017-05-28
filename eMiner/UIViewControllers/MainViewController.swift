@@ -39,11 +39,13 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UITableViewDelegate
 {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
         guard let miningDashboardViewController = storyBoard
             .instantiateViewController(withIdentifier: "MiningDashboardViewController") as? MiningDashboardViewController
             else { return }
+        miningDashboardViewController.serviceModel = dataSource.services[indexPath.item]
         
         tableView.deselectRow(at: indexPath, animated: true)
         self.navigationController?.pushViewController(miningDashboardViewController, animated: true)

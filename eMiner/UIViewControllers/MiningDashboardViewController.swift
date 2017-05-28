@@ -21,13 +21,17 @@ class MiningDashboardViewController: UIViewController
                                                collectionViewLayout: UICollectionViewFlowLayout())
     var collectionViewLayout = UICollectionViewFlowLayout()
     
+    var serviceModel: ServiceModel {
+        get { return dataSource.service }
+        set { dataSource.service = newValue } 
+    }
+    
     let actInd: UIActivityIndicatorView = UIActivityIndicatorView()
 
     override func viewDidLoad()
     
     {
         super.viewDidLoad()
-        loadData()
         initialCollectionView(collectionView)
         self.view.addSubview(collectionView)
         self.view.setNeedsUpdateConstraints()
@@ -77,7 +81,7 @@ class MiningDashboardViewController: UIViewController
         refresher.addTarget(self, action: #selector(self.loadData), for: .valueChanged)
         collectionView.addSubview(refresher)
         collectionView.alpha = 0
-        collectionView.contentInset = UIEdgeInsetsMake(CGFloat((self.navigationController?.navigationBar.bounds.height)! + 35), 0, 0, 0)
+        collectionView.contentInset = UIEdgeInsetsMake(15, 0, 0, 0)
         collectionView.collectionViewLayout = collectionViewLayout
         
         collectionView.register(DashboardCollectionViewCell.self, forCellWithReuseIdentifier: "cell")

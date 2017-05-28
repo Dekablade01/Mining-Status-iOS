@@ -27,7 +27,7 @@ class MainTableViewDataSource: NSObject, UITableViewDataSource
         let service = services[indexPath.item]
 
         cell.textLabel?.text = service.poolname
-        cell.detailTextLabel?.text = service.currency
+        cell.detailTextLabel?.text = service.currency + " - " + service.address
         return cell
     }
     func loadData()

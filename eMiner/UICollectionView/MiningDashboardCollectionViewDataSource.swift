@@ -13,6 +13,7 @@ class MiningDashboardCollectionViewDataSource: NSObject, UICollectionViewDataSou
     
     var contents: [CellContentModel] = []
     var didFinishLoadedHandler: (()->())?
+    var service: ServiceModel! { didSet { loadData() } }
     
     func loadData ()
     {
@@ -20,7 +21,9 @@ class MiningDashboardCollectionViewDataSource: NSObject, UICollectionViewDataSou
         RemoteFactory
             .remoteFactory
             .remoteMiningDashBoard
-            .loadDetail(){
+            .loadDetail(poolname: service.poolname,
+                        address: service.address,
+                        expectedCurrency: "THB"){
                 self.contents = $0
                 self.didFinishLoadedHandler?()
         }
