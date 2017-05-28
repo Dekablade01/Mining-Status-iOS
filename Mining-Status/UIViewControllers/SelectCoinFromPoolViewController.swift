@@ -14,7 +14,7 @@ class SelectCoinFromPoolViewController: UIViewController {
     
     var selectedPool: PoolModel! {
         set { dataSource.selectedPool = newValue }
-        get { return dataSource.selectedPool } 
+        get { return dataSource.selectedPool }
     }
     
     @IBOutlet weak var tableView: UITableView!

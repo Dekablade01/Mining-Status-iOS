@@ -17,13 +17,7 @@ class MainTableViewDataSource: NSObject, UITableViewDataSource
     
     var pools: [PoolModel] = []
     
-    func loadData()
-    {
-        RemoteFactory
-            .remoteFactory
-            .remoteService
-            .loadService(){ self.pools = $0; self.didFinishLoadedHandler?() }
-    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return pools.count

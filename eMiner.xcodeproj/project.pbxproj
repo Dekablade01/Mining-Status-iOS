@@ -8,13 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		467DD3B499D258BFC8A8654A /* Pods_Mining_Status.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB8520DA125CA7FEA4555EA /* Pods_Mining_Status.framework */; };
+		8A678943C37FC7FAF932541B /* Pods_eMiner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA13DEDF7335674FCFA8A32 /* Pods_eMiner.framework */; };
 		9E6BF13A1ED991CC008E3327 /* PoolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6BF1391ED991CC008E3327 /* PoolModel.swift */; };
 		9E6BF13C1ED9AE43008E3327 /* AddServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6BF13B1ED9AE43008E3327 /* AddServiceViewController.swift */; };
 		9E6BF13E1ED9B893008E3327 /* PoolListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6BF13D1ED9B893008E3327 /* PoolListTableViewDataSource.swift */; };
 		9E6BF1401ED9BE7A008E3327 /* SelectCoinFromPoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6BF13F1ED9BE7A008E3327 /* SelectCoinFromPoolViewController.swift */; };
 		9E6BF1421ED9BEF8008E3327 /* CurrencyListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6BF1411ED9BEF8008E3327 /* CurrencyListTableViewDataSource.swift */; };
-		9E6BF1441ED9CC63008E3327 /* SingleonPools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6BF1431ED9CC63008E3327 /* SingleonPools.swift */; };
+		9E6BF1441ED9CC63008E3327 /* SingletonPools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6BF1431ED9CC63008E3327 /* SingletonPools.swift */; };
 		9E6BF1471ED9D529008E3327 /* AddPoolTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6BF1461ED9D529008E3327 /* AddPoolTableViewDelegate.swift */; };
+		9E6BF1491EDAC2B3008E3327 /* ServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6BF1481EDAC2B3008E3327 /* ServiceModel.swift */; };
+		9E6BF14C1EDAC2D0008E3327 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6BF14A1EDAC2D0008E3327 /* RealmSwift.framework */; };
+		9E6BF14D1EDAC2D0008E3327 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6BF14A1EDAC2D0008E3327 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9E6BF14E1EDAC2D0008E3327 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6BF14B1EDAC2D0008E3327 /* Realm.framework */; };
+		9E6BF14F1EDAC2D0008E3327 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6BF14B1EDAC2D0008E3327 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9EAB5E891ED5D3CF00C95BA1 /* MiningDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB5E881ED5D3CF00C95BA1 /* MiningDashboardViewController.swift */; };
 		9EAB5E8C1ED5D62600C95BA1 /* DashboardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB5E8B1ED5D62600C95BA1 /* DashboardResponse.swift */; };
 		9EAB5E8F1ED61D6B00C95BA1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB5E8E1ED61D6B00C95BA1 /* MainViewController.swift */; };
@@ -59,7 +65,9 @@
 			files = (
 				9EAB5EC41ED755E700C95BA1 /* ObjectMapper.framework in Embed Frameworks */,
 				9EAB5EC81ED7809C00C95BA1 /* Then.framework in Embed Frameworks */,
+				9E6BF14D1EDAC2D0008E3327 /* RealmSwift.framework in Embed Frameworks */,
 				9EAB5E9B1ED621A000C95BA1 /* RxCocoa.framework in Embed Frameworks */,
+				9E6BF14F1EDAC2D0008E3327 /* Realm.framework in Embed Frameworks */,
 				9EAB5E991ED621A000C95BA1 /* RxSwift.framework in Embed Frameworks */,
 				9EAB5E971ED621A000C95BA1 /* Alamofire.framework in Embed Frameworks */,
 				9EAB5EAF1ED6CB9700C95BA1 /* SnapKit.framework in Embed Frameworks */,
@@ -73,14 +81,20 @@
 
 /* Begin PBXFileReference section */
 		15FA054AF8EF8042250E29B6 /* Pods-Mining-Status.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mining-Status.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mining-Status/Pods-Mining-Status.debug.xcconfig"; sourceTree = "<group>"; };
+		1915BC0EB0A0CB5CF8A9D6E8 /* Pods-eMiner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eMiner.release.xcconfig"; path = "Pods/Target Support Files/Pods-eMiner/Pods-eMiner.release.xcconfig"; sourceTree = "<group>"; };
+		1D087784BF964A61CBF01A16 /* Pods-eMiner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eMiner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eMiner/Pods-eMiner.debug.xcconfig"; sourceTree = "<group>"; };
+		2EA13DEDF7335674FCFA8A32 /* Pods_eMiner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eMiner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4744D7251DAF7895A364521B /* Pods-Mining-Status.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mining-Status.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mining-Status/Pods-Mining-Status.release.xcconfig"; sourceTree = "<group>"; };
 		9E6BF1391ED991CC008E3327 /* PoolModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PoolModel.swift; path = Model/PoolModel.swift; sourceTree = "<group>"; };
 		9E6BF13B1ED9AE43008E3327 /* AddServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddServiceViewController.swift; path = UIViewControllers/AddServiceViewController.swift; sourceTree = "<group>"; };
 		9E6BF13D1ED9B893008E3327 /* PoolListTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PoolListTableViewDataSource.swift; path = UITableView/PoolListTableViewDataSource.swift; sourceTree = "<group>"; };
 		9E6BF13F1ED9BE7A008E3327 /* SelectCoinFromPoolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectCoinFromPoolViewController.swift; path = UIViewControllers/SelectCoinFromPoolViewController.swift; sourceTree = "<group>"; };
 		9E6BF1411ED9BEF8008E3327 /* CurrencyListTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CurrencyListTableViewDataSource.swift; path = UITableView/CurrencyListTableViewDataSource.swift; sourceTree = "<group>"; };
-		9E6BF1431ED9CC63008E3327 /* SingleonPools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SingleonPools.swift; path = Singleton/SingleonPools.swift; sourceTree = "<group>"; };
+		9E6BF1431ED9CC63008E3327 /* SingletonPools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SingletonPools.swift; path = Singleton/SingletonPools.swift; sourceTree = "<group>"; };
 		9E6BF1461ED9D529008E3327 /* AddPoolTableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddPoolTableViewDelegate.swift; path = UITableView/AddPoolTableViewDelegate.swift; sourceTree = "<group>"; };
+		9E6BF1481EDAC2B3008E3327 /* ServiceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceModel.swift; path = Model/ServiceModel.swift; sourceTree = "<group>"; };
+		9E6BF14A1EDAC2D0008E3327 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		9E6BF14B1EDAC2D0008E3327 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		9EAB5E881ED5D3CF00C95BA1 /* MiningDashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MiningDashboardViewController.swift; path = UIViewControllers/MiningDashboardViewController.swift; sourceTree = "<group>"; };
 		9EAB5E8B1ED5D62600C95BA1 /* DashboardResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashboardResponse.swift; path = Enum/DashboardResponse.swift; sourceTree = SOURCE_ROOT; };
 		9EAB5E8E1ED61D6B00C95BA1 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = UIViewControllers/MainViewController.swift; sourceTree = "<group>"; };
@@ -122,9 +136,12 @@
 				9EAB5EC11ED755E700C95BA1 /* SwiftyJSON.framework in Frameworks */,
 				9EAB5ECA1ED7810100C95BA1 /* AlamofireObjectMapper.framework in Frameworks */,
 				9EAB5E961ED621A000C95BA1 /* Alamofire.framework in Frameworks */,
+				9E6BF14C1EDAC2D0008E3327 /* RealmSwift.framework in Frameworks */,
 				9EAB5E981ED621A000C95BA1 /* RxSwift.framework in Frameworks */,
 				9EAB5EAE1ED6CB9700C95BA1 /* SnapKit.framework in Frameworks */,
 				9EAB5EC31ED755E700C95BA1 /* ObjectMapper.framework in Frameworks */,
+				9E6BF14E1EDAC2D0008E3327 /* Realm.framework in Frameworks */,
+				8A678943C37FC7FAF932541B /* Pods_eMiner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,7 +151,7 @@
 		9E6BF1451ED9CE3E008E3327 /* Singleton */ = {
 			isa = PBXGroup;
 			children = (
-				9E6BF1431ED9CC63008E3327 /* SingleonPools.swift */,
+				9E6BF1431ED9CC63008E3327 /* SingletonPools.swift */,
 			);
 			name = Singleton;
 			sourceTree = "<group>";
@@ -151,6 +168,8 @@
 		9EAB5E9D1ED621A400C95BA1 /* Carthage */ = {
 			isa = PBXGroup;
 			children = (
+				9E6BF14A1EDAC2D0008E3327 /* RealmSwift.framework */,
+				9E6BF14B1EDAC2D0008E3327 /* Realm.framework */,
 				9EAB5EC91ED7810100C95BA1 /* AlamofireObjectMapper.framework */,
 				9EAB5EC61ED7809C00C95BA1 /* Then.framework */,
 				9EAB5EBF1ED755E700C95BA1 /* SwiftyJSON.framework */,
@@ -214,6 +233,7 @@
 			children = (
 				9EAB5ED01ED806CE00C95BA1 /* CellContentModel.swift */,
 				9E6BF1391ED991CC008E3327 /* PoolModel.swift */,
+				9E6BF1481EDAC2B3008E3327 /* ServiceModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -289,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				FAB8520DA125CA7FEA4555EA /* Pods_Mining_Status.framework */,
+				2EA13DEDF7335674FCFA8A32 /* Pods_eMiner.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -298,6 +319,8 @@
 			children = (
 				15FA054AF8EF8042250E29B6 /* Pods-Mining-Status.debug.xcconfig */,
 				4744D7251DAF7895A364521B /* Pods-Mining-Status.release.xcconfig */,
+				1D087784BF964A61CBF01A16 /* Pods-eMiner.debug.xcconfig */,
+				1915BC0EB0A0CB5CF8A9D6E8 /* Pods-eMiner.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -388,7 +411,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mining-Status/Pods-Mining-Status-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eMiner/Pods-eMiner-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		975059E03C146DDB534F891E /* [CP] Check Pods Manifest.lock */ = {
@@ -420,6 +443,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Then.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/AlamofireObjectMapper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -440,7 +465,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Mining-Status/Pods-Mining-Status-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eMiner/Pods-eMiner-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -455,11 +480,12 @@
 				9E6BF1401ED9BE7A008E3327 /* SelectCoinFromPoolViewController.swift in Sources */,
 				9EAB5E891ED5D3CF00C95BA1 /* MiningDashboardViewController.swift in Sources */,
 				9E6BF13A1ED991CC008E3327 /* PoolModel.swift in Sources */,
+				9E6BF1491EDAC2B3008E3327 /* ServiceModel.swift in Sources */,
 				9E6BF1421ED9BEF8008E3327 /* CurrencyListTableViewDataSource.swift in Sources */,
 				9EAB5EB31ED6D27700C95BA1 /* Color.swift in Sources */,
 				9EAB5EA11ED6227000C95BA1 /* RemoteFactory.swift in Sources */,
 				9EAB5ECF1ED7942600C95BA1 /* RemoteMiningDashBoard.swift in Sources */,
-				9E6BF1441ED9CC63008E3327 /* SingleonPools.swift in Sources */,
+				9E6BF1441ED9CC63008E3327 /* SingletonPools.swift in Sources */,
 				9EAB5EAC1ED6C68B00C95BA1 /* DashboardCollectionViewCell.swift in Sources */,
 				9E6BF13C1ED9AE43008E3327 /* AddServiceViewController.swift in Sources */,
 				9EAB5EA91ED6C56C00C95BA1 /* MiningDashboardCollectionViewDataSource.swift in Sources */,
@@ -593,7 +619,7 @@
 		};
 		9EB909831ED5D2F000BB533A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 15FA054AF8EF8042250E29B6 /* Pods-Mining-Status.debug.xcconfig */;
+			baseConfigurationReference = 1D087784BF964A61CBF01A16 /* Pods-eMiner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RJA42UD9TG;
@@ -611,7 +637,7 @@
 		};
 		9EB909841ED5D2F000BB533A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4744D7251DAF7895A364521B /* Pods-Mining-Status.release.xcconfig */;
+			baseConfigurationReference = 1915BC0EB0A0CB5CF8A9D6E8 /* Pods-eMiner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RJA42UD9TG;
