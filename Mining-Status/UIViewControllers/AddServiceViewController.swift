@@ -13,7 +13,7 @@ class AddServiceViewController: UIViewController
     @IBOutlet weak var tableView: UITableView!
     var dataSource = PoolListTableViewDataSource()
     var delegate = AddPoolTableViewDelegate()
-    var pools:[PoolModel] = SingleonPools.singletonPools.pools
+    var pools:[PoolModel] { return SingleonPools.singletonPools.pools }
     
     var selectedPool: PoolModel!
     
@@ -64,6 +64,7 @@ extension AddServiceViewController: UITableViewDelegate
 {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
+        
         self.selectedPool = self.pools[indexPath.item]
         
         tableView.deselectRow(at: indexPath, animated: true)
