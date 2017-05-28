@@ -8,6 +8,9 @@
 
 import UIKit
 
-class AddServiceSingleton: NSObject {
-
+class AddServiceSingleton: NSObject
+{
+    static let sharedInstance = AddServiceSingleton()
+    
+    var serviceModel = ServiceModel()
 }
