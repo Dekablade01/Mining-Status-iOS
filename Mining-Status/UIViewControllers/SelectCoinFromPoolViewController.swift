@@ -16,6 +16,7 @@ class SelectCoinFromPoolViewController: UIViewController {
         set { dataSource.selectedPool = newValue }
         get { return dataSource.selectedPool }
     }
+    var selectedCoin: String = ""
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -29,5 +30,20 @@ class SelectCoinFromPoolViewController: UIViewController {
         dataSource.reloadDataHandler = { tableView.reloadData() }
         
         tableView.dataSource = dataSource
+        tableView.delegate = self 
+    }
+    
+}
+
+extension SelectCoinFromPoolViewController: UITableViewDelegate
+{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let currency = selectedPool.currencies[indexPath.item]
+
+        print(currency)
+        
+        AddServiceSingleton.sharedInstance.serviceModel.currency = currency
     }
 }

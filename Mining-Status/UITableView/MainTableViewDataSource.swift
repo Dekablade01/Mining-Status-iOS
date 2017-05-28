@@ -8,28 +8,39 @@
 
 import UIKit
 import Alamofire
-import RxSwift
-import RxCocoa
 import AlamofireObjectMapper
+import RealmSwift
 class MainTableViewDataSource: NSObject, UITableViewDataSource
 {
     var didFinishLoadedHandler: (()->())?
     
-    var pools: [PoolModel] = []
+    var services: [ServiceModel] = []
     
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return pools.count
+        return services.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let pool = pools[indexPath.item]
+        
+        let service = services[indexPath.item]
 
-        cell.textLabel?.text = pool.name
-        cell.detailTextLabel?.text = pool.currencies.first
+        cell.textLabel?.text = service.poolname
+        cell.detailTextLabel?.text = service.currency
         return cell
+    }
+    func loadData()
+    {
+        services.removeAll()
+        let realm = try! Realm()
+        let result = realm.objects(ServiceModel.self)
+        
+        for service in result
+        {
+            services.append(service)
+        }
+        didFinishLoadedHandler?()
     }
 
 }

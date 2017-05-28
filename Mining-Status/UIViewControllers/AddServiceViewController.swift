@@ -49,6 +49,7 @@ class AddServiceViewController: UIViewController
             guard let  viewController = segue.destination as? SelectCoinFromPoolViewController
                 else { return }
                 viewController.selectedPool = pool
+                AddServiceSingleton.sharedInstance.serviceModel.poolname = pool.name
         }
     }
     

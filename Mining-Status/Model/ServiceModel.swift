@@ -27,5 +27,6 @@ class ServiceModel: Object, Mappable
         self.poolname <- map["poolname"]
         self.currency <- map["currency"]
     }
+
     
 }
