@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9EB9096F1ED5D2F000BB533A"
+               BlueprintIdentifier = "9E885ACF1EDB0A4700D3324E"
                BuildableName = "eMiner.app"
                BlueprintName = "eMiner"
                ReferencedContainer = "container:eMiner.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9EB9096F1ED5D2F000BB533A"
+            BlueprintIdentifier = "9E885ACF1EDB0A4700D3324E"
             BuildableName = "eMiner.app"
             BlueprintName = "eMiner"
             ReferencedContainer = "container:eMiner.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9EB9096F1ED5D2F000BB533A"
+            BlueprintIdentifier = "9E885ACF1EDB0A4700D3324E"
             BuildableName = "eMiner.app"
             BlueprintName = "eMiner"
             ReferencedContainer = "container:eMiner.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9EB9096F1ED5D2F000BB533A"
+            BlueprintIdentifier = "9E885ACF1EDB0A4700D3324E"
             BuildableName = "eMiner.app"
             BlueprintName = "eMiner"
             ReferencedContainer = "container:eMiner.xcodeproj">

@@ -7,73 +7,73 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		467DD3B499D258BFC8A8654A /* Pods_Mining_Status.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB8520DA125CA7FEA4555EA /* Pods_Mining_Status.framework */; };
-		8A678943C37FC7FAF932541B /* Pods_eMiner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EA13DEDF7335674FCFA8A32 /* Pods_eMiner.framework */; };
-		9E5F6EF71EDAF89F00902610 /* AddServiceSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5F6EF61EDAF89F00902610 /* AddServiceSingleton.swift */; };
-		9E6BF13A1ED991CC008E3327 /* PoolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6BF1391ED991CC008E3327 /* PoolModel.swift */; };
-		9E6BF13C1ED9AE43008E3327 /* AddServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6BF13B1ED9AE43008E3327 /* AddServiceViewController.swift */; };
-		9E6BF13E1ED9B893008E3327 /* PoolListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6BF13D1ED9B893008E3327 /* PoolListTableViewDataSource.swift */; };
-		9E6BF1401ED9BE7A008E3327 /* SelectCoinFromPoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6BF13F1ED9BE7A008E3327 /* SelectCoinFromPoolViewController.swift */; };
-		9E6BF1421ED9BEF8008E3327 /* CurrencyListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6BF1411ED9BEF8008E3327 /* CurrencyListTableViewDataSource.swift */; };
-		9E6BF1441ED9CC63008E3327 /* SingletonPools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6BF1431ED9CC63008E3327 /* SingletonPools.swift */; };
-		9E6BF1471ED9D529008E3327 /* AddPoolTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6BF1461ED9D529008E3327 /* AddPoolTableViewDelegate.swift */; };
-		9E6BF1491EDAC2B3008E3327 /* ServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E6BF1481EDAC2B3008E3327 /* ServiceModel.swift */; };
-		9E6BF14C1EDAC2D0008E3327 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6BF14A1EDAC2D0008E3327 /* RealmSwift.framework */; };
-		9E6BF14D1EDAC2D0008E3327 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6BF14A1EDAC2D0008E3327 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9E6BF14E1EDAC2D0008E3327 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6BF14B1EDAC2D0008E3327 /* Realm.framework */; };
-		9E6BF14F1EDAC2D0008E3327 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6BF14B1EDAC2D0008E3327 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9EAB5E891ED5D3CF00C95BA1 /* MiningDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB5E881ED5D3CF00C95BA1 /* MiningDashboardViewController.swift */; };
-		9EAB5E8C1ED5D62600C95BA1 /* DashboardResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB5E8B1ED5D62600C95BA1 /* DashboardResponse.swift */; };
-		9EAB5E8F1ED61D6B00C95BA1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB5E8E1ED61D6B00C95BA1 /* MainViewController.swift */; };
-		9EAB5E961ED621A000C95BA1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAB5E931ED621A000C95BA1 /* Alamofire.framework */; };
-		9EAB5E971ED621A000C95BA1 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAB5E931ED621A000C95BA1 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9EAB5E981ED621A000C95BA1 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAB5E941ED621A000C95BA1 /* RxSwift.framework */; };
-		9EAB5E991ED621A000C95BA1 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAB5E941ED621A000C95BA1 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9EAB5E9A1ED621A000C95BA1 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAB5E951ED621A000C95BA1 /* RxCocoa.framework */; };
-		9EAB5E9B1ED621A000C95BA1 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAB5E951ED621A000C95BA1 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9EAB5EA11ED6227000C95BA1 /* RemoteFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB5EA01ED6227000C95BA1 /* RemoteFactory.swift */; };
-		9EAB5EA41ED6C36400C95BA1 /* MainTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB5EA31ED6C36400C95BA1 /* MainTableViewDataSource.swift */; };
-		9EAB5EA71ED6C3D500C95BA1 /* MiningDashboardCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB5EA61ED6C3D500C95BA1 /* MiningDashboardCollectionViewDelegate.swift */; };
-		9EAB5EA91ED6C56C00C95BA1 /* MiningDashboardCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB5EA81ED6C56C00C95BA1 /* MiningDashboardCollectionViewDataSource.swift */; };
-		9EAB5EAC1ED6C68B00C95BA1 /* DashboardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB5EAB1ED6C68B00C95BA1 /* DashboardCollectionViewCell.swift */; };
-		9EAB5EAE1ED6CB9700C95BA1 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAB5EAD1ED6CB9700C95BA1 /* SnapKit.framework */; };
-		9EAB5EAF1ED6CB9700C95BA1 /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAB5EAD1ED6CB9700C95BA1 /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9EAB5EB31ED6D27700C95BA1 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB5EB21ED6D27700C95BA1 /* Color.swift */; };
-		9EAB5EB91ED74F1700C95BA1 /* Alamofire+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB5EB81ED74F1700C95BA1 /* Alamofire+RxSwift.swift */; };
-		9EAB5EBB1ED7516900C95BA1 /* RemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB5EBA1ED7516900C95BA1 /* RemoteService.swift */; };
-		9EAB5EC11ED755E700C95BA1 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAB5EBF1ED755E700C95BA1 /* SwiftyJSON.framework */; };
-		9EAB5EC21ED755E700C95BA1 /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAB5EBF1ED755E700C95BA1 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9EAB5EC31ED755E700C95BA1 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAB5EC01ED755E700C95BA1 /* ObjectMapper.framework */; };
-		9EAB5EC41ED755E700C95BA1 /* ObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAB5EC01ED755E700C95BA1 /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9EAB5EC71ED7809C00C95BA1 /* Then.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAB5EC61ED7809C00C95BA1 /* Then.framework */; };
-		9EAB5EC81ED7809C00C95BA1 /* Then.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAB5EC61ED7809C00C95BA1 /* Then.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9EAB5ECA1ED7810100C95BA1 /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAB5EC91ED7810100C95BA1 /* AlamofireObjectMapper.framework */; };
-		9EAB5ECB1ED7810100C95BA1 /* AlamofireObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAB5EC91ED7810100C95BA1 /* AlamofireObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9EAB5ECF1ED7942600C95BA1 /* RemoteMiningDashBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB5ECE1ED7942600C95BA1 /* RemoteMiningDashBoard.swift */; };
-		9EAB5ED11ED806CE00C95BA1 /* CellContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EAB5ED01ED806CE00C95BA1 /* CellContentModel.swift */; };
-		9EB909741ED5D2F000BB533A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB909731ED5D2F000BB533A /* AppDelegate.swift */; };
-		9EB909791ED5D2F000BB533A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EB909771ED5D2F000BB533A /* Main.storyboard */; };
-		9EB9097B1ED5D2F000BB533A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EB9097A1ED5D2F000BB533A /* Assets.xcassets */; };
-		9EB9097E1ED5D2F000BB533A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EB9097C1ED5D2F000BB533A /* LaunchScreen.storyboard */; };
+		6EC6CFB76AD44E10F95D15B2 /* Pods_eMiner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A601F4956E659FF35EADB6 /* Pods_eMiner.framework */; };
+		9E885AEF1EDB0F3700D3324E /* Then.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E885AE51EDB0F3700D3324E /* Then.framework */; };
+		9E885AF01EDB0F3700D3324E /* Then.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E885AE51EDB0F3700D3324E /* Then.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9E885AF11EDB0F3700D3324E /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E885AE61EDB0F3700D3324E /* SwiftyJSON.framework */; };
+		9E885AF21EDB0F3700D3324E /* SwiftyJSON.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E885AE61EDB0F3700D3324E /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9E885AF31EDB0F3700D3324E /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E885AE71EDB0F3700D3324E /* SnapKit.framework */; };
+		9E885AF41EDB0F3700D3324E /* SnapKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E885AE71EDB0F3700D3324E /* SnapKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9E885AF51EDB0F3700D3324E /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E885AE81EDB0F3700D3324E /* AlamofireObjectMapper.framework */; };
+		9E885AF61EDB0F3700D3324E /* AlamofireObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E885AE81EDB0F3700D3324E /* AlamofireObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9E885AF71EDB0F3700D3324E /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E885AE91EDB0F3700D3324E /* ObjectMapper.framework */; };
+		9E885AF81EDB0F3700D3324E /* ObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E885AE91EDB0F3700D3324E /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9E885AF91EDB0F3700D3324E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E885AEA1EDB0F3700D3324E /* Alamofire.framework */; };
+		9E885AFA1EDB0F3700D3324E /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E885AEA1EDB0F3700D3324E /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9E885AFB1EDB0F3700D3324E /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E885AEB1EDB0F3700D3324E /* RealmSwift.framework */; };
+		9E885AFC1EDB0F3700D3324E /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E885AEB1EDB0F3700D3324E /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9E885AFD1EDB0F3700D3324E /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E885AEC1EDB0F3700D3324E /* Realm.framework */; };
+		9E885AFE1EDB0F3700D3324E /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E885AEC1EDB0F3700D3324E /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9E885AFF1EDB0F3700D3324E /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E885AED1EDB0F3700D3324E /* RxSwift.framework */; };
+		9E885B001EDB0F3700D3324E /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E885AED1EDB0F3700D3324E /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9E885B011EDB0F3700D3324E /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E885AEE1EDB0F3700D3324E /* RxCocoa.framework */; };
+		9E885B021EDB0F3700D3324E /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E885AEE1EDB0F3700D3324E /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9E885B291EDB104E00D3324E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B051EDB104E00D3324E /* AppDelegate.swift */; };
+		9E885B2A1EDB104E00D3324E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E885B061EDB104E00D3324E /* Assets.xcassets */; };
+		9E885B2B1EDB104E00D3324E /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B091EDB104E00D3324E /* Color.swift */; };
+		9E885B2C1EDB104E00D3324E /* Alamofire+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B0C1EDB104E00D3324E /* Alamofire+RxSwift.swift */; };
+		9E885B2D1EDB104E00D3324E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9E885B0D1EDB104E00D3324E /* Info.plist */; };
+		9E885B2E1EDB104E00D3324E /* CellContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B0F1EDB104E00D3324E /* CellContentModel.swift */; };
+		9E885B2F1EDB104E00D3324E /* PoolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B101EDB104E00D3324E /* PoolModel.swift */; };
+		9E885B301EDB104E00D3324E /* ServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B111EDB104E00D3324E /* ServiceModel.swift */; };
+		9E885B311EDB104E00D3324E /* RemoteFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B131EDB104E00D3324E /* RemoteFactory.swift */; };
+		9E885B321EDB104E00D3324E /* RemoteMiningDashBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B141EDB104E00D3324E /* RemoteMiningDashBoard.swift */; };
+		9E885B331EDB104E00D3324E /* RemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B151EDB104E00D3324E /* RemoteService.swift */; };
+		9E885B341EDB104E00D3324E /* AddServiceSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B171EDB104E00D3324E /* AddServiceSingleton.swift */; };
+		9E885B351EDB104E00D3324E /* SingletonPools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B181EDB104E00D3324E /* SingletonPools.swift */; };
+		9E885B361EDB104E00D3324E /* MiningDashboardCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B1A1EDB104E00D3324E /* MiningDashboardCollectionViewDataSource.swift */; };
+		9E885B371EDB104E00D3324E /* MiningDashboardCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B1B1EDB104E00D3324E /* MiningDashboardCollectionViewDelegate.swift */; };
+		9E885B381EDB104E00D3324E /* DashboardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B1D1EDB104E00D3324E /* DashboardCollectionViewCell.swift */; };
+		9E885B391EDB104E00D3324E /* AddPoolTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B1F1EDB104E00D3324E /* AddPoolTableViewDelegate.swift */; };
+		9E885B3A1EDB104E00D3324E /* CurrencyListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B201EDB104E00D3324E /* CurrencyListTableViewDataSource.swift */; };
+		9E885B3B1EDB104E00D3324E /* MainTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B211EDB104E00D3324E /* MainTableViewDataSource.swift */; };
+		9E885B3C1EDB104E00D3324E /* PoolListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B221EDB104E00D3324E /* PoolListTableViewDataSource.swift */; };
+		9E885B3D1EDB104E00D3324E /* AddServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B241EDB104E00D3324E /* AddServiceViewController.swift */; };
+		9E885B3E1EDB104E00D3324E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B251EDB104E00D3324E /* MainViewController.swift */; };
+		9E885B3F1EDB104E00D3324E /* MiningDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B261EDB104E00D3324E /* MiningDashboardViewController.swift */; };
+		9E885B401EDB104E00D3324E /* SelectCoinFromPoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B271EDB104E00D3324E /* SelectCoinFromPoolViewController.swift */; };
+		9E885B411EDB104E00D3324E /* WalletAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B281EDB104E00D3324E /* WalletAddressViewController.swift */; };
+		9E885B451EDB10A400D3324E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E885B431EDB10A400D3324E /* LaunchScreen.storyboard */; };
+		9E885B461EDB10A400D3324E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E885B441EDB10A400D3324E /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		9EAB5E9C1ED621A100C95BA1 /* Embed Frameworks */ = {
+		9E885B031EDB0F3700D3324E /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9EAB5EC41ED755E700C95BA1 /* ObjectMapper.framework in Embed Frameworks */,
-				9EAB5EC81ED7809C00C95BA1 /* Then.framework in Embed Frameworks */,
-				9E6BF14D1EDAC2D0008E3327 /* RealmSwift.framework in Embed Frameworks */,
-				9EAB5E9B1ED621A000C95BA1 /* RxCocoa.framework in Embed Frameworks */,
-				9E6BF14F1EDAC2D0008E3327 /* Realm.framework in Embed Frameworks */,
-				9EAB5E991ED621A000C95BA1 /* RxSwift.framework in Embed Frameworks */,
-				9EAB5E971ED621A000C95BA1 /* Alamofire.framework in Embed Frameworks */,
-				9EAB5EAF1ED6CB9700C95BA1 /* SnapKit.framework in Embed Frameworks */,
-				9EAB5EC21ED755E700C95BA1 /* SwiftyJSON.framework in Embed Frameworks */,
-				9EAB5ECB1ED7810100C95BA1 /* AlamofireObjectMapper.framework in Embed Frameworks */,
+				9E885AF41EDB0F3700D3324E /* SnapKit.framework in Embed Frameworks */,
+				9E885AFA1EDB0F3700D3324E /* Alamofire.framework in Embed Frameworks */,
+				9E885B001EDB0F3700D3324E /* RxSwift.framework in Embed Frameworks */,
+				9E885AFC1EDB0F3700D3324E /* RealmSwift.framework in Embed Frameworks */,
+				9E885AF21EDB0F3700D3324E /* SwiftyJSON.framework in Embed Frameworks */,
+				9E885AFE1EDB0F3700D3324E /* Realm.framework in Embed Frameworks */,
+				9E885AF81EDB0F3700D3324E /* ObjectMapper.framework in Embed Frameworks */,
+				9E885AF01EDB0F3700D3324E /* Then.framework in Embed Frameworks */,
+				9E885B021EDB0F3700D3324E /* RxCocoa.framework in Embed Frameworks */,
+				9E885AF61EDB0F3700D3324E /* AlamofireObjectMapper.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,296 +81,299 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		15FA054AF8EF8042250E29B6 /* Pods-Mining-Status.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mining-Status.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mining-Status/Pods-Mining-Status.debug.xcconfig"; sourceTree = "<group>"; };
-		1915BC0EB0A0CB5CF8A9D6E8 /* Pods-eMiner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eMiner.release.xcconfig"; path = "Pods/Target Support Files/Pods-eMiner/Pods-eMiner.release.xcconfig"; sourceTree = "<group>"; };
-		1D087784BF964A61CBF01A16 /* Pods-eMiner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eMiner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eMiner/Pods-eMiner.debug.xcconfig"; sourceTree = "<group>"; };
-		2EA13DEDF7335674FCFA8A32 /* Pods_eMiner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eMiner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4744D7251DAF7895A364521B /* Pods-Mining-Status.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mining-Status.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mining-Status/Pods-Mining-Status.release.xcconfig"; sourceTree = "<group>"; };
-		9E5F6EF61EDAF89F00902610 /* AddServiceSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddServiceSingleton.swift; path = Singleton/AddServiceSingleton.swift; sourceTree = "<group>"; };
-		9E6BF1391ED991CC008E3327 /* PoolModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PoolModel.swift; path = Model/PoolModel.swift; sourceTree = "<group>"; };
-		9E6BF13B1ED9AE43008E3327 /* AddServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddServiceViewController.swift; path = UIViewControllers/AddServiceViewController.swift; sourceTree = "<group>"; };
-		9E6BF13D1ED9B893008E3327 /* PoolListTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PoolListTableViewDataSource.swift; path = UITableView/PoolListTableViewDataSource.swift; sourceTree = "<group>"; };
-		9E6BF13F1ED9BE7A008E3327 /* SelectCoinFromPoolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SelectCoinFromPoolViewController.swift; path = UIViewControllers/SelectCoinFromPoolViewController.swift; sourceTree = "<group>"; };
-		9E6BF1411ED9BEF8008E3327 /* CurrencyListTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CurrencyListTableViewDataSource.swift; path = UITableView/CurrencyListTableViewDataSource.swift; sourceTree = "<group>"; };
-		9E6BF1431ED9CC63008E3327 /* SingletonPools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SingletonPools.swift; path = Singleton/SingletonPools.swift; sourceTree = "<group>"; };
-		9E6BF1461ED9D529008E3327 /* AddPoolTableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddPoolTableViewDelegate.swift; path = UITableView/AddPoolTableViewDelegate.swift; sourceTree = "<group>"; };
-		9E6BF1481EDAC2B3008E3327 /* ServiceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ServiceModel.swift; path = Model/ServiceModel.swift; sourceTree = "<group>"; };
-		9E6BF14A1EDAC2D0008E3327 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
-		9E6BF14B1EDAC2D0008E3327 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
-		9EAB5E881ED5D3CF00C95BA1 /* MiningDashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MiningDashboardViewController.swift; path = UIViewControllers/MiningDashboardViewController.swift; sourceTree = "<group>"; };
-		9EAB5E8B1ED5D62600C95BA1 /* DashboardResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashboardResponse.swift; path = Enum/DashboardResponse.swift; sourceTree = SOURCE_ROOT; };
-		9EAB5E8E1ED61D6B00C95BA1 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = UIViewControllers/MainViewController.swift; sourceTree = "<group>"; };
-		9EAB5E931ED621A000C95BA1 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		9EAB5E941ED621A000C95BA1 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
-		9EAB5E951ED621A000C95BA1 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
-		9EAB5EA01ED6227000C95BA1 /* RemoteFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RemoteFactory.swift; path = Remote/RemoteFactory.swift; sourceTree = "<group>"; };
-		9EAB5EA31ED6C36400C95BA1 /* MainTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTableViewDataSource.swift; path = UITableView/MainTableViewDataSource.swift; sourceTree = "<group>"; };
-		9EAB5EA61ED6C3D500C95BA1 /* MiningDashboardCollectionViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MiningDashboardCollectionViewDelegate.swift; path = UICollectionView/MiningDashboardCollectionViewDelegate.swift; sourceTree = "<group>"; };
-		9EAB5EA81ED6C56C00C95BA1 /* MiningDashboardCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MiningDashboardCollectionViewDataSource.swift; path = UICollectionView/MiningDashboardCollectionViewDataSource.swift; sourceTree = "<group>"; };
-		9EAB5EAB1ED6C68B00C95BA1 /* DashboardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashboardCollectionViewCell.swift; path = UICollectionViewCell/DashboardCollectionViewCell.swift; sourceTree = "<group>"; };
-		9EAB5EAD1ED6CB9700C95BA1 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
-		9EAB5EB21ED6D27700C95BA1 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Color.swift; path = Enum/Color.swift; sourceTree = "<group>"; };
-		9EAB5EB81ED74F1700C95BA1 /* Alamofire+RxSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Alamofire+RxSwift.swift"; path = "Extensions/Alamofire/Alamofire+RxSwift.swift"; sourceTree = "<group>"; };
-		9EAB5EBA1ED7516900C95BA1 /* RemoteService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RemoteService.swift; path = Remote/RemoteService.swift; sourceTree = "<group>"; };
-		9EAB5EBF1ED755E700C95BA1 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
-		9EAB5EC01ED755E700C95BA1 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
-		9EAB5EC61ED7809C00C95BA1 /* Then.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Then.framework; path = Carthage/Build/iOS/Then.framework; sourceTree = "<group>"; };
-		9EAB5EC91ED7810100C95BA1 /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
-		9EAB5ECE1ED7942600C95BA1 /* RemoteMiningDashBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RemoteMiningDashBoard.swift; path = Remote/RemoteMiningDashBoard.swift; sourceTree = "<group>"; };
-		9EAB5ED01ED806CE00C95BA1 /* CellContentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellContentModel.swift; path = Model/CellContentModel.swift; sourceTree = "<group>"; };
-		9EB909701ED5D2F000BB533A /* eMiner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eMiner.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9EB909731ED5D2F000BB533A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9EB909781ED5D2F000BB533A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		9EB9097A1ED5D2F000BB533A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		9EB9097D1ED5D2F000BB533A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		9EB9097F1ED5D2F000BB533A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FAB8520DA125CA7FEA4555EA /* Pods_Mining_Status.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mining_Status.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		01AB15959F5607184498BFCA /* Pods-eMiner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eMiner.release.xcconfig"; path = "Pods/Target Support Files/Pods-eMiner/Pods-eMiner.release.xcconfig"; sourceTree = "<group>"; };
+		9E885AD01EDB0A4700D3324E /* eMiner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eMiner.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E885ADF1EDB0A4700D3324E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E885AE51EDB0F3700D3324E /* Then.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Then.framework; path = Carthage/Build/iOS/Then.framework; sourceTree = "<group>"; };
+		9E885AE61EDB0F3700D3324E /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		9E885AE71EDB0F3700D3324E /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		9E885AE81EDB0F3700D3324E /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
+		9E885AE91EDB0F3700D3324E /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
+		9E885AEA1EDB0F3700D3324E /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		9E885AEB1EDB0F3700D3324E /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		9E885AEC1EDB0F3700D3324E /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		9E885AED1EDB0F3700D3324E /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		9E885AEE1EDB0F3700D3324E /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		9E885B051EDB104E00D3324E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9E885B061EDB104E00D3324E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9E885B091EDB104E00D3324E /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		9E885B0C1EDB104E00D3324E /* Alamofire+RxSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamofire+RxSwift.swift"; sourceTree = "<group>"; };
+		9E885B0D1EDB104E00D3324E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E885B0F1EDB104E00D3324E /* CellContentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellContentModel.swift; sourceTree = "<group>"; };
+		9E885B101EDB104E00D3324E /* PoolModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoolModel.swift; sourceTree = "<group>"; };
+		9E885B111EDB104E00D3324E /* ServiceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceModel.swift; sourceTree = "<group>"; };
+		9E885B131EDB104E00D3324E /* RemoteFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteFactory.swift; sourceTree = "<group>"; };
+		9E885B141EDB104E00D3324E /* RemoteMiningDashBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteMiningDashBoard.swift; sourceTree = "<group>"; };
+		9E885B151EDB104E00D3324E /* RemoteService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteService.swift; sourceTree = "<group>"; };
+		9E885B171EDB104E00D3324E /* AddServiceSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddServiceSingleton.swift; sourceTree = "<group>"; };
+		9E885B181EDB104E00D3324E /* SingletonPools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingletonPools.swift; sourceTree = "<group>"; };
+		9E885B1A1EDB104E00D3324E /* MiningDashboardCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiningDashboardCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		9E885B1B1EDB104E00D3324E /* MiningDashboardCollectionViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiningDashboardCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		9E885B1D1EDB104E00D3324E /* DashboardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardCollectionViewCell.swift; sourceTree = "<group>"; };
+		9E885B1F1EDB104E00D3324E /* AddPoolTableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPoolTableViewDelegate.swift; sourceTree = "<group>"; };
+		9E885B201EDB104E00D3324E /* CurrencyListTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyListTableViewDataSource.swift; sourceTree = "<group>"; };
+		9E885B211EDB104E00D3324E /* MainTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewDataSource.swift; sourceTree = "<group>"; };
+		9E885B221EDB104E00D3324E /* PoolListTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoolListTableViewDataSource.swift; sourceTree = "<group>"; };
+		9E885B241EDB104E00D3324E /* AddServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddServiceViewController.swift; sourceTree = "<group>"; };
+		9E885B251EDB104E00D3324E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		9E885B261EDB104E00D3324E /* MiningDashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiningDashboardViewController.swift; sourceTree = "<group>"; };
+		9E885B271EDB104E00D3324E /* SelectCoinFromPoolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCoinFromPoolViewController.swift; sourceTree = "<group>"; };
+		9E885B281EDB104E00D3324E /* WalletAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletAddressViewController.swift; sourceTree = "<group>"; };
+		9E885B431EDB10A400D3324E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9E885B441EDB10A400D3324E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A7A601F4956E659FF35EADB6 /* Pods_eMiner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eMiner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C62276AF7A6D43CC1B5FCD6B /* Pods-eMiner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eMiner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eMiner/Pods-eMiner.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9EB9096D1ED5D2F000BB533A /* Frameworks */ = {
+		9E885ACD1EDB0A4700D3324E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EAB5E9A1ED621A000C95BA1 /* RxCocoa.framework in Frameworks */,
-				9EAB5EC71ED7809C00C95BA1 /* Then.framework in Frameworks */,
-				467DD3B499D258BFC8A8654A /* Pods_Mining_Status.framework in Frameworks */,
-				9EAB5EC11ED755E700C95BA1 /* SwiftyJSON.framework in Frameworks */,
-				9EAB5ECA1ED7810100C95BA1 /* AlamofireObjectMapper.framework in Frameworks */,
-				9EAB5E961ED621A000C95BA1 /* Alamofire.framework in Frameworks */,
-				9E6BF14C1EDAC2D0008E3327 /* RealmSwift.framework in Frameworks */,
-				9EAB5E981ED621A000C95BA1 /* RxSwift.framework in Frameworks */,
-				9EAB5EAE1ED6CB9700C95BA1 /* SnapKit.framework in Frameworks */,
-				9EAB5EC31ED755E700C95BA1 /* ObjectMapper.framework in Frameworks */,
-				9E6BF14E1EDAC2D0008E3327 /* Realm.framework in Frameworks */,
-				8A678943C37FC7FAF932541B /* Pods_eMiner.framework in Frameworks */,
+				9E885AFF1EDB0F3700D3324E /* RxSwift.framework in Frameworks */,
+				9E885AFD1EDB0F3700D3324E /* Realm.framework in Frameworks */,
+				9E885AF71EDB0F3700D3324E /* ObjectMapper.framework in Frameworks */,
+				6EC6CFB76AD44E10F95D15B2 /* Pods_eMiner.framework in Frameworks */,
+				9E885AEF1EDB0F3700D3324E /* Then.framework in Frameworks */,
+				9E885AF11EDB0F3700D3324E /* SwiftyJSON.framework in Frameworks */,
+				9E885AF91EDB0F3700D3324E /* Alamofire.framework in Frameworks */,
+				9E885AF51EDB0F3700D3324E /* AlamofireObjectMapper.framework in Frameworks */,
+				9E885AFB1EDB0F3700D3324E /* RealmSwift.framework in Frameworks */,
+				9E885B011EDB0F3700D3324E /* RxCocoa.framework in Frameworks */,
+				9E885AF31EDB0F3700D3324E /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9E6BF1451ED9CE3E008E3327 /* Singleton */ = {
+		3ABAE718AA12E75B40A1CA03 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9E6BF1431ED9CC63008E3327 /* SingletonPools.swift */,
-				9E5F6EF61EDAF89F00902610 /* AddServiceSingleton.swift */,
-			);
-			name = Singleton;
-			sourceTree = "<group>";
-		};
-		9EAB5E8A1ED5D60E00C95BA1 /* Enum */ = {
-			isa = PBXGroup;
-			children = (
-				9EAB5E8B1ED5D62600C95BA1 /* DashboardResponse.swift */,
-				9EAB5EB21ED6D27700C95BA1 /* Color.swift */,
-			);
-			name = Enum;
-			sourceTree = "<group>";
-		};
-		9EAB5E9D1ED621A400C95BA1 /* Carthage */ = {
-			isa = PBXGroup;
-			children = (
-				9E6BF14A1EDAC2D0008E3327 /* RealmSwift.framework */,
-				9E6BF14B1EDAC2D0008E3327 /* Realm.framework */,
-				9EAB5EC91ED7810100C95BA1 /* AlamofireObjectMapper.framework */,
-				9EAB5EC61ED7809C00C95BA1 /* Then.framework */,
-				9EAB5EBF1ED755E700C95BA1 /* SwiftyJSON.framework */,
-				9EAB5EC01ED755E700C95BA1 /* ObjectMapper.framework */,
-				9EAB5EAD1ED6CB9700C95BA1 /* SnapKit.framework */,
-				9EAB5E931ED621A000C95BA1 /* Alamofire.framework */,
-				9EAB5E941ED621A000C95BA1 /* RxSwift.framework */,
-				9EAB5E951ED621A000C95BA1 /* RxCocoa.framework */,
-			);
-			name = Carthage;
-			sourceTree = "<group>";
-		};
-		9EAB5E9F1ED6226100C95BA1 /* Remote */ = {
-			isa = PBXGroup;
-			children = (
-				9EAB5EA01ED6227000C95BA1 /* RemoteFactory.swift */,
-				9EAB5EBA1ED7516900C95BA1 /* RemoteService.swift */,
-				9EAB5ECE1ED7942600C95BA1 /* RemoteMiningDashBoard.swift */,
-			);
-			name = Remote;
-			sourceTree = "<group>";
-		};
-		9EAB5EA21ED6C35600C95BA1 /* UITableView */ = {
-			isa = PBXGroup;
-			children = (
-				9EAB5EA31ED6C36400C95BA1 /* MainTableViewDataSource.swift */,
-				9E6BF13D1ED9B893008E3327 /* PoolListTableViewDataSource.swift */,
-				9E6BF1411ED9BEF8008E3327 /* CurrencyListTableViewDataSource.swift */,
-				9E6BF1461ED9D529008E3327 /* AddPoolTableViewDelegate.swift */,
-			);
-			name = UITableView;
-			sourceTree = "<group>";
-		};
-		9EAB5EA51ED6C38900C95BA1 /* UICollectionView */ = {
-			isa = PBXGroup;
-			children = (
-				9EAB5EA61ED6C3D500C95BA1 /* MiningDashboardCollectionViewDelegate.swift */,
-				9EAB5EA81ED6C56C00C95BA1 /* MiningDashboardCollectionViewDataSource.swift */,
-			);
-			name = UICollectionView;
-			sourceTree = "<group>";
-		};
-		9EAB5EAA1ED6C66A00C95BA1 /* UICollectionViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				9EAB5EAB1ED6C68B00C95BA1 /* DashboardCollectionViewCell.swift */,
-			);
-			name = UICollectionViewCell;
-			sourceTree = "<group>";
-		};
-		9EAB5EB41ED74DFA00C95BA1 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				9EAB5EB81ED74F1700C95BA1 /* Alamofire+RxSwift.swift */,
-			);
-			name = Extensions;
-			sourceTree = "<group>";
-		};
-		9EAB5EBC1ED7545000C95BA1 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				9EAB5ED01ED806CE00C95BA1 /* CellContentModel.swift */,
-				9E6BF1391ED991CC008E3327 /* PoolModel.swift */,
-				9E6BF1481EDAC2B3008E3327 /* ServiceModel.swift */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
-		9EB909671ED5D2F000BB533A = {
-			isa = PBXGroup;
-			children = (
-				9EAB5E9D1ED621A400C95BA1 /* Carthage */,
-				9EB909721ED5D2F000BB533A /* Mining-Status */,
-				9EB909711ED5D2F000BB533A /* Products */,
-				F8EAC4CCD88AD4BC1E3FCD82 /* Pods */,
-				E844D731243A700C3B23131E /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		9EB909711ED5D2F000BB533A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9EB909701ED5D2F000BB533A /* eMiner.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		9EB909721ED5D2F000BB533A /* Mining-Status */ = {
-			isa = PBXGroup;
-			children = (
-				9EB9097A1ED5D2F000BB533A /* Assets.xcassets */,
-				9EAB5E8A1ED5D60E00C95BA1 /* Enum */,
-				9EAB5EB41ED74DFA00C95BA1 /* Extensions */,
-				9EAB5EBC1ED7545000C95BA1 /* Model */,
-				9EAB5E9F1ED6226100C95BA1 /* Remote */,
-				9E6BF1451ED9CE3E008E3327 /* Singleton */,
-				9EB909851ED5D2FA00BB533A /* Storyboard */,
-				9EB909861ED5D30800BB533A /* Supporting Files */,
-				9EAB5EA51ED6C38900C95BA1 /* UICollectionView */,
-				9EAB5EAA1ED6C66A00C95BA1 /* UICollectionViewCell */,
-				9EAB5EA21ED6C35600C95BA1 /* UITableView */,
-				9EB909871ED5D31800BB533A /* UIViewControllers */,
-			);
-			path = "Mining-Status";
-			sourceTree = "<group>";
-		};
-		9EB909851ED5D2FA00BB533A /* Storyboard */ = {
-			isa = PBXGroup;
-			children = (
-				9EB909771ED5D2F000BB533A /* Main.storyboard */,
-				9EB9097C1ED5D2F000BB533A /* LaunchScreen.storyboard */,
-			);
-			name = Storyboard;
-			sourceTree = "<group>";
-		};
-		9EB909861ED5D30800BB533A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				9EB909731ED5D2F000BB533A /* AppDelegate.swift */,
-				9EB9097F1ED5D2F000BB533A /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		9EB909871ED5D31800BB533A /* UIViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				9EAB5E881ED5D3CF00C95BA1 /* MiningDashboardViewController.swift */,
-				9EAB5E8E1ED61D6B00C95BA1 /* MainViewController.swift */,
-				9E6BF13B1ED9AE43008E3327 /* AddServiceViewController.swift */,
-				9E6BF13F1ED9BE7A008E3327 /* SelectCoinFromPoolViewController.swift */,
-			);
-			name = UIViewControllers;
-			sourceTree = "<group>";
-		};
-		E844D731243A700C3B23131E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				FAB8520DA125CA7FEA4555EA /* Pods_Mining_Status.framework */,
-				2EA13DEDF7335674FCFA8A32 /* Pods_eMiner.framework */,
+				A7A601F4956E659FF35EADB6 /* Pods_eMiner.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F8EAC4CCD88AD4BC1E3FCD82 /* Pods */ = {
+		8DD8472704489D241CA1F5B8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				15FA054AF8EF8042250E29B6 /* Pods-Mining-Status.debug.xcconfig */,
-				4744D7251DAF7895A364521B /* Pods-Mining-Status.release.xcconfig */,
-				1D087784BF964A61CBF01A16 /* Pods-eMiner.debug.xcconfig */,
-				1915BC0EB0A0CB5CF8A9D6E8 /* Pods-eMiner.release.xcconfig */,
+				C62276AF7A6D43CC1B5FCD6B /* Pods-eMiner.debug.xcconfig */,
+				01AB15959F5607184498BFCA /* Pods-eMiner.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		9E885AC71EDB0A4700D3324E = {
+			isa = PBXGroup;
+			children = (
+				9E885B041EDB0F4000D3324E /* Carthage */,
+				9E885AD21EDB0A4700D3324E /* eMiner */,
+				9E885AD11EDB0A4700D3324E /* Products */,
+				8DD8472704489D241CA1F5B8 /* Pods */,
+				3ABAE718AA12E75B40A1CA03 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9E885AD11EDB0A4700D3324E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9E885AD01EDB0A4700D3324E /* eMiner.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9E885AD21EDB0A4700D3324E /* eMiner */ = {
+			isa = PBXGroup;
+			children = (
+				9E885B421EDB109900D3324E /* Storyboard */,
+				9E885B051EDB104E00D3324E /* AppDelegate.swift */,
+				9E885B061EDB104E00D3324E /* Assets.xcassets */,
+				9E885B071EDB104E00D3324E /* Base.lproj */,
+				9E885B081EDB104E00D3324E /* Enum */,
+				9E885B0A1EDB104E00D3324E /* Extensions */,
+				9E885B0D1EDB104E00D3324E /* Info.plist */,
+				9E885B0E1EDB104E00D3324E /* Model */,
+				9E885B121EDB104E00D3324E /* Remote */,
+				9E885B161EDB104E00D3324E /* Singleton */,
+				9E885B191EDB104E00D3324E /* UICollectionView */,
+				9E885B1C1EDB104E00D3324E /* UICollectionViewCell */,
+				9E885B1E1EDB104E00D3324E /* UITableView */,
+				9E885B231EDB104E00D3324E /* UIViewControllers */,
+				9E885ADF1EDB0A4700D3324E /* Info.plist */,
+			);
+			path = eMiner;
+			sourceTree = "<group>";
+		};
+		9E885B041EDB0F4000D3324E /* Carthage */ = {
+			isa = PBXGroup;
+			children = (
+				9E885AE51EDB0F3700D3324E /* Then.framework */,
+				9E885AE61EDB0F3700D3324E /* SwiftyJSON.framework */,
+				9E885AE71EDB0F3700D3324E /* SnapKit.framework */,
+				9E885AE81EDB0F3700D3324E /* AlamofireObjectMapper.framework */,
+				9E885AE91EDB0F3700D3324E /* ObjectMapper.framework */,
+				9E885AEA1EDB0F3700D3324E /* Alamofire.framework */,
+				9E885AEB1EDB0F3700D3324E /* RealmSwift.framework */,
+				9E885AEC1EDB0F3700D3324E /* Realm.framework */,
+				9E885AED1EDB0F3700D3324E /* RxSwift.framework */,
+				9E885AEE1EDB0F3700D3324E /* RxCocoa.framework */,
+			);
+			name = Carthage;
+			sourceTree = "<group>";
+		};
+		9E885B071EDB104E00D3324E /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		9E885B081EDB104E00D3324E /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				9E885B091EDB104E00D3324E /* Color.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		9E885B0A1EDB104E00D3324E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9E885B0B1EDB104E00D3324E /* Alamofire */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		9E885B0B1EDB104E00D3324E /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				9E885B0C1EDB104E00D3324E /* Alamofire+RxSwift.swift */,
+			);
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		9E885B0E1EDB104E00D3324E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9E885B0F1EDB104E00D3324E /* CellContentModel.swift */,
+				9E885B101EDB104E00D3324E /* PoolModel.swift */,
+				9E885B111EDB104E00D3324E /* ServiceModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9E885B121EDB104E00D3324E /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				9E885B131EDB104E00D3324E /* RemoteFactory.swift */,
+				9E885B141EDB104E00D3324E /* RemoteMiningDashBoard.swift */,
+				9E885B151EDB104E00D3324E /* RemoteService.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		9E885B161EDB104E00D3324E /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				9E885B171EDB104E00D3324E /* AddServiceSingleton.swift */,
+				9E885B181EDB104E00D3324E /* SingletonPools.swift */,
+			);
+			path = Singleton;
+			sourceTree = "<group>";
+		};
+		9E885B191EDB104E00D3324E /* UICollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				9E885B1A1EDB104E00D3324E /* MiningDashboardCollectionViewDataSource.swift */,
+				9E885B1B1EDB104E00D3324E /* MiningDashboardCollectionViewDelegate.swift */,
+			);
+			path = UICollectionView;
+			sourceTree = "<group>";
+		};
+		9E885B1C1EDB104E00D3324E /* UICollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				9E885B1D1EDB104E00D3324E /* DashboardCollectionViewCell.swift */,
+			);
+			path = UICollectionViewCell;
+			sourceTree = "<group>";
+		};
+		9E885B1E1EDB104E00D3324E /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				9E885B1F1EDB104E00D3324E /* AddPoolTableViewDelegate.swift */,
+				9E885B201EDB104E00D3324E /* CurrencyListTableViewDataSource.swift */,
+				9E885B211EDB104E00D3324E /* MainTableViewDataSource.swift */,
+				9E885B221EDB104E00D3324E /* PoolListTableViewDataSource.swift */,
+			);
+			path = UITableView;
+			sourceTree = "<group>";
+		};
+		9E885B231EDB104E00D3324E /* UIViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9E885B241EDB104E00D3324E /* AddServiceViewController.swift */,
+				9E885B251EDB104E00D3324E /* MainViewController.swift */,
+				9E885B261EDB104E00D3324E /* MiningDashboardViewController.swift */,
+				9E885B271EDB104E00D3324E /* SelectCoinFromPoolViewController.swift */,
+				9E885B281EDB104E00D3324E /* WalletAddressViewController.swift */,
+			);
+			path = UIViewControllers;
+			sourceTree = "<group>";
+		};
+		9E885B421EDB109900D3324E /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				9E885B431EDB10A400D3324E /* LaunchScreen.storyboard */,
+				9E885B441EDB10A400D3324E /* Main.storyboard */,
+			);
+			name = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9EB9096F1ED5D2F000BB533A /* eMiner */ = {
+		9E885ACF1EDB0A4700D3324E /* eMiner */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9EB909821ED5D2F000BB533A /* Build configuration list for PBXNativeTarget "eMiner" */;
+			buildConfigurationList = 9E885AE21EDB0A4700D3324E /* Build configuration list for PBXNativeTarget "eMiner" */;
 			buildPhases = (
-				975059E03C146DDB534F891E /* [CP] Check Pods Manifest.lock */,
-				9EB9096C1ED5D2F000BB533A /* Sources */,
-				9EB9096D1ED5D2F000BB533A /* Frameworks */,
-				9EB9096E1ED5D2F000BB533A /* Resources */,
-				71FAD9656FD6F43F644574F5 /* [CP] Embed Pods Frameworks */,
-				A8E8262E61999E36C0F9C4F0 /* [CP] Copy Pods Resources */,
-				9EAB5E9C1ED621A100C95BA1 /* Embed Frameworks */,
-				9EAB5E9E1ED621B100C95BA1 /* Carthage */,
+				1190A4B0171723333182B7EF /* [CP] Check Pods Manifest.lock */,
+				9E885ACC1EDB0A4700D3324E /* Sources */,
+				9E885ACD1EDB0A4700D3324E /* Frameworks */,
+				9E885ACE1EDB0A4700D3324E /* Resources */,
+				4E49977CE482FBD9BB8EEF59 /* [CP] Embed Pods Frameworks */,
+				63282BFEF3C1436D872C2F03 /* [CP] Copy Pods Resources */,
+				9E885B031EDB0F3700D3324E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = eMiner;
-			productName = "Mining-Status";
-			productReference = 9EB909701ED5D2F000BB533A /* eMiner.app */;
+			productName = eMiner;
+			productReference = 9E885AD01EDB0A4700D3324E /* eMiner.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		9EB909681ED5D2F000BB533A /* Project object */ = {
+		9E885AC81EDB0A4700D3324E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Issarapong Poesua";
 				TargetAttributes = {
-					9EB9096F1ED5D2F000BB533A = {
+					9E885ACF1EDB0A4700D3324E = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = RJA42UD9TG;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 9EB9096B1ED5D2F000BB533A /* Build configuration list for PBXProject "eMiner" */;
+			buildConfigurationList = 9E885ACB1EDB0A4700D3324E /* Build configuration list for PBXProject "eMiner" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -378,46 +381,32 @@
 				en,
 				Base,
 			);
-			mainGroup = 9EB909671ED5D2F000BB533A;
-			productRefGroup = 9EB909711ED5D2F000BB533A /* Products */;
+			mainGroup = 9E885AC71EDB0A4700D3324E;
+			productRefGroup = 9E885AD11EDB0A4700D3324E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9EB9096F1ED5D2F000BB533A /* eMiner */,
+				9E885ACF1EDB0A4700D3324E /* eMiner */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9EB9096E1ED5D2F000BB533A /* Resources */ = {
+		9E885ACE1EDB0A4700D3324E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EB9097E1ED5D2F000BB533A /* LaunchScreen.storyboard in Resources */,
-				9EB9097B1ED5D2F000BB533A /* Assets.xcassets in Resources */,
-				9EB909791ED5D2F000BB533A /* Main.storyboard in Resources */,
+				9E885B451EDB10A400D3324E /* LaunchScreen.storyboard in Resources */,
+				9E885B2D1EDB104E00D3324E /* Info.plist in Resources */,
+				9E885B2A1EDB104E00D3324E /* Assets.xcassets in Resources */,
+				9E885B461EDB10A400D3324E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		71FAD9656FD6F43F644574F5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eMiner/Pods-eMiner-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		975059E03C146DDB534F891E /* [CP] Check Pods Manifest.lock */ = {
+		1190A4B0171723333182B7EF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -432,31 +421,22 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		9EAB5E9E1ED621B100C95BA1 /* Carthage */ = {
+		4E49977CE482FBD9BB8EEF59 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Then.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/AlamofireObjectMapper.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
 			);
-			name = Carthage;
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eMiner/Pods-eMiner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
-		A8E8262E61999E36C0F9C4F0 /* [CP] Copy Pods Resources */ = {
+		63282BFEF3C1436D872C2F03 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -474,59 +454,40 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9EB9096C1ED5D2F000BB533A /* Sources */ = {
+		9E885ACC1EDB0A4700D3324E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EAB5EA41ED6C36400C95BA1 /* MainTableViewDataSource.swift in Sources */,
-				9EAB5E8C1ED5D62600C95BA1 /* DashboardResponse.swift in Sources */,
-				9E6BF1401ED9BE7A008E3327 /* SelectCoinFromPoolViewController.swift in Sources */,
-				9EAB5E891ED5D3CF00C95BA1 /* MiningDashboardViewController.swift in Sources */,
-				9E6BF13A1ED991CC008E3327 /* PoolModel.swift in Sources */,
-				9E6BF1491EDAC2B3008E3327 /* ServiceModel.swift in Sources */,
-				9E5F6EF71EDAF89F00902610 /* AddServiceSingleton.swift in Sources */,
-				9E6BF1421ED9BEF8008E3327 /* CurrencyListTableViewDataSource.swift in Sources */,
-				9EAB5EB31ED6D27700C95BA1 /* Color.swift in Sources */,
-				9EAB5EA11ED6227000C95BA1 /* RemoteFactory.swift in Sources */,
-				9EAB5ECF1ED7942600C95BA1 /* RemoteMiningDashBoard.swift in Sources */,
-				9E6BF1441ED9CC63008E3327 /* SingletonPools.swift in Sources */,
-				9EAB5EAC1ED6C68B00C95BA1 /* DashboardCollectionViewCell.swift in Sources */,
-				9E6BF13C1ED9AE43008E3327 /* AddServiceViewController.swift in Sources */,
-				9EAB5EA91ED6C56C00C95BA1 /* MiningDashboardCollectionViewDataSource.swift in Sources */,
-				9EAB5EBB1ED7516900C95BA1 /* RemoteService.swift in Sources */,
-				9E6BF13E1ED9B893008E3327 /* PoolListTableViewDataSource.swift in Sources */,
-				9EB909741ED5D2F000BB533A /* AppDelegate.swift in Sources */,
-				9EAB5E8F1ED61D6B00C95BA1 /* MainViewController.swift in Sources */,
-				9E6BF1471ED9D529008E3327 /* AddPoolTableViewDelegate.swift in Sources */,
-				9EAB5ED11ED806CE00C95BA1 /* CellContentModel.swift in Sources */,
-				9EAB5EA71ED6C3D500C95BA1 /* MiningDashboardCollectionViewDelegate.swift in Sources */,
-				9EAB5EB91ED74F1700C95BA1 /* Alamofire+RxSwift.swift in Sources */,
+				9E885B351EDB104E00D3324E /* SingletonPools.swift in Sources */,
+				9E885B3F1EDB104E00D3324E /* MiningDashboardViewController.swift in Sources */,
+				9E885B291EDB104E00D3324E /* AppDelegate.swift in Sources */,
+				9E885B331EDB104E00D3324E /* RemoteService.swift in Sources */,
+				9E885B301EDB104E00D3324E /* ServiceModel.swift in Sources */,
+				9E885B361EDB104E00D3324E /* MiningDashboardCollectionViewDataSource.swift in Sources */,
+				9E885B3A1EDB104E00D3324E /* CurrencyListTableViewDataSource.swift in Sources */,
+				9E885B401EDB104E00D3324E /* SelectCoinFromPoolViewController.swift in Sources */,
+				9E885B2E1EDB104E00D3324E /* CellContentModel.swift in Sources */,
+				9E885B3D1EDB104E00D3324E /* AddServiceViewController.swift in Sources */,
+				9E885B311EDB104E00D3324E /* RemoteFactory.swift in Sources */,
+				9E885B341EDB104E00D3324E /* AddServiceSingleton.swift in Sources */,
+				9E885B321EDB104E00D3324E /* RemoteMiningDashBoard.swift in Sources */,
+				9E885B2F1EDB104E00D3324E /* PoolModel.swift in Sources */,
+				9E885B391EDB104E00D3324E /* AddPoolTableViewDelegate.swift in Sources */,
+				9E885B3C1EDB104E00D3324E /* PoolListTableViewDataSource.swift in Sources */,
+				9E885B2C1EDB104E00D3324E /* Alamofire+RxSwift.swift in Sources */,
+				9E885B381EDB104E00D3324E /* DashboardCollectionViewCell.swift in Sources */,
+				9E885B371EDB104E00D3324E /* MiningDashboardCollectionViewDelegate.swift in Sources */,
+				9E885B2B1EDB104E00D3324E /* Color.swift in Sources */,
+				9E885B411EDB104E00D3324E /* WalletAddressViewController.swift in Sources */,
+				9E885B3B1EDB104E00D3324E /* MainTableViewDataSource.swift in Sources */,
+				9E885B3E1EDB104E00D3324E /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		9EB909771ED5D2F000BB533A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9EB909781ED5D2F000BB533A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		9EB9097C1ED5D2F000BB533A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9EB9097D1ED5D2F000BB533A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		9EB909801ED5D2F000BB533A /* Debug */ = {
+		9E885AE01EDB0A4700D3324E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -577,7 +538,7 @@
 			};
 			name = Debug;
 		};
-		9EB909811ED5D2F000BB533A /* Release */ = {
+		9E885AE11EDB0A4700D3324E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -621,37 +582,40 @@
 			};
 			name = Release;
 		};
-		9EB909831ED5D2F000BB533A /* Debug */ = {
+		9E885AE31EDB0A4700D3324E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1D087784BF964A61CBF01A16 /* Pods-eMiner.debug.xcconfig */;
+			baseConfigurationReference = C62276AF7A6D43CC1B5FCD6B /* Pods-eMiner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = RJA42UD9TG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "Mining-Status/Info.plist";
+				INFOPLIST_FILE = eMiner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "me.dekablade01.Mining-Status";
+				PRODUCT_BUNDLE_IDENTIFIER = me.dekablade01.eMiner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
-		9EB909841ED5D2F000BB533A /* Release */ = {
+		9E885AE41EDB0A4700D3324E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1915BC0EB0A0CB5CF8A9D6E8 /* Pods-eMiner.release.xcconfig */;
+			baseConfigurationReference = 01AB15959F5607184498BFCA /* Pods-eMiner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = RJA42UD9TG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "Mining-Status/Info.plist";
+				INFOPLIST_FILE = eMiner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "me.dekablade01.Mining-Status";
+				PRODUCT_BUNDLE_IDENTIFIER = me.dekablade01.eMiner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -660,25 +624,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9EB9096B1ED5D2F000BB533A /* Build configuration list for PBXProject "eMiner" */ = {
+		9E885ACB1EDB0A4700D3324E /* Build configuration list for PBXProject "eMiner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9EB909801ED5D2F000BB533A /* Debug */,
-				9EB909811ED5D2F000BB533A /* Release */,
+				9E885AE01EDB0A4700D3324E /* Debug */,
+				9E885AE11EDB0A4700D3324E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9EB909821ED5D2F000BB533A /* Build configuration list for PBXNativeTarget "eMiner" */ = {
+		9E885AE21EDB0A4700D3324E /* Build configuration list for PBXNativeTarget "eMiner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9EB909831ED5D2F000BB533A /* Debug */,
-				9EB909841ED5D2F000BB533A /* Release */,
+				9E885AE31EDB0A4700D3324E /* Debug */,
+				9E885AE41EDB0A4700D3324E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 9EB909681ED5D2F000BB533A /* Project object */;
+	rootObject = 9E885AC81EDB0A4700D3324E /* Project object */;
 }
