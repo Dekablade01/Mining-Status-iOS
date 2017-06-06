@@ -17,16 +17,51 @@ class MiningDashboardCollectionViewDataSource: NSObject, UICollectionViewDataSou
     
     func loadData ()
     {
-        contents.removeAll()
         RemoteFactory
             .remoteFactory
             .remoteMiningDashBoard
             .loadDetail(poolname: service.poolname,
                         address: service.address,
                         expectedCurrency: "THB"){
-                self.contents = $0
-                self.didFinishLoadedHandler?()
+                            self.contents.removeAll()
+                            self.contents = $0
+                            if (self.service.poolname != "NiceHash")
+                            {
+                                self.didFinishLoadedHandler?()
+                            }
+                            else
+                            {
+                                RemoteFactory
+                                    .remoteFactory
+                                    .remoteNiceHash
+                                    .didFinishLoadingPayoutHandler = {
+                                        var payoutDate = ""
+                                        if ( $0 == "N/A")
+                                        {
+                                             payoutDate = $0
+                                        }
+                                        else
+                                        {
+                                             payoutDate = $0.substring(to: $0.index($0.startIndex,
+                                                                                       offsetBy: 10))
+                                        }
+                                        
+                                        self.contents.append(CellContentModel(name: "Payout Date",
+                                                                              value: payoutDate))
+                                        self.didFinishLoadedHandler?()
+
+                                }
+                                
+                                RemoteFactory
+                                    .remoteFactory
+                                    .remoteNiceHash
+                                    .getPayoutDate(address: self.service.address)
+                                
+                                
+                            }
         }
+        
+        
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
@@ -36,7 +71,7 @@ class MiningDashboardCollectionViewDataSource: NSObject, UICollectionViewDataSou
     {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? DashboardCollectionViewCell
             else {
-            return collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+                return collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
         }
         if( indexPath.item != contents.count)
         {
@@ -50,6 +85,6 @@ class MiningDashboardCollectionViewDataSource: NSObject, UICollectionViewDataSou
         
         return cell
     }
-
+    
 }
 

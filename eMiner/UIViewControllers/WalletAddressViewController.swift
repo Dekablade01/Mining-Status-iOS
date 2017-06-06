@@ -16,19 +16,33 @@ class WalletAddressViewController: UIViewController
     }
 
     @IBOutlet weak var walletAddressTextField: UITextField!
-    var walletAddress:String {return walletAddressTextField.text ?? ""}
+    var walletAddress:String { return walletAddressTextField.text ?? ""}
     
     @IBAction func submit(_ sender: UIBarButtonItem)
     {
-        guard (walletAddress != "" && walletAddress.characters.count > 30)
-            else { showAlert(title: "Something Went Wrong",
-                             message: "Please Input Your \(service.currency) Wallet Address" ,
-                             button: "OK")
-                
-                return }
-        AddServiceSingleton.sharedInstance.serviceModel.address = walletAddress
+        RemoteFactory
+            .remoteFactory
+            .remoteWalletValidator
+            .validateWallet(coin: service.currency,
+                            address: self.walletAddress){
+                                guard $0 == true
+                                    else { self.showAlert(
+                                        title: "Something Went Wrong",
+                                        message: "Please Input Your \(self.service.currency) Wallet Address" ,
+                                        button: "OK")
+                                return }
+                                AddServiceSingleton
+                                    .sharedInstance
+                                    .serviceModel
+                                    .address = self.walletAddress
+                                
+                                self.addServiceToRealm(poolName: self.service.poolname,
+                                                  currency: self.service.currency,
+                                                  address: self.service.address)
+                                
+        }
         
-        addServiceToRealm(poolName: service.poolname, currency: service.currency, address: service.address)
+        
     }
     
     override func viewDidLoad()

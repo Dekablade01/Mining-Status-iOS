@@ -14,11 +14,15 @@ class MiningDashboardViewController: UIViewController
     let delegate = MiningDashboardCollectionViewDelegate()
     let dataSource = MiningDashboardCollectionViewDataSource()
     
+    var ableToload = true
+    
+    
     var isAddedConstraint = false
     let refresher = UIRefreshControl()
 
-    var collectionView = UICollectionView(frame: CGRect.zero,
-                                               collectionViewLayout: UICollectionViewFlowLayout())
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     var collectionViewLayout = UICollectionViewFlowLayout()
     
     var serviceModel: ServiceModel {
@@ -33,8 +37,6 @@ class MiningDashboardViewController: UIViewController
     {
         super.viewDidLoad()
         initialCollectionView(collectionView)
-        self.view.addSubview(collectionView)
-        self.view.setNeedsUpdateConstraints()
         
     }
     func showIndicator ()
@@ -50,25 +52,26 @@ class MiningDashboardViewController: UIViewController
         
         actInd.startAnimating()
     }
-    override func updateViewConstraints() {
-        
-        if (isAddedConstraint == false)
-        {
-            collectionView.snp.makeConstraints(){
-                $0.centerY.equalTo(view)
-                $0.height.equalTo(view)
-                $0.width.equalTo(view).inset(15)
-                $0.centerX.equalTo(view)
-                
-            }
-            isAddedConstraint = true
-        }
-        super.updateViewConstraints()
-    }
     func loadData(){
-        showIndicator()
-        dataSource.loadData()
-        stopRefresher()
+        
+        if (ableToload == true)
+        {
+            showIndicator()
+            dataSource.loadData()
+            stopRefresher()
+            ableToload = false
+            delayFor(second: 10){
+                self.ableToload = true
+            }
+        }
+        else
+        {
+            showIndicator()
+            stopRefresher()
+            actInd.stopAnimating()
+        }
+        
+        
     }
     
     func stopRefresher()
@@ -81,7 +84,7 @@ class MiningDashboardViewController: UIViewController
         refresher.addTarget(self, action: #selector(self.loadData), for: .valueChanged)
         collectionView.addSubview(refresher)
         collectionView.alpha = 0
-        collectionView.contentInset = UIEdgeInsetsMake(15, 0, 0, 0)
+        collectionView.contentInset = UIEdgeInsetsMake(7.5, 0, 0, 0)
         collectionView.collectionViewLayout = collectionViewLayout
         
         collectionView.register(DashboardCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
@@ -99,6 +102,13 @@ class MiningDashboardViewController: UIViewController
             }
         }
         collectionView.dataSource = dataSource
+        
+    }
+    
+    func delayFor(second: Int, then: (()->())? )
+    {
+        let when = DispatchTime.now() + .seconds(second)
+        DispatchQueue.main.asyncAfter(deadline: when) { then?() }
         
     }
 

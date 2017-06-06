@@ -30,6 +30,25 @@ class MainTableViewDataSource: NSObject, UITableViewDataSource
         cell.detailTextLabel?.text = service.currency + " - " + service.address
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete
+        {
+            services.remove(at: indexPath.item)
+            tableView.deleteRows(at: [IndexPath(item: indexPath.item,
+                                                section: 0)],
+                                 with: .automatic)
+        }
+        else if editingStyle == .insert
+        {
+            
+        }
+    }
+    
     func loadData()
     {
         services.removeAll()

@@ -21,5 +21,9 @@ class CellContentModel: Mappable
     required init?(map: Map) {
         
     }
+    init(name: String, value: String) {
+        self.name = name
+        self.value = value
+    }
 
 }

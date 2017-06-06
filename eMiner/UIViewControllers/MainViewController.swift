@@ -14,6 +14,10 @@ class MainViewController: UIViewController {
     
     var dataSource = MainTableViewDataSource()
     
+    var selectedServiceModel: ServiceModel? = nil {
+        didSet { performSegue(withIdentifier: "OpenDashboard", sender: self); selectedServiceModel = nil  }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,22 +36,44 @@ class MainViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool)
     {
         super.viewWillAppear(animated)
+
         dataSource.loadData()
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if (segue.identifier == "OpenDashboard")
+        {
+            let viewController = segue.destination as? MiningDashboardViewController
+            
+            viewController?.serviceModel = selectedServiceModel!
+        }
+    }
 
+
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        
+        if (identifier == "OpenDashboard")
+        {
+            if selectedServiceModel == nil
+            {
+                return false
+            }
+            else
+            {
+                return true
+            }
+        }
+        else
+        {
+            return true
+        }
+    }
 }
 
 extension MainViewController: UITableViewDelegate
 {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        guard let miningDashboardViewController = storyBoard
-            .instantiateViewController(withIdentifier: "MiningDashboardViewController") as? MiningDashboardViewController
-            else { return }
-        miningDashboardViewController.serviceModel = dataSource.services[indexPath.item]
-        
-        tableView.deselectRow(at: indexPath, animated: true)
-        self.navigationController?.pushViewController(miningDashboardViewController, animated: true)
+        selectedServiceModel = dataSource.services[indexPath.item]
     }
 }
