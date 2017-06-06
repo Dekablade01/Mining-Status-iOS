@@ -25,12 +25,14 @@ class WalletAddressViewController: UIViewController
             .remoteWalletValidator
             .validateWallet(coin: service.currency,
                             address: self.walletAddress){
+                                print($0)
                                 guard $0 == true
-                                    else { self.showAlert(
+                                    else {
+                                        self.showAlert(
                                         title: "Something Went Wrong",
                                         message: "Please Input Your \(self.service.currency) Wallet Address" ,
-                                        button: "OK")
-                                return }
+                                        button: "OK"); return }
+                                
                                 AddServiceSingleton
                                     .sharedInstance
                                     .serviceModel
@@ -75,9 +77,11 @@ class WalletAddressViewController: UIViewController
         let realm = try! Realm()
         
         let service = ServiceModel()
+        service.id = randomString(length: 20)
         service.address = address
         service.currency = currency
         service.poolname = poolName
+        
         
         try! realm.write {
             realm.add(service)
@@ -85,6 +89,22 @@ class WalletAddressViewController: UIViewController
         
         AddServiceSingleton.sharedInstance.clear()
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    func randomString(length: Int) -> String {
+        
+        let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        let len = UInt32(letters.length)
+        
+        var randomString = ""
+        
+        for _ in 0 ..< length {
+            let rand = arc4random_uniform(len)
+            var nextChar = letters.character(at: Int(rand))
+            randomString += NSString(characters: &nextChar, length: 1) as String
+        }
+        
+        return randomString
     }
 
 

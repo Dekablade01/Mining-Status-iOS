@@ -36,7 +36,14 @@ class MiningDashboardViewController: UIViewController
     
     {
         super.viewDidLoad()
+        self.title = serviceModel.poolname + " - " + serviceModel.currency
+        self.navigationItem.leftBarButtonItem?.isEnabled = false
         initialCollectionView(collectionView)
+        
+    }
+    override func viewDidDisappear(_ animated: Bool)
+    {
+        super.viewDidDisappear(animated)
         
     }
     func showIndicator ()
@@ -95,6 +102,8 @@ class MiningDashboardViewController: UIViewController
         dataSource.didFinishLoadedHandler = {
             collectionView.reloadData()
             self.actInd.stopAnimating()
+            
+            self.navigationItem.leftBarButtonItem?.isEnabled = true
             
             UIView.animate(withDuration: 0.4)
             {

@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Dashboard-->
         <scene sceneID="CaL-hF-UUU">
             <objects>
-                <viewController id="91E-pE-gKL" customClass="MainViewController" customModule="eMiner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="91E-pE-gKL" customClass="MainForDashboardViewController" customModule="eMiner" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xE7-Sa-B1a"/>
                         <viewControllerLayoutGuide type="bottom" id="uKK-PB-EJ0"/>
@@ -64,7 +64,7 @@
                             <constraint firstItem="uKK-PB-EJ0" firstAttribute="top" secondItem="Ftr-RF-yge" secondAttribute="bottom" id="xAn-h4-vo5"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Bns-V4-KiG">
+                    <navigationItem key="navigationItem" title="Dashboard" id="Bns-V4-KiG">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="tUa-Yy-P21">
                             <connections>
                                 <segue destination="EFU-T0-2LA" kind="presentation" id="W8c-NR-Do0"/>
@@ -142,7 +142,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NLU-r5-vZg">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="0b6-Zz-EDL" detailTextLabel="0oj-Vb-w2C" style="IBUITableViewCellStyleSubtitle" id="wRS-tX-QJK">
@@ -212,7 +212,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5lq-jO-0yR">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="aSu-QS-Mah" style="IBUITableViewCellStyleDefault" id="ZeW-i1-FyT">
@@ -364,10 +364,10 @@
             </objects>
             <point key="canvasLocation" x="-2530" y="134"/>
         </scene>
-        <!--Main View Controller-->
+        <!--WebView-->
         <scene sceneID="Xye-ei-M8C">
             <objects>
-                <viewController id="kdT-1e-Uhy" customClass="MainViewController" customModule="eMiner" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="kdT-1e-Uhy" customClass="MainForWebViewController" customModule="eMiner" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="W36-nJ-OTa"/>
                         <viewControllerLayoutGuide type="bottom" id="kP0-MY-z0T"/>
@@ -403,6 +403,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="VHx-0s-X02" kind="show" identifier="OpenWeb" id="alB-cz-rRk"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -415,7 +418,7 @@
                             <constraint firstItem="gME-uk-MiM" firstAttribute="top" secondItem="dtB-sR-5vH" secondAttribute="top" id="qg1-Th-zBW"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="hgg-f3-qbZ">
+                    <navigationItem key="navigationItem" title="WebView" id="hgg-f3-qbZ">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="k3S-t5-0x9">
                             <connections>
                                 <segue destination="EFU-T0-2LA" kind="show" id="UIP-p8-SLZ"/>
@@ -429,6 +432,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e1P-1R-giF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-530" y="134"/>
+        </scene>
+        <!--Pool Web View Controller-->
+        <scene sceneID="wVH-Vx-owg">
+            <objects>
+                <viewController id="VHx-0s-X02" customClass="PoolWebViewController" customModule="eMiner" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SAg-Ak-KbO"/>
+                        <viewControllerLayoutGuide type="bottom" id="4CP-qm-9Id"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PUh-gt-g0x">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YzX-Uj-4xW">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7cJ-Dd-auX">
+                                <rect key="frame" x="0.0" y="574" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem title="Back" id="2fX-nz-bAl">
+                                        <connections>
+                                            <action selector="didPressOnBackButton:" destination="VHx-0s-X02" id="Wz9-ve-5vK"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="EoY-3m-k6l"/>
+                                    <barButtonItem title="Reload" id="ch4-df-b4L">
+                                        <connections>
+                                            <action selector="didPressOnReloadButton:" destination="VHx-0s-X02" id="Nnb-kN-zg7"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="YzX-Uj-4xW" secondAttribute="bottom" id="Ngk-uc-5cv"/>
+                            <constraint firstItem="YzX-Uj-4xW" firstAttribute="leading" secondItem="PUh-gt-g0x" secondAttribute="leading" id="SF1-Zo-xcL"/>
+                            <constraint firstItem="4CP-qm-9Id" firstAttribute="top" secondItem="7cJ-Dd-auX" secondAttribute="bottom" id="bRv-L3-vrB"/>
+                            <constraint firstItem="7cJ-Dd-auX" firstAttribute="leading" secondItem="PUh-gt-g0x" secondAttribute="leading" id="bwN-Za-diH"/>
+                            <constraint firstAttribute="trailing" secondItem="YzX-Uj-4xW" secondAttribute="trailing" id="r4U-K8-qze"/>
+                            <constraint firstAttribute="trailing" secondItem="7cJ-Dd-auX" secondAttribute="trailing" id="tq8-NW-vDS"/>
+                            <constraint firstItem="YzX-Uj-4xW" firstAttribute="top" secondItem="PUh-gt-g0x" secondAttribute="top" id="zkY-Zm-gkk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="YzX-Uj-4xW" id="46T-Ea-f27"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ssp-at-f5V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="388" y="140.77961019490255"/>
         </scene>
         <!--WebView-->
         <scene sceneID="yfP-UQ-Y18">
@@ -493,6 +548,6 @@
         <image name="webView-icon" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="W8c-NR-Do0"/>
+        <segue reference="UIP-p8-SLZ"/>
     </inferredMetricsTieBreakers>
 </document>

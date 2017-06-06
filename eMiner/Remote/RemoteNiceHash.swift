@@ -16,7 +16,7 @@ class RemoteNiceHash: NSObject
     let webView = UIWebView(frame: CGRect.zero)
     var payout = ""
     var sec = 0
-    var tryAgain = true
+    var tryAgain:Bool? = true
     
     var didFinishLoadingPayoutHandler: ((String)->())?
 
@@ -49,7 +49,7 @@ extension RemoteNiceHash : UIWebViewDelegate
             
             self.payout = self.webView.stringByEvaluatingJavaScript(from: jsString) ?? "no value"
             print(self.payout)
-            if ( self.payout == "N/A" && self.tryAgain == true)
+            if (self.payout == "N/A" && self.tryAgain == true )
             {
                 self.getPayoutDateFromLoadingWebSite(1)
                 self.sec += wait
@@ -59,13 +59,14 @@ extension RemoteNiceHash : UIWebViewDelegate
                     self.tryAgain = false
                 }
             }
+            else if (self.tryAgain == nil)
+            {
+                self.didFinishLoadingPayoutHandler?("")
+            }
             else
             {
                 self.didFinishLoadingPayoutHandler?(self.payout)
             }
-            
         }
-
-
     }
 }

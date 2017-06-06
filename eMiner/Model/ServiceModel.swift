@@ -16,6 +16,7 @@ class ServiceModel: Object, Mappable
     dynamic var address = ""
     dynamic var poolname = ""
     dynamic var currency = ""
+    dynamic var id = ""
     
  
     required convenience init?(map: Map) {
@@ -26,6 +27,7 @@ class ServiceModel: Object, Mappable
         self.address <- map["address"]
         self.poolname <- map["poolname"]
         self.currency <- map["currency"]
+        self.id <- map["id"]
     }
 
     

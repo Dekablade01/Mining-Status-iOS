@@ -52,13 +52,16 @@
 		9E885B3B1EDB104E00D3324E /* MainTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B211EDB104E00D3324E /* MainTableViewDataSource.swift */; };
 		9E885B3C1EDB104E00D3324E /* PoolListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B221EDB104E00D3324E /* PoolListTableViewDataSource.swift */; };
 		9E885B3D1EDB104E00D3324E /* AddServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B241EDB104E00D3324E /* AddServiceViewController.swift */; };
-		9E885B3E1EDB104E00D3324E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B251EDB104E00D3324E /* MainViewController.swift */; };
+		9E885B3E1EDB104E00D3324E /* MainForDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B251EDB104E00D3324E /* MainForDashboardViewController.swift */; };
 		9E885B3F1EDB104E00D3324E /* MiningDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B261EDB104E00D3324E /* MiningDashboardViewController.swift */; };
 		9E885B401EDB104E00D3324E /* SelectCoinFromPoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B271EDB104E00D3324E /* SelectCoinFromPoolViewController.swift */; };
 		9E885B411EDB104E00D3324E /* WalletAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B281EDB104E00D3324E /* WalletAddressViewController.swift */; };
 		9E885B451EDB10A400D3324E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E885B431EDB10A400D3324E /* LaunchScreen.storyboard */; };
 		9E885B461EDB10A400D3324E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E885B441EDB10A400D3324E /* Main.storyboard */; };
 		9EB132821EE60915005DE6AA /* RemoteWalletValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB132811EE60915005DE6AA /* RemoteWalletValidator.swift */; };
+		9EB132A21EE700B8005DE6AA /* MainForWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB132A11EE700B8005DE6AA /* MainForWebViewController.swift */; };
+		9EB132A41EE7012F005DE6AA /* PoolWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB132A31EE7012F005DE6AA /* PoolWebViewController.swift */; };
+		9EB132A61EE701DE005DE6AA /* RemotePoolURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB132A51EE701DE005DE6AA /* RemotePoolURL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -122,13 +125,16 @@
 		9E885B211EDB104E00D3324E /* MainTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewDataSource.swift; sourceTree = "<group>"; };
 		9E885B221EDB104E00D3324E /* PoolListTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoolListTableViewDataSource.swift; sourceTree = "<group>"; };
 		9E885B241EDB104E00D3324E /* AddServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddServiceViewController.swift; sourceTree = "<group>"; };
-		9E885B251EDB104E00D3324E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		9E885B251EDB104E00D3324E /* MainForDashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainForDashboardViewController.swift; sourceTree = "<group>"; };
 		9E885B261EDB104E00D3324E /* MiningDashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiningDashboardViewController.swift; sourceTree = "<group>"; };
 		9E885B271EDB104E00D3324E /* SelectCoinFromPoolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCoinFromPoolViewController.swift; sourceTree = "<group>"; };
 		9E885B281EDB104E00D3324E /* WalletAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletAddressViewController.swift; sourceTree = "<group>"; };
 		9E885B431EDB10A400D3324E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E885B441EDB10A400D3324E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9EB132811EE60915005DE6AA /* RemoteWalletValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteWalletValidator.swift; sourceTree = "<group>"; };
+		9EB132A11EE700B8005DE6AA /* MainForWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainForWebViewController.swift; sourceTree = "<group>"; };
+		9EB132A31EE7012F005DE6AA /* PoolWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoolWebViewController.swift; sourceTree = "<group>"; };
+		9EB132A51EE701DE005DE6AA /* RemotePoolURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemotePoolURL.swift; sourceTree = "<group>"; };
 		A7A601F4956E659FF35EADB6 /* Pods_eMiner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eMiner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62276AF7A6D43CC1B5FCD6B /* Pods-eMiner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eMiner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eMiner/Pods-eMiner.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -281,6 +287,7 @@
 				9E885B151EDB104E00D3324E /* RemoteService.swift */,
 				9E0327711EE55E9900AFBC1F /* RemoteNiceHash.swift */,
 				9EB132811EE60915005DE6AA /* RemoteWalletValidator.swift */,
+				9EB132A51EE701DE005DE6AA /* RemotePoolURL.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -326,10 +333,12 @@
 			isa = PBXGroup;
 			children = (
 				9E885B241EDB104E00D3324E /* AddServiceViewController.swift */,
-				9E885B251EDB104E00D3324E /* MainViewController.swift */,
+				9E885B251EDB104E00D3324E /* MainForDashboardViewController.swift */,
 				9E885B261EDB104E00D3324E /* MiningDashboardViewController.swift */,
 				9E885B271EDB104E00D3324E /* SelectCoinFromPoolViewController.swift */,
 				9E885B281EDB104E00D3324E /* WalletAddressViewController.swift */,
+				9EB132A11EE700B8005DE6AA /* MainForWebViewController.swift */,
+				9EB132A31EE7012F005DE6AA /* PoolWebViewController.swift */,
 			);
 			path = UIViewControllers;
 			sourceTree = "<group>";
@@ -478,10 +487,12 @@
 				9E885B301EDB104E00D3324E /* ServiceModel.swift in Sources */,
 				9E885B361EDB104E00D3324E /* MiningDashboardCollectionViewDataSource.swift in Sources */,
 				9EB132821EE60915005DE6AA /* RemoteWalletValidator.swift in Sources */,
+				9EB132A21EE700B8005DE6AA /* MainForWebViewController.swift in Sources */,
 				9E885B3A1EDB104E00D3324E /* CurrencyListTableViewDataSource.swift in Sources */,
 				9E885B401EDB104E00D3324E /* SelectCoinFromPoolViewController.swift in Sources */,
 				9E885B2E1EDB104E00D3324E /* CellContentModel.swift in Sources */,
 				9E885B3D1EDB104E00D3324E /* AddServiceViewController.swift in Sources */,
+				9EB132A41EE7012F005DE6AA /* PoolWebViewController.swift in Sources */,
 				9E885B311EDB104E00D3324E /* RemoteFactory.swift in Sources */,
 				9E885B341EDB104E00D3324E /* AddServiceSingleton.swift in Sources */,
 				9E885B321EDB104E00D3324E /* RemoteMiningDashBoard.swift in Sources */,
@@ -491,10 +502,11 @@
 				9E885B2C1EDB104E00D3324E /* Alamofire+RxSwift.swift in Sources */,
 				9E885B381EDB104E00D3324E /* DashboardCollectionViewCell.swift in Sources */,
 				9E885B371EDB104E00D3324E /* MiningDashboardCollectionViewDelegate.swift in Sources */,
+				9EB132A61EE701DE005DE6AA /* RemotePoolURL.swift in Sources */,
 				9E885B2B1EDB104E00D3324E /* Color.swift in Sources */,
 				9E885B411EDB104E00D3324E /* WalletAddressViewController.swift in Sources */,
 				9E885B3B1EDB104E00D3324E /* MainTableViewDataSource.swift in Sources */,
-				9E885B3E1EDB104E00D3324E /* MainViewController.swift in Sources */,
+				9E885B3E1EDB104E00D3324E /* MainForDashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

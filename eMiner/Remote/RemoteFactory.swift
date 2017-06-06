@@ -22,7 +22,7 @@ enum API
     static let nicehashDashBoard = "https://www.nicehash.com/index.jsp?utm_source=NHM&p=miners&addr="
     static let ownNiceHash = API.server + "ownNiceHash/"
     static let walletValidator = API.server + "validateWallet/"
-    
+    static let poolURL = API.server + "pool-url/"
 }
 
 class RemoteFactory: NSObject
@@ -32,12 +32,14 @@ class RemoteFactory: NSObject
     var remoteMiningDashBoard: RemoteMiningDashBoard
     var remoteNiceHash: RemoteNiceHash
     var remoteWalletValidator : RemoteWalletValidator
+    var remotePoolURL: RemotePoolURL
     
     override init() {
         remoteService = RemoteService()
         remoteMiningDashBoard = RemoteMiningDashBoard()
         remoteNiceHash = RemoteNiceHash()
         remoteWalletValidator = RemoteWalletValidator()
+        remotePoolURL = RemotePoolURL()
         
         super.init()
     }

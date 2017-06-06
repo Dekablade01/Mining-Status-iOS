@@ -38,18 +38,25 @@ class MiningDashboardCollectionViewDataSource: NSObject, UICollectionViewDataSou
                                         var payoutDate = ""
                                         if ( $0 == "N/A")
                                         {
-                                             payoutDate = $0
+                                            payoutDate = $0
+                                            self.contents.append(CellContentModel(name: "Payout Date",
+                                                                                  value: payoutDate))
+                                        }
+                                        else if($0 == "")
+                                        {
+                                            
                                         }
                                         else
                                         {
-                                             payoutDate = $0.substring(to: $0.index($0.startIndex,
-                                                                                       offsetBy: 10))
+                                            payoutDate = $0.substring(to: $0.index($0.startIndex,
+                                                                                   offsetBy: 10))
+                                            self.contents.append(CellContentModel(name: "Payout Date",
+                                                                                  value: payoutDate))
                                         }
                                         
-                                        self.contents.append(CellContentModel(name: "Payout Date",
-                                                                              value: payoutDate))
+                                        
                                         self.didFinishLoadedHandler?()
-
+                                        
                                 }
                                 
                                 RemoteFactory

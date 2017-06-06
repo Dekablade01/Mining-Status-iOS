@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  MainForDashboardViewController.swift
 //  Mining-Status
 //
 //  Created by Issarapong Poesua on 5/25/2560 BE.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainForDashboardViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -70,7 +70,7 @@ class MainViewController: UIViewController {
     }
 }
 
-extension MainViewController: UITableViewDelegate
+extension MainForDashboardViewController: UITableViewDelegate
 {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {

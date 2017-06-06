@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "eMiner/UIViewControllers/MainViewController.swift"
-            timestampString = "518447845.160569"
+            filePath = "eMiner/UICollectionView/MiningDashboardCollectionViewDataSource.swift"
+            timestampString = "518454783.658221"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "shouldPerformSegue(withIdentifier:sender:)"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "loadData()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,45 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "eMiner/UIViewControllers/MainViewController.swift"
-            timestampString = "518447845.160569"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "shouldPerformSegue(withIdentifier:sender:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "eMiner/UIViewControllers/MainViewController.swift"
-            timestampString = "518447845.160569"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "shouldPerformSegue(withIdentifier:sender:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "eMiner/UIViewControllers/MainViewController.swift"
-            timestampString = "518447845.160569"
+            filePath = "eMiner/Remote/RemoteNiceHash.swift"
+            timestampString = "518454895.4484"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "54"
             endingLineNumber = "54"
-            landmarkName = "shouldPerformSegue(withIdentifier:sender:)"
+            landmarkName = "getPayoutDateFromLoadingWebSite(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -73,13 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "eMiner/UIViewControllers/MainViewController.swift"
-            timestampString = "518447845.160569"
+            filePath = "eMiner/Remote/RemoteNiceHash.swift"
+            timestampString = "518454896.714002"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "prepare(for:sender:)"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "getPayoutDateFromLoadingWebSite(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -89,13 +57,45 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "eMiner/UIViewControllers/MainViewController.swift"
-            timestampString = "518447845.160569"
+            filePath = "eMiner/Remote/RemoteNiceHash.swift"
+            timestampString = "518454897.917812"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "prepare(for:sender:)"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "getPayoutDateFromLoadingWebSite(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "eMiner/UIViewControllers/WalletAddressViewController.swift"
+            timestampString = "518465662.286287"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "addServiceToRealm(poolName:currency:address:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "eMiner/UIViewControllers/WalletAddressViewController.swift"
+            timestampString = "518465662.286287"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "submit(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

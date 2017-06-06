@@ -25,7 +25,7 @@ class MainTableViewDataSource: NSObject, UITableViewDataSource
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
         let service = services[indexPath.item]
-
+        
         cell.textLabel?.text = service.poolname
         cell.detailTextLabel?.text = service.currency + " - " + service.address
         return cell
@@ -38,16 +38,31 @@ class MainTableViewDataSource: NSObject, UITableViewDataSource
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete
         {
-            services.remove(at: indexPath.item)
-            tableView.deleteRows(at: [IndexPath(item: indexPath.item,
-                                                section: 0)],
-                                 with: .automatic)
+            removeData(id: services[indexPath.row].id)
+            services.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            
         }
         else if editingStyle == .insert
         {
             
         }
     }
+    func removeData(id: String)
+    {
+        let services = self.services.filter(){ $0.id != id }
+        print(services.count)
+        
+        let realm = try! Realm()
+        
+        for service in services {
+            try! realm.write {
+                realm.delete(service)
+            }
+        }
+    }
+    
+    
     
     func loadData()
     {
@@ -61,5 +76,5 @@ class MainTableViewDataSource: NSObject, UITableViewDataSource
         }
         didFinishLoadedHandler?()
     }
-
+    
 }
