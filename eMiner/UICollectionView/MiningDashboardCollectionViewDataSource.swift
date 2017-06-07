@@ -22,7 +22,7 @@ class MiningDashboardCollectionViewDataSource: NSObject, UICollectionViewDataSou
         RemoteFactory
             .remoteFactory
             .remoteMiningDashBoard
-            .loadDetail(poolname: service.poolname,
+            .loadDetail(poolname: service.poolname, coin: service.currency,
                         address: service.address,
                         expectedCurrency: expectCurrency){
                             self.contents.removeAll()

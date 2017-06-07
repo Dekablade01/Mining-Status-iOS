@@ -23,7 +23,7 @@ class PoolWebViewController: UIViewController {
         RemoteFactory
             .remoteFactory
             .remotePoolURL
-            .getURL(pool: service.poolname) { print("url", $0); self.urlString = $0 }
+            .getURL(pool: service.poolname, currency: service.currency) { print("url", $0); self.urlString = $0 }
         self.title = service.poolname + " - " + service.currency
 
         }

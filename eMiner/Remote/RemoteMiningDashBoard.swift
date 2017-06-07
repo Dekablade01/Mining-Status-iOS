@@ -12,9 +12,9 @@ import AlamofireObjectMapper
 
 class RemoteMiningDashBoard: NSObject {
     
-    func loadDetail(poolname: String, address: String, expectedCurrency: String,_ callback: (([CellContentModel])->())?)
+    func loadDetail(poolname: String, coin: String ,address: String, expectedCurrency: String,_ callback: (([CellContentModel])->())?)
     {
-        Alamofire.request(API.dashboard + "\(poolname)/\(address)/\(expectedCurrency)")
+        Alamofire.request(API.dashboard + poolname + "/" + coin + "/" + address + "/" + expectedCurrency)
             .responseArray() { (res: DataResponse<[CellContentModel]>) in
         
                 guard let contents = res.result.value

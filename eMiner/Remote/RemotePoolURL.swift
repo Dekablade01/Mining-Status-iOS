@@ -12,19 +12,20 @@ import SwiftyJSON
 class RemotePoolURL: NSObject
 {
     
-    func getURL(pool: String, callback: ((String)->())? )
+    func getURL(pool: String, currency: String,callback: ((String)->())? )
     {
-        Alamofire.request(API.poolURL + pool).responseJSON(){ res in
-            
-            if let result = res.result.value
-            {
-                let json = JSON(result)
-                print(result)
-                let poolURL = json["url"].string ?? ""
+        
+        Alamofire.request(API.poolURL + pool + "/" + currency).responseJSON(){ res in
                 
-                callback?(poolURL)
-            }
-            
+                if let result = res.result.value
+                {
+                    let json = JSON(result)
+                    print(result)
+                    let poolURL = json["url"].string ?? ""
+                    
+                    callback?(poolURL)
+                }
+                
         }
     }
     

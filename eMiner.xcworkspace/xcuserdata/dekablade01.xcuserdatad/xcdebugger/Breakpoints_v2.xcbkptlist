@@ -57,13 +57,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "eMiner/UIViewControllers/CurrencyPickerViewController.swift"
-            timestampString = "518527782.424386"
+            filePath = "eMiner/UIViewControllers/WalletAddressViewController.swift"
+            timestampString = "518544427.624559"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "initialPickerView()"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "submit(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "eMiner/UIViewControllers/WalletAddressViewController.swift"
+            timestampString = "518544427.624559"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "submit(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

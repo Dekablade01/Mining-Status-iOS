@@ -14,33 +14,42 @@ class WalletAddressViewController: UIViewController
     var service: ServiceModel {
         get {return AddServiceSingleton.sharedInstance.serviceModel }
     }
-
+    
     @IBOutlet weak var walletAddressTextField: UITextField!
     var walletAddress:String { return walletAddressTextField.text ?? ""}
     
     @IBAction func submit(_ sender: UIBarButtonItem)
     {
+        
+        print("-- ", self.walletAddress)
         RemoteFactory
             .remoteFactory
             .remoteWalletValidator
             .validateWallet(coin: service.currency,
                             address: self.walletAddress){
-                                print($0)
-                                guard $0 == true
-                                    else {
-                                        self.showAlert(
+                                
+                                
+                                if ($0 == true)
+                                {
+                                    AddServiceSingleton
+                                        .sharedInstance
+                                        .serviceModel
+                                        .address = self.walletAddress
+                                    
+                                    self.addServiceToRealm(poolName: self.service.poolname,
+                                                           currency: self.service.currency,
+                                                           address: self.service.address)
+                                }
+                                else
+                                {
+                                    self.showAlert(
                                         title: "Something Went Wrong",
                                         message: "Please Input Your \(self.service.currency) Wallet Address" ,
-                                        button: "OK"); return }
+                                        button: "OK")
+                                }
                                 
-                                AddServiceSingleton
-                                    .sharedInstance
-                                    .serviceModel
-                                    .address = self.walletAddress
                                 
-                                self.addServiceToRealm(poolName: self.service.poolname,
-                                                  currency: self.service.currency,
-                                                  address: self.service.address)
+                                
                                 
         }
         
@@ -55,7 +64,7 @@ class WalletAddressViewController: UIViewController
         walletAddressTextField.placeholder = "Your \(service.currency) Wallet Address"
         
         walletAddressTextField.becomeFirstResponder()
-
+        
     }
     
     func showAlert(title: String, message: String, button: String)
@@ -106,7 +115,7 @@ class WalletAddressViewController: UIViewController
         
         return randomString
     }
-
-
-
+    
+    
+    
 }

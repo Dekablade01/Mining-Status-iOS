@@ -18,7 +18,7 @@ enum Server
 enum API
 {
     static let server = Server.localhost
-    static let poolList = API.server + "pool-list"
+    static let poolList = API.server + "pool-list/"
     static let dashboard = API.server
     static let nicehashDashBoard = "https://www.nicehash.com/index.jsp?utm_source=NHM&p=miners&addr="
     static let ownNiceHash = API.server + "ownNiceHash/"

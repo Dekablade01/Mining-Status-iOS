@@ -33,6 +33,13 @@ class CurrencyPickerViewController: UIViewController {
         
     }
     
+    @IBAction func cancel(_ sender: UIBarButtonItem)
+    {
+        
+        self.dismiss(animated: true, completion: nil)
+        
+        
+    }
     override func updateViewConstraints() {
         if (isAddedConstraints == false)
         {

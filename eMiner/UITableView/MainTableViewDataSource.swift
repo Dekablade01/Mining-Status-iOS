@@ -50,7 +50,7 @@ class MainTableViewDataSource: NSObject, UITableViewDataSource
     }
     func removeData(id: String)
     {
-        let services = self.services.filter(){ $0.id != id }
+        let services = self.services.filter(){ $0.id == id }
         print(services.count)
         
         let realm = try! Realm()
