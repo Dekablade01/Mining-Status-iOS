@@ -31,16 +31,14 @@ class RemoteFactory: NSObject
 {
     static var remoteFactory = RemoteFactory()
     var remoteService: RemoteService
-    var remoteMiningDashBoard: RemoteMiningDashBoard
-    var remoteNiceHash: RemoteNiceHash
+
     var remoteWalletValidator : RemoteWalletValidator
     var remotePoolURL: RemotePoolURL
     var remoteCurrency: RemoteCurrency
     
     override init() {
         remoteService = RemoteService()
-        remoteMiningDashBoard = RemoteMiningDashBoard()
-        remoteNiceHash = RemoteNiceHash()
+
         remoteWalletValidator = RemoteWalletValidator()
         remotePoolURL = RemotePoolURL()
         remoteCurrency = RemoteCurrency()

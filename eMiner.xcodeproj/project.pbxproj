@@ -10,7 +10,6 @@
 		6EC6CFB76AD44E10F95D15B2 /* Pods_eMiner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A601F4956E659FF35EADB6 /* Pods_eMiner.framework */; };
 		9E03276F1EE55E6A00AFBC1F /* SwiftSoup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E03276E1EE55E6A00AFBC1F /* SwiftSoup.framework */; };
 		9E0327701EE55E6A00AFBC1F /* SwiftSoup.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E03276E1EE55E6A00AFBC1F /* SwiftSoup.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9E0327721EE55E9900AFBC1F /* RemoteNiceHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0327711EE55E9900AFBC1F /* RemoteNiceHash.swift */; };
 		9E59ACD21EE7F3E700CE71A1 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59ACD11EE7F3E700CE71A1 /* MoreViewController.swift */; };
 		9E885AEF1EDB0F3700D3324E /* Then.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E885AE51EDB0F3700D3324E /* Then.framework */; };
 		9E885AF01EDB0F3700D3324E /* Then.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E885AE51EDB0F3700D3324E /* Then.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -41,20 +40,15 @@
 		9E885B2F1EDB104E00D3324E /* PoolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B101EDB104E00D3324E /* PoolModel.swift */; };
 		9E885B301EDB104E00D3324E /* ServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B111EDB104E00D3324E /* ServiceModel.swift */; };
 		9E885B311EDB104E00D3324E /* RemoteFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B131EDB104E00D3324E /* RemoteFactory.swift */; };
-		9E885B321EDB104E00D3324E /* RemoteMiningDashBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B141EDB104E00D3324E /* RemoteMiningDashBoard.swift */; };
 		9E885B331EDB104E00D3324E /* RemoteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B151EDB104E00D3324E /* RemoteService.swift */; };
 		9E885B341EDB104E00D3324E /* AddServiceSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B171EDB104E00D3324E /* AddServiceSingleton.swift */; };
 		9E885B351EDB104E00D3324E /* SingletonPools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B181EDB104E00D3324E /* SingletonPools.swift */; };
-		9E885B361EDB104E00D3324E /* MiningDashboardCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B1A1EDB104E00D3324E /* MiningDashboardCollectionViewDataSource.swift */; };
-		9E885B371EDB104E00D3324E /* MiningDashboardCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B1B1EDB104E00D3324E /* MiningDashboardCollectionViewDelegate.swift */; };
 		9E885B381EDB104E00D3324E /* DashboardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B1D1EDB104E00D3324E /* DashboardCollectionViewCell.swift */; };
 		9E885B391EDB104E00D3324E /* AddPoolTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B1F1EDB104E00D3324E /* AddPoolTableViewDelegate.swift */; };
 		9E885B3A1EDB104E00D3324E /* CurrencyListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B201EDB104E00D3324E /* CurrencyListTableViewDataSource.swift */; };
 		9E885B3B1EDB104E00D3324E /* MainTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B211EDB104E00D3324E /* MainTableViewDataSource.swift */; };
 		9E885B3C1EDB104E00D3324E /* PoolListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B221EDB104E00D3324E /* PoolListTableViewDataSource.swift */; };
 		9E885B3D1EDB104E00D3324E /* AddServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B241EDB104E00D3324E /* AddServiceViewController.swift */; };
-		9E885B3E1EDB104E00D3324E /* MainForDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B251EDB104E00D3324E /* MainForDashboardViewController.swift */; };
-		9E885B3F1EDB104E00D3324E /* MiningDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B261EDB104E00D3324E /* MiningDashboardViewController.swift */; };
 		9E885B401EDB104E00D3324E /* SelectCoinFromPoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B271EDB104E00D3324E /* SelectCoinFromPoolViewController.swift */; };
 		9E885B411EDB104E00D3324E /* WalletAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B281EDB104E00D3324E /* WalletAddressViewController.swift */; };
 		9E885B451EDB10A400D3324E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E885B431EDB10A400D3324E /* LaunchScreen.storyboard */; };
@@ -94,7 +88,6 @@
 /* Begin PBXFileReference section */
 		01AB15959F5607184498BFCA /* Pods-eMiner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eMiner.release.xcconfig"; path = "Pods/Target Support Files/Pods-eMiner/Pods-eMiner.release.xcconfig"; sourceTree = "<group>"; };
 		9E03276E1EE55E6A00AFBC1F /* SwiftSoup.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSoup.framework; path = Carthage/Build/iOS/SwiftSoup.framework; sourceTree = "<group>"; };
-		9E0327711EE55E9900AFBC1F /* RemoteNiceHash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteNiceHash.swift; sourceTree = "<group>"; };
 		9E59ACD11EE7F3E700CE71A1 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		9E885AD01EDB0A4700D3324E /* eMiner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eMiner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E885ADF1EDB0A4700D3324E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -117,20 +110,15 @@
 		9E885B101EDB104E00D3324E /* PoolModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoolModel.swift; sourceTree = "<group>"; };
 		9E885B111EDB104E00D3324E /* ServiceModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceModel.swift; sourceTree = "<group>"; };
 		9E885B131EDB104E00D3324E /* RemoteFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteFactory.swift; sourceTree = "<group>"; };
-		9E885B141EDB104E00D3324E /* RemoteMiningDashBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteMiningDashBoard.swift; sourceTree = "<group>"; };
 		9E885B151EDB104E00D3324E /* RemoteService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteService.swift; sourceTree = "<group>"; };
 		9E885B171EDB104E00D3324E /* AddServiceSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddServiceSingleton.swift; sourceTree = "<group>"; };
 		9E885B181EDB104E00D3324E /* SingletonPools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingletonPools.swift; sourceTree = "<group>"; };
-		9E885B1A1EDB104E00D3324E /* MiningDashboardCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiningDashboardCollectionViewDataSource.swift; sourceTree = "<group>"; };
-		9E885B1B1EDB104E00D3324E /* MiningDashboardCollectionViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiningDashboardCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		9E885B1D1EDB104E00D3324E /* DashboardCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardCollectionViewCell.swift; sourceTree = "<group>"; };
 		9E885B1F1EDB104E00D3324E /* AddPoolTableViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPoolTableViewDelegate.swift; sourceTree = "<group>"; };
 		9E885B201EDB104E00D3324E /* CurrencyListTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyListTableViewDataSource.swift; sourceTree = "<group>"; };
 		9E885B211EDB104E00D3324E /* MainTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewDataSource.swift; sourceTree = "<group>"; };
 		9E885B221EDB104E00D3324E /* PoolListTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoolListTableViewDataSource.swift; sourceTree = "<group>"; };
 		9E885B241EDB104E00D3324E /* AddServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddServiceViewController.swift; sourceTree = "<group>"; };
-		9E885B251EDB104E00D3324E /* MainForDashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainForDashboardViewController.swift; sourceTree = "<group>"; };
-		9E885B261EDB104E00D3324E /* MiningDashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiningDashboardViewController.swift; sourceTree = "<group>"; };
 		9E885B271EDB104E00D3324E /* SelectCoinFromPoolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectCoinFromPoolViewController.swift; sourceTree = "<group>"; };
 		9E885B281EDB104E00D3324E /* WalletAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletAddressViewController.swift; sourceTree = "<group>"; };
 		9E885B431EDB10A400D3324E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -217,7 +205,6 @@
 				9E885B121EDB104E00D3324E /* Remote */,
 				9E885B161EDB104E00D3324E /* Singleton */,
 				9E885B421EDB109900D3324E /* Storyboard */,
-				9E885B191EDB104E00D3324E /* UICollectionView */,
 				9E885B1C1EDB104E00D3324E /* UICollectionViewCell */,
 				9E885B1E1EDB104E00D3324E /* UITableView */,
 				9E885B231EDB104E00D3324E /* UIViewControllers */,
@@ -289,9 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				9E885B131EDB104E00D3324E /* RemoteFactory.swift */,
-				9E885B141EDB104E00D3324E /* RemoteMiningDashBoard.swift */,
 				9E885B151EDB104E00D3324E /* RemoteService.swift */,
-				9E0327711EE55E9900AFBC1F /* RemoteNiceHash.swift */,
 				9EB132811EE60915005DE6AA /* RemoteWalletValidator.swift */,
 				9EB132A51EE701DE005DE6AA /* RemotePoolURL.swift */,
 				9EB132A71EE73723005DE6AA /* RemoteCurrency.swift */,
@@ -306,15 +291,6 @@
 				9E885B181EDB104E00D3324E /* SingletonPools.swift */,
 			);
 			path = Singleton;
-			sourceTree = "<group>";
-		};
-		9E885B191EDB104E00D3324E /* UICollectionView */ = {
-			isa = PBXGroup;
-			children = (
-				9E885B1A1EDB104E00D3324E /* MiningDashboardCollectionViewDataSource.swift */,
-				9E885B1B1EDB104E00D3324E /* MiningDashboardCollectionViewDelegate.swift */,
-			);
-			path = UICollectionView;
 			sourceTree = "<group>";
 		};
 		9E885B1C1EDB104E00D3324E /* UICollectionViewCell */ = {
@@ -340,8 +316,6 @@
 			isa = PBXGroup;
 			children = (
 				9E885B241EDB104E00D3324E /* AddServiceViewController.swift */,
-				9E885B251EDB104E00D3324E /* MainForDashboardViewController.swift */,
-				9E885B261EDB104E00D3324E /* MiningDashboardViewController.swift */,
 				9E885B271EDB104E00D3324E /* SelectCoinFromPoolViewController.swift */,
 				9E885B281EDB104E00D3324E /* WalletAddressViewController.swift */,
 				9EB132A11EE700B8005DE6AA /* MainForWebViewController.swift */,
@@ -488,13 +462,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E0327721EE55E9900AFBC1F /* RemoteNiceHash.swift in Sources */,
 				9E885B351EDB104E00D3324E /* SingletonPools.swift in Sources */,
-				9E885B3F1EDB104E00D3324E /* MiningDashboardViewController.swift in Sources */,
 				9E885B291EDB104E00D3324E /* AppDelegate.swift in Sources */,
 				9E885B331EDB104E00D3324E /* RemoteService.swift in Sources */,
 				9E885B301EDB104E00D3324E /* ServiceModel.swift in Sources */,
-				9E885B361EDB104E00D3324E /* MiningDashboardCollectionViewDataSource.swift in Sources */,
 				9EB132821EE60915005DE6AA /* RemoteWalletValidator.swift in Sources */,
 				9EB132A21EE700B8005DE6AA /* MainForWebViewController.swift in Sources */,
 				9EB132A81EE73723005DE6AA /* RemoteCurrency.swift in Sources */,
@@ -505,20 +476,17 @@
 				9EB132A41EE7012F005DE6AA /* PoolWebViewController.swift in Sources */,
 				9E885B311EDB104E00D3324E /* RemoteFactory.swift in Sources */,
 				9E885B341EDB104E00D3324E /* AddServiceSingleton.swift in Sources */,
-				9E885B321EDB104E00D3324E /* RemoteMiningDashBoard.swift in Sources */,
 				9E885B2F1EDB104E00D3324E /* PoolModel.swift in Sources */,
 				9E885B391EDB104E00D3324E /* AddPoolTableViewDelegate.swift in Sources */,
 				9E885B3C1EDB104E00D3324E /* PoolListTableViewDataSource.swift in Sources */,
 				9E885B2C1EDB104E00D3324E /* Alamofire+RxSwift.swift in Sources */,
 				9E885B381EDB104E00D3324E /* DashboardCollectionViewCell.swift in Sources */,
 				9EB132AA1EE73D3A005DE6AA /* CurrencyPickerViewController.swift in Sources */,
-				9E885B371EDB104E00D3324E /* MiningDashboardCollectionViewDelegate.swift in Sources */,
 				9EB132A61EE701DE005DE6AA /* RemotePoolURL.swift in Sources */,
 				9E885B2B1EDB104E00D3324E /* Color.swift in Sources */,
 				9E885B411EDB104E00D3324E /* WalletAddressViewController.swift in Sources */,
 				9E885B3B1EDB104E00D3324E /* MainTableViewDataSource.swift in Sources */,
 				9E59ACD21EE7F3E700CE71A1 /* MoreViewController.swift in Sources */,
-				9E885B3E1EDB104E00D3324E /* MainForDashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
