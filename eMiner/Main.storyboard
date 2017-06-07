@@ -351,6 +351,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="yDa-Sb-feT" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="ziE-CA-nTb">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -478,12 +479,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="toolBar" destination="7cJ-Dd-auX" id="g0x-mu-Qc6"/>
                         <outlet property="webView" destination="YzX-Uj-4xW" id="46T-Ea-f27"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ssp-at-f5V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="388" y="140.77961019490255"/>
+            <point key="canvasLocation" x="350" y="134"/>
         </scene>
         <!--WebView-->
         <scene sceneID="yfP-UQ-Y18">
@@ -504,10 +506,10 @@
             </objects>
             <point key="canvasLocation" x="-1474" y="134"/>
         </scene>
-        <!--View Controller-->
+        <!--More View Controller-->
         <scene sceneID="dxp-eN-FMX">
             <objects>
-                <viewController id="XYY-c0-3VF" sceneMemberID="viewController">
+                <viewController id="XYY-c0-3VF" customClass="MoreViewController" customModule="eMiner" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YF9-FG-vG0"/>
                         <viewControllerLayoutGuide type="bottom" id="Oo9-Eu-gc5"/>
@@ -515,6 +517,17 @@
                     <view key="view" contentMode="scaleToFill" id="lqJ-km-Hwg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZD-9L-md1">
+                                <rect key="frame" x="203" y="421" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="openCurrencyPage:" destination="XYY-c0-3VF" eventType="touchUpInside" id="QYc-0y-927"/>
+                                    <segue destination="ocQ-jb-8ZA" kind="presentation" identifier="OpenCurrency" id="DL2-hM-VRc"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="aQg-ol-741"/>
@@ -542,12 +555,55 @@
             </objects>
             <point key="canvasLocation" x="-2530" y="1403"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eid-Nk-gjJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ocQ-jb-8ZA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="G9y-2a-QEv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Trf-IK-DCP" kind="relationship" relationship="rootViewController" id="pcA-3l-G5P"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dHe-Dv-B74" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-890" y="1403"/>
+        </scene>
+        <!--Currency Picker View Controller-->
+        <scene sceneID="P7z-Xv-iDe">
+            <objects>
+                <viewController id="Trf-IK-DCP" customClass="CurrencyPickerViewController" customModule="eMiner" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bfW-8O-hcw"/>
+                        <viewControllerLayoutGuide type="bottom" id="v1h-CV-V0Y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lft-9e-huN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="drW-zv-kzX">
+                        <barButtonItem key="rightBarButtonItem" title="OK" id="Q25-FY-BuA">
+                            <connections>
+                                <action selector="didPressOnOKButton:" destination="Trf-IK-DCP" id="L8j-Pd-ZSZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zhU-B7-KUq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-18" y="1403"/>
+        </scene>
     </scenes>
     <resources>
         <image name="dashboard-icon" width="24" height="24"/>
         <image name="webView-icon" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="UIP-p8-SLZ"/>
+        <segue reference="W8c-NR-Do0"/>
     </inferredMetricsTieBreakers>
 </document>

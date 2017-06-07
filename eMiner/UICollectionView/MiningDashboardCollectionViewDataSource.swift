@@ -17,12 +17,14 @@ class MiningDashboardCollectionViewDataSource: NSObject, UICollectionViewDataSou
     
     func loadData ()
     {
+        let expectCurrency = UserDefaults.standard.string(forKey: "currencyCode") ?? "USD"
+        
         RemoteFactory
             .remoteFactory
             .remoteMiningDashBoard
             .loadDetail(poolname: service.poolname,
                         address: service.address,
-                        expectedCurrency: "THB"){
+                        expectedCurrency: expectCurrency){
                             self.contents.removeAll()
                             self.contents = $0
                             if (self.service.poolname != "NiceHash")

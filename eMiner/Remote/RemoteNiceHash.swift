@@ -10,7 +10,6 @@ import UIKit
 import SwiftSoup
 import Alamofire
 import SwiftyJSON
-import Fuzi
 class RemoteNiceHash: NSObject
 {
     let webView = UIWebView(frame: CGRect.zero)

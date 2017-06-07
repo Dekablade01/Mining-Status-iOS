@@ -21,6 +21,7 @@ class MainForDashboardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         initialTableView()
     }
 
@@ -36,6 +37,7 @@ class MainForDashboardViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool)
     {
         super.viewWillAppear(animated)
+        RemoteFactory.remoteFactory.remoteCurrency.loadCurrencies(){ _ in }
 
         dataSource.loadData()
     }

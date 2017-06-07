@@ -11,6 +11,7 @@
 		9E03276F1EE55E6A00AFBC1F /* SwiftSoup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E03276E1EE55E6A00AFBC1F /* SwiftSoup.framework */; };
 		9E0327701EE55E6A00AFBC1F /* SwiftSoup.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E03276E1EE55E6A00AFBC1F /* SwiftSoup.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9E0327721EE55E9900AFBC1F /* RemoteNiceHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0327711EE55E9900AFBC1F /* RemoteNiceHash.swift */; };
+		9E59ACD21EE7F3E700CE71A1 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59ACD11EE7F3E700CE71A1 /* MoreViewController.swift */; };
 		9E885AEF1EDB0F3700D3324E /* Then.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E885AE51EDB0F3700D3324E /* Then.framework */; };
 		9E885AF01EDB0F3700D3324E /* Then.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E885AE51EDB0F3700D3324E /* Then.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9E885AF11EDB0F3700D3324E /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E885AE61EDB0F3700D3324E /* SwiftyJSON.framework */; };
@@ -62,6 +63,8 @@
 		9EB132A21EE700B8005DE6AA /* MainForWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB132A11EE700B8005DE6AA /* MainForWebViewController.swift */; };
 		9EB132A41EE7012F005DE6AA /* PoolWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB132A31EE7012F005DE6AA /* PoolWebViewController.swift */; };
 		9EB132A61EE701DE005DE6AA /* RemotePoolURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB132A51EE701DE005DE6AA /* RemotePoolURL.swift */; };
+		9EB132A81EE73723005DE6AA /* RemoteCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB132A71EE73723005DE6AA /* RemoteCurrency.swift */; };
+		9EB132AA1EE73D3A005DE6AA /* CurrencyPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB132A91EE73D3A005DE6AA /* CurrencyPickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -92,6 +95,7 @@
 		01AB15959F5607184498BFCA /* Pods-eMiner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eMiner.release.xcconfig"; path = "Pods/Target Support Files/Pods-eMiner/Pods-eMiner.release.xcconfig"; sourceTree = "<group>"; };
 		9E03276E1EE55E6A00AFBC1F /* SwiftSoup.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSoup.framework; path = Carthage/Build/iOS/SwiftSoup.framework; sourceTree = "<group>"; };
 		9E0327711EE55E9900AFBC1F /* RemoteNiceHash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteNiceHash.swift; sourceTree = "<group>"; };
+		9E59ACD11EE7F3E700CE71A1 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		9E885AD01EDB0A4700D3324E /* eMiner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eMiner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E885ADF1EDB0A4700D3324E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E885AE51EDB0F3700D3324E /* Then.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Then.framework; path = Carthage/Build/iOS/Then.framework; sourceTree = "<group>"; };
@@ -135,6 +139,8 @@
 		9EB132A11EE700B8005DE6AA /* MainForWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainForWebViewController.swift; sourceTree = "<group>"; };
 		9EB132A31EE7012F005DE6AA /* PoolWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoolWebViewController.swift; sourceTree = "<group>"; };
 		9EB132A51EE701DE005DE6AA /* RemotePoolURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemotePoolURL.swift; sourceTree = "<group>"; };
+		9EB132A71EE73723005DE6AA /* RemoteCurrency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteCurrency.swift; sourceTree = "<group>"; };
+		9EB132A91EE73D3A005DE6AA /* CurrencyPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyPickerViewController.swift; sourceTree = "<group>"; };
 		A7A601F4956E659FF35EADB6 /* Pods_eMiner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eMiner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62276AF7A6D43CC1B5FCD6B /* Pods-eMiner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eMiner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eMiner/Pods-eMiner.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -201,7 +207,6 @@
 		9E885AD21EDB0A4700D3324E /* eMiner */ = {
 			isa = PBXGroup;
 			children = (
-				9E885B421EDB109900D3324E /* Storyboard */,
 				9E885B051EDB104E00D3324E /* AppDelegate.swift */,
 				9E885B061EDB104E00D3324E /* Assets.xcassets */,
 				9E885B071EDB104E00D3324E /* Base.lproj */,
@@ -211,6 +216,7 @@
 				9E885B0E1EDB104E00D3324E /* Model */,
 				9E885B121EDB104E00D3324E /* Remote */,
 				9E885B161EDB104E00D3324E /* Singleton */,
+				9E885B421EDB109900D3324E /* Storyboard */,
 				9E885B191EDB104E00D3324E /* UICollectionView */,
 				9E885B1C1EDB104E00D3324E /* UICollectionViewCell */,
 				9E885B1E1EDB104E00D3324E /* UITableView */,
@@ -288,6 +294,7 @@
 				9E0327711EE55E9900AFBC1F /* RemoteNiceHash.swift */,
 				9EB132811EE60915005DE6AA /* RemoteWalletValidator.swift */,
 				9EB132A51EE701DE005DE6AA /* RemotePoolURL.swift */,
+				9EB132A71EE73723005DE6AA /* RemoteCurrency.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -339,6 +346,8 @@
 				9E885B281EDB104E00D3324E /* WalletAddressViewController.swift */,
 				9EB132A11EE700B8005DE6AA /* MainForWebViewController.swift */,
 				9EB132A31EE7012F005DE6AA /* PoolWebViewController.swift */,
+				9EB132A91EE73D3A005DE6AA /* CurrencyPickerViewController.swift */,
+				9E59ACD11EE7F3E700CE71A1 /* MoreViewController.swift */,
 			);
 			path = UIViewControllers;
 			sourceTree = "<group>";
@@ -488,6 +497,7 @@
 				9E885B361EDB104E00D3324E /* MiningDashboardCollectionViewDataSource.swift in Sources */,
 				9EB132821EE60915005DE6AA /* RemoteWalletValidator.swift in Sources */,
 				9EB132A21EE700B8005DE6AA /* MainForWebViewController.swift in Sources */,
+				9EB132A81EE73723005DE6AA /* RemoteCurrency.swift in Sources */,
 				9E885B3A1EDB104E00D3324E /* CurrencyListTableViewDataSource.swift in Sources */,
 				9E885B401EDB104E00D3324E /* SelectCoinFromPoolViewController.swift in Sources */,
 				9E885B2E1EDB104E00D3324E /* CellContentModel.swift in Sources */,
@@ -501,11 +511,13 @@
 				9E885B3C1EDB104E00D3324E /* PoolListTableViewDataSource.swift in Sources */,
 				9E885B2C1EDB104E00D3324E /* Alamofire+RxSwift.swift in Sources */,
 				9E885B381EDB104E00D3324E /* DashboardCollectionViewCell.swift in Sources */,
+				9EB132AA1EE73D3A005DE6AA /* CurrencyPickerViewController.swift in Sources */,
 				9E885B371EDB104E00D3324E /* MiningDashboardCollectionViewDelegate.swift in Sources */,
 				9EB132A61EE701DE005DE6AA /* RemotePoolURL.swift in Sources */,
 				9E885B2B1EDB104E00D3324E /* Color.swift in Sources */,
 				9E885B411EDB104E00D3324E /* WalletAddressViewController.swift in Sources */,
 				9E885B3B1EDB104E00D3324E /* MainTableViewDataSource.swift in Sources */,
+				9E59ACD21EE7F3E700CE71A1 /* MoreViewController.swift in Sources */,
 				9E885B3E1EDB104E00D3324E /* MainForDashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

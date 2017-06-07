@@ -12,6 +12,7 @@ enum Server
 {
     static let localhost = "http://192.168.10.101:5000/api/"
     static let heroku = "https://eminer-server.herokuapp.com/api/"
+    static let digitalOcean = "http://128.199.166.29:5000/api/"
 }
 
 enum API
@@ -23,6 +24,7 @@ enum API
     static let ownNiceHash = API.server + "ownNiceHash/"
     static let walletValidator = API.server + "validateWallet/"
     static let poolURL = API.server + "pool-url/"
+    static let currencies = API.server + "currencies/"
 }
 
 class RemoteFactory: NSObject
@@ -33,6 +35,7 @@ class RemoteFactory: NSObject
     var remoteNiceHash: RemoteNiceHash
     var remoteWalletValidator : RemoteWalletValidator
     var remotePoolURL: RemotePoolURL
+    var remoteCurrency: RemoteCurrency
     
     override init() {
         remoteService = RemoteService()
@@ -40,6 +43,7 @@ class RemoteFactory: NSObject
         remoteNiceHash = RemoteNiceHash()
         remoteWalletValidator = RemoteWalletValidator()
         remotePoolURL = RemotePoolURL()
+        remoteCurrency = RemoteCurrency()
         
         super.init()
     }

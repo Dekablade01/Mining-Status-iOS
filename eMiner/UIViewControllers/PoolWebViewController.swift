@@ -16,6 +16,8 @@ class PoolWebViewController: UIViewController {
     
     var urlRequest: URLRequest { return URLRequest(url: URL(string: urlString + service.address)!) }
     
+    @IBOutlet weak var toolBar: UIToolbar!
+    
     var service: ServiceModel!
     { didSet {
         RemoteFactory
@@ -38,8 +40,7 @@ class PoolWebViewController: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
-        
+        webView.scrollView.contentInset = UIEdgeInsetsMake(0, 0, toolBar.bounds.height, 0)
     }
     
     
