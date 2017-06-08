@@ -41,8 +41,6 @@ extension SelectCoinFromPoolViewController: UITableViewDelegate
     {
         tableView.deselectRow(at: indexPath, animated: true)
         let currency = selectedPool.currencies[indexPath.item]
-
-        print(currency)
         
         AddServiceSingleton.sharedInstance.serviceModel.currency = currency
     }

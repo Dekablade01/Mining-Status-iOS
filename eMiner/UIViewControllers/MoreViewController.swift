@@ -10,30 +10,56 @@ import UIKit
 
 class MoreViewController: UIViewController
 {
-
+    
+    
     var openCurrencyIdentifier: String { return "OpenCurrency"}
     var currenciesCode:[String] = []
     var currenciesName:[String] = []
+    var subject = ""
+    var body = ""
+    var email = ""
     
     override func viewDidLoad()
     {
-        super.viewDidLoad()
+        
         
     }
-
     
-    @IBAction func openCurrencyPage(_ sender: UIButton)
-    {
-
+    @IBAction func sendNeedHelp(_ sender: Any) {
+        
+        var subject = "Miner : I need help !"
+        subject = subject.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? ""
+        
+        var body = ""
+        body = body.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? ""
+        let url = URL(string:
+            "mailto:dekablade01@gmail.com" +
+            "?subject=" + subject +
+            "&body=" + body)!
+        
+        UIApplication.shared.open(url)
+        
     }
-    func loadCurrency()
-    {
-        RemoteFactory.remoteFactory.remoteCurrency.loadCurrencies(){
-            self.currenciesCode = $0
-            self.currenciesName = $1
-            self.performSegue(withIdentifier: self.openCurrencyIdentifier, sender: self)
-        }
+    @IBAction func sendPoolRequest(_ sender: Any) {
+        
+        var subject = "Miner : I need more pool !"
+        subject = subject.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? ""
+        
+        var body = "Poolname(url) : \n" + "coins : "
+        body = body.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? ""
+        let url = URL(string:
+            "mailto:dekablade01@gmail.com" +
+                "?subject=" + subject +
+                "&body=" + body)!
+        UIApplication.shared.open(url)
+        
+        
     }
     
-
+    
+    
+    
+    
+    
+    
 }

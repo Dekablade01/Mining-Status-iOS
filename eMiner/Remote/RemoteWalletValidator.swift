@@ -16,12 +16,8 @@ class RemoteWalletValidator: NSObject
     {
         
         let url = API.walletValidator + coin + "/" + address
-        
-        print("coin ", coin)
-        print("address ", address)
-        print("url ", url)
+
         Alamofire.request(url).responseJSON(){
-            print($0)
             if let value = $0.result.value
             {
                 let json = JSON(value)

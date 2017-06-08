@@ -17,7 +17,7 @@ enum Server
 
 enum API
 {
-    static let server = Server.localhost
+    static let server = Server.heroku
     static let poolList = API.server + "pool-list/"
     static let dashboard = API.server
     static let nicehashDashBoard = "https://www.nicehash.com/index.jsp?utm_source=NHM&p=miners&addr="
@@ -25,6 +25,7 @@ enum API
     static let walletValidator = API.server + "validateWallet/"
     static let poolURL = API.server + "pool-url/"
     static let currencies = API.server + "currencies/"
+    static let contact = API.server + "contact/"
 }
 
 class RemoteFactory: NSObject

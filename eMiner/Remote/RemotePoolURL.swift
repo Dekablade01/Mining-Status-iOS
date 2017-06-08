@@ -20,7 +20,6 @@ class RemotePoolURL: NSObject
                 if let result = res.result.value
                 {
                     let json = JSON(result)
-                    print(result)
                     let poolURL = json["url"].string ?? ""
                     
                     callback?(poolURL)

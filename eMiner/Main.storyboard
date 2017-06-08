@@ -6,6 +6,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -367,7 +369,7 @@
             </objects>
             <point key="canvasLocation" x="-1474" y="134"/>
         </scene>
-        <!--More View Controller-->
+        <!--More-->
         <scene sceneID="dxp-eN-FMX">
             <objects>
                 <viewController id="XYY-c0-3VF" customClass="MoreViewController" customModule="eMiner" customModuleProvider="target" sceneMemberID="viewController">
@@ -379,19 +381,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZD-9L-md1">
-                                <rect key="frame" x="203" y="421" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle-logo" translatesAutoresizingMaskIntoConstraints="NO" id="0iQ-4Z-S0t">
+                                <rect key="frame" x="125" y="191" width="125" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0iQ-4Z-S0t" secondAttribute="height" multiplier="1:1" id="sXh-bA-ekw"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AKS-Z5-nwX">
+                                <rect key="frame" x="50" y="400" width="88" height="30"/>
+                                <state key="normal" title="Need Help ? ">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
-                                    <action selector="openCurrencyPage:" destination="XYY-c0-3VF" eventType="touchUpInside" id="QYc-0y-927"/>
-                                    <segue destination="ocQ-jb-8ZA" kind="presentation" identifier="OpenCurrency" id="DL2-hM-VRc"/>
+                                    <action selector="sendNeedHelp:" destination="XYY-c0-3VF" eventType="touchUpInside" id="lJk-fT-wTf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYT-PF-7uH">
+                                <rect key="frame" x="216" y="400" width="130" height="30"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <state key="normal" title="Request More Pool"/>
+                                <connections>
+                                    <action selector="sendPoolRequest:" destination="XYY-c0-3VF" eventType="touchUpInside" id="28f-pN-wPf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="eMiner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYL-9r-n6q">
+                                <rect key="frame" x="156" y="346" width="61.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zKb-yc-oYV">
+                                <rect key="frame" x="0.0" y="465" width="187.5" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mAY-pr-8VS">
+                                <rect key="frame" x="187" y="465" width="187.5" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AKS-Z5-nwX" firstAttribute="top" secondItem="fYL-9r-n6q" secondAttribute="bottom" constant="30" id="09W-zu-lHc"/>
+                            <constraint firstItem="zKb-yc-oYV" firstAttribute="width" secondItem="lqJ-km-Hwg" secondAttribute="width" multiplier="1:2" id="0PA-iT-yzL"/>
+                            <constraint firstItem="fYL-9r-n6q" firstAttribute="top" secondItem="0iQ-4Z-S0t" secondAttribute="bottom" constant="30" id="2F1-mk-Pbi"/>
+                            <constraint firstItem="zKb-yc-oYV" firstAttribute="leading" secondItem="lqJ-km-Hwg" secondAttribute="leadingMargin" constant="-16" id="4Qq-zR-8gq"/>
+                            <constraint firstItem="AKS-Z5-nwX" firstAttribute="centerX" secondItem="zKb-yc-oYV" secondAttribute="centerX" id="8GW-wO-p9P"/>
+                            <constraint firstItem="zKb-yc-oYV" firstAttribute="height" secondItem="AKS-Z5-nwX" secondAttribute="height" id="AJb-LU-16D"/>
+                            <constraint firstItem="fYL-9r-n6q" firstAttribute="centerX" secondItem="lqJ-km-Hwg" secondAttribute="centerX" id="BS1-K8-Toc"/>
+                            <constraint firstItem="mAY-pr-8VS" firstAttribute="centerY" secondItem="zKb-yc-oYV" secondAttribute="centerY" id="JMd-Gs-Yud"/>
+                            <constraint firstItem="0iQ-4Z-S0t" firstAttribute="centerX" secondItem="lqJ-km-Hwg" secondAttribute="centerX" id="OiZ-hY-PiQ"/>
+                            <constraint firstItem="mAY-pr-8VS" firstAttribute="width" secondItem="zKb-yc-oYV" secondAttribute="width" id="S1k-17-Jc0"/>
+                            <constraint firstItem="zKb-yc-oYV" firstAttribute="top" secondItem="AKS-Z5-nwX" secondAttribute="bottom" constant="35" id="Vjv-jP-qjC"/>
+                            <constraint firstItem="mAY-pr-8VS" firstAttribute="height" secondItem="zKb-yc-oYV" secondAttribute="height" id="YVA-ss-AS0"/>
+                            <constraint firstItem="zKb-yc-oYV" firstAttribute="leading" secondItem="lqJ-km-Hwg" secondAttribute="leadingMargin" constant="-16" id="lhN-Zi-jbP"/>
+                            <constraint firstAttribute="trailing" secondItem="mAY-pr-8VS" secondAttribute="trailing" id="pb1-iJ-DIP"/>
+                            <constraint firstItem="0iQ-4Z-S0t" firstAttribute="centerY" secondItem="lqJ-km-Hwg" secondAttribute="centerY" constant="-80" id="qzB-Yu-yD9"/>
+                            <constraint firstItem="aYT-PF-7uH" firstAttribute="centerY" secondItem="AKS-Z5-nwX" secondAttribute="centerY" id="r24-7i-hWA"/>
+                            <constraint firstItem="aYT-PF-7uH" firstAttribute="centerX" secondItem="mAY-pr-8VS" secondAttribute="centerX" id="rAQ-wM-Nk4"/>
+                            <constraint firstItem="0iQ-4Z-S0t" firstAttribute="width" secondItem="lqJ-km-Hwg" secondAttribute="width" multiplier="1:3" id="yr3-Y2-UQ7"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="aQg-ol-741"/>
+                    <navigationItem key="navigationItem" title="More" id="aQg-ol-741"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R6J-Z0-usK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -416,57 +466,9 @@
             </objects>
             <point key="canvasLocation" x="-2530" y="1403"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="eid-Nk-gjJ">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ocQ-jb-8ZA" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="G9y-2a-QEv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Trf-IK-DCP" kind="relationship" relationship="rootViewController" id="pcA-3l-G5P"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dHe-Dv-B74" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-890" y="1403"/>
-        </scene>
-        <!--Currency Picker View Controller-->
-        <scene sceneID="P7z-Xv-iDe">
-            <objects>
-                <viewController id="Trf-IK-DCP" customClass="CurrencyPickerViewController" customModule="eMiner" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="bfW-8O-hcw"/>
-                        <viewControllerLayoutGuide type="bottom" id="v1h-CV-V0Y"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Lft-9e-huN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="drW-zv-kzX">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="D1g-NE-VOV">
-                            <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="cancel:" destination="Trf-IK-DCP" id="q7D-uH-gPt"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="OK" id="Q25-FY-BuA">
-                            <connections>
-                                <action selector="didPressOnOKButton:" destination="Trf-IK-DCP" id="L8j-Pd-ZSZ"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zhU-B7-KUq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-18" y="1403"/>
-        </scene>
     </scenes>
     <resources>
+        <image name="circle-logo" width="192" height="192"/>
         <image name="webView-icon" width="24" height="24"/>
     </resources>
 </document>

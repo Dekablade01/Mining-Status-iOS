@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6EC6CFB76AD44E10F95D15B2 /* Pods_eMiner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A601F4956E659FF35EADB6 /* Pods_eMiner.framework */; };
-		9E03276F1EE55E6A00AFBC1F /* SwiftSoup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E03276E1EE55E6A00AFBC1F /* SwiftSoup.framework */; };
-		9E0327701EE55E6A00AFBC1F /* SwiftSoup.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E03276E1EE55E6A00AFBC1F /* SwiftSoup.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9E59ACD21EE7F3E700CE71A1 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59ACD11EE7F3E700CE71A1 /* MoreViewController.swift */; };
 		9E885AEF1EDB0F3700D3324E /* Then.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E885AE51EDB0F3700D3324E /* Then.framework */; };
 		9E885AF01EDB0F3700D3324E /* Then.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E885AE51EDB0F3700D3324E /* Then.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -27,14 +25,9 @@
 		9E885AFC1EDB0F3700D3324E /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E885AEB1EDB0F3700D3324E /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9E885AFD1EDB0F3700D3324E /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E885AEC1EDB0F3700D3324E /* Realm.framework */; };
 		9E885AFE1EDB0F3700D3324E /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E885AEC1EDB0F3700D3324E /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9E885AFF1EDB0F3700D3324E /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E885AED1EDB0F3700D3324E /* RxSwift.framework */; };
-		9E885B001EDB0F3700D3324E /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E885AED1EDB0F3700D3324E /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9E885B011EDB0F3700D3324E /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E885AEE1EDB0F3700D3324E /* RxCocoa.framework */; };
-		9E885B021EDB0F3700D3324E /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E885AEE1EDB0F3700D3324E /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9E885B291EDB104E00D3324E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B051EDB104E00D3324E /* AppDelegate.swift */; };
 		9E885B2A1EDB104E00D3324E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E885B061EDB104E00D3324E /* Assets.xcassets */; };
 		9E885B2B1EDB104E00D3324E /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B091EDB104E00D3324E /* Color.swift */; };
-		9E885B2C1EDB104E00D3324E /* Alamofire+RxSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B0C1EDB104E00D3324E /* Alamofire+RxSwift.swift */; };
 		9E885B2D1EDB104E00D3324E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9E885B0D1EDB104E00D3324E /* Info.plist */; };
 		9E885B2E1EDB104E00D3324E /* CellContentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B0F1EDB104E00D3324E /* CellContentModel.swift */; };
 		9E885B2F1EDB104E00D3324E /* PoolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B101EDB104E00D3324E /* PoolModel.swift */; };
@@ -58,7 +51,8 @@
 		9EB132A41EE7012F005DE6AA /* PoolWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB132A31EE7012F005DE6AA /* PoolWebViewController.swift */; };
 		9EB132A61EE701DE005DE6AA /* RemotePoolURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB132A51EE701DE005DE6AA /* RemotePoolURL.swift */; };
 		9EB132A81EE73723005DE6AA /* RemoteCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB132A71EE73723005DE6AA /* RemoteCurrency.swift */; };
-		9EB132AA1EE73D3A005DE6AA /* CurrencyPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB132A91EE73D3A005DE6AA /* CurrencyPickerViewController.swift */; };
+		9EC9F24F1EE8725C00D364B2 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC9F24E1EE8725C00D364B2 /* ReportViewController.swift */; };
+		9EC9F2511EE8727200D364B2 /* PoolRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC9F2501EE8727200D364B2 /* PoolRequestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -70,14 +64,11 @@
 			files = (
 				9E885AF41EDB0F3700D3324E /* SnapKit.framework in Embed Frameworks */,
 				9E885AFA1EDB0F3700D3324E /* Alamofire.framework in Embed Frameworks */,
-				9E885B001EDB0F3700D3324E /* RxSwift.framework in Embed Frameworks */,
 				9E885AFC1EDB0F3700D3324E /* RealmSwift.framework in Embed Frameworks */,
 				9E885AF21EDB0F3700D3324E /* SwiftyJSON.framework in Embed Frameworks */,
 				9E885AFE1EDB0F3700D3324E /* Realm.framework in Embed Frameworks */,
 				9E885AF81EDB0F3700D3324E /* ObjectMapper.framework in Embed Frameworks */,
 				9E885AF01EDB0F3700D3324E /* Then.framework in Embed Frameworks */,
-				9E0327701EE55E6A00AFBC1F /* SwiftSoup.framework in Embed Frameworks */,
-				9E885B021EDB0F3700D3324E /* RxCocoa.framework in Embed Frameworks */,
 				9E885AF61EDB0F3700D3324E /* AlamofireObjectMapper.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -87,7 +78,6 @@
 
 /* Begin PBXFileReference section */
 		01AB15959F5607184498BFCA /* Pods-eMiner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eMiner.release.xcconfig"; path = "Pods/Target Support Files/Pods-eMiner/Pods-eMiner.release.xcconfig"; sourceTree = "<group>"; };
-		9E03276E1EE55E6A00AFBC1F /* SwiftSoup.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSoup.framework; path = Carthage/Build/iOS/SwiftSoup.framework; sourceTree = "<group>"; };
 		9E59ACD11EE7F3E700CE71A1 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		9E885AD01EDB0A4700D3324E /* eMiner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eMiner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E885ADF1EDB0A4700D3324E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,12 +89,9 @@
 		9E885AEA1EDB0F3700D3324E /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		9E885AEB1EDB0F3700D3324E /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		9E885AEC1EDB0F3700D3324E /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
-		9E885AED1EDB0F3700D3324E /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
-		9E885AEE1EDB0F3700D3324E /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		9E885B051EDB104E00D3324E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E885B061EDB104E00D3324E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E885B091EDB104E00D3324E /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
-		9E885B0C1EDB104E00D3324E /* Alamofire+RxSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamofire+RxSwift.swift"; sourceTree = "<group>"; };
 		9E885B0D1EDB104E00D3324E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E885B0F1EDB104E00D3324E /* CellContentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellContentModel.swift; sourceTree = "<group>"; };
 		9E885B101EDB104E00D3324E /* PoolModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoolModel.swift; sourceTree = "<group>"; };
@@ -128,7 +115,8 @@
 		9EB132A31EE7012F005DE6AA /* PoolWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoolWebViewController.swift; sourceTree = "<group>"; };
 		9EB132A51EE701DE005DE6AA /* RemotePoolURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemotePoolURL.swift; sourceTree = "<group>"; };
 		9EB132A71EE73723005DE6AA /* RemoteCurrency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteCurrency.swift; sourceTree = "<group>"; };
-		9EB132A91EE73D3A005DE6AA /* CurrencyPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyPickerViewController.swift; sourceTree = "<group>"; };
+		9EC9F24E1EE8725C00D364B2 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
+		9EC9F2501EE8727200D364B2 /* PoolRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoolRequestViewController.swift; sourceTree = "<group>"; };
 		A7A601F4956E659FF35EADB6 /* Pods_eMiner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eMiner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C62276AF7A6D43CC1B5FCD6B /* Pods-eMiner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eMiner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eMiner/Pods-eMiner.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,7 +126,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E885AFF1EDB0F3700D3324E /* RxSwift.framework in Frameworks */,
 				9E885AFD1EDB0F3700D3324E /* Realm.framework in Frameworks */,
 				9E885AF71EDB0F3700D3324E /* ObjectMapper.framework in Frameworks */,
 				6EC6CFB76AD44E10F95D15B2 /* Pods_eMiner.framework in Frameworks */,
@@ -147,9 +134,7 @@
 				9E885AF91EDB0F3700D3324E /* Alamofire.framework in Frameworks */,
 				9E885AF51EDB0F3700D3324E /* AlamofireObjectMapper.framework in Frameworks */,
 				9E885AFB1EDB0F3700D3324E /* RealmSwift.framework in Frameworks */,
-				9E885B011EDB0F3700D3324E /* RxCocoa.framework in Frameworks */,
 				9E885AF31EDB0F3700D3324E /* SnapKit.framework in Frameworks */,
-				9E03276F1EE55E6A00AFBC1F /* SwiftSoup.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +201,6 @@
 		9E885B041EDB0F4000D3324E /* Carthage */ = {
 			isa = PBXGroup;
 			children = (
-				9E03276E1EE55E6A00AFBC1F /* SwiftSoup.framework */,
 				9E885AE51EDB0F3700D3324E /* Then.framework */,
 				9E885AE61EDB0F3700D3324E /* SwiftyJSON.framework */,
 				9E885AE71EDB0F3700D3324E /* SnapKit.framework */,
@@ -225,8 +209,6 @@
 				9E885AEA1EDB0F3700D3324E /* Alamofire.framework */,
 				9E885AEB1EDB0F3700D3324E /* RealmSwift.framework */,
 				9E885AEC1EDB0F3700D3324E /* Realm.framework */,
-				9E885AED1EDB0F3700D3324E /* RxSwift.framework */,
-				9E885AEE1EDB0F3700D3324E /* RxCocoa.framework */,
 			);
 			name = Carthage;
 			sourceTree = "<group>";
@@ -249,17 +231,8 @@
 		9E885B0A1EDB104E00D3324E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				9E885B0B1EDB104E00D3324E /* Alamofire */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		9E885B0B1EDB104E00D3324E /* Alamofire */ = {
-			isa = PBXGroup;
-			children = (
-				9E885B0C1EDB104E00D3324E /* Alamofire+RxSwift.swift */,
-			);
-			path = Alamofire;
 			sourceTree = "<group>";
 		};
 		9E885B0E1EDB104E00D3324E /* Model */ = {
@@ -320,8 +293,9 @@
 				9E885B281EDB104E00D3324E /* WalletAddressViewController.swift */,
 				9EB132A11EE700B8005DE6AA /* MainForWebViewController.swift */,
 				9EB132A31EE7012F005DE6AA /* PoolWebViewController.swift */,
-				9EB132A91EE73D3A005DE6AA /* CurrencyPickerViewController.swift */,
 				9E59ACD11EE7F3E700CE71A1 /* MoreViewController.swift */,
+				9EC9F24E1EE8725C00D364B2 /* ReportViewController.swift */,
+				9EC9F2501EE8727200D364B2 /* PoolRequestViewController.swift */,
 			);
 			path = UIViewControllers;
 			sourceTree = "<group>";
@@ -465,10 +439,12 @@
 				9E885B351EDB104E00D3324E /* SingletonPools.swift in Sources */,
 				9E885B291EDB104E00D3324E /* AppDelegate.swift in Sources */,
 				9E885B331EDB104E00D3324E /* RemoteService.swift in Sources */,
+				9EC9F24F1EE8725C00D364B2 /* ReportViewController.swift in Sources */,
 				9E885B301EDB104E00D3324E /* ServiceModel.swift in Sources */,
 				9EB132821EE60915005DE6AA /* RemoteWalletValidator.swift in Sources */,
 				9EB132A21EE700B8005DE6AA /* MainForWebViewController.swift in Sources */,
 				9EB132A81EE73723005DE6AA /* RemoteCurrency.swift in Sources */,
+				9EC9F2511EE8727200D364B2 /* PoolRequestViewController.swift in Sources */,
 				9E885B3A1EDB104E00D3324E /* CurrencyListTableViewDataSource.swift in Sources */,
 				9E885B401EDB104E00D3324E /* SelectCoinFromPoolViewController.swift in Sources */,
 				9E885B2E1EDB104E00D3324E /* CellContentModel.swift in Sources */,
@@ -479,9 +455,7 @@
 				9E885B2F1EDB104E00D3324E /* PoolModel.swift in Sources */,
 				9E885B391EDB104E00D3324E /* AddPoolTableViewDelegate.swift in Sources */,
 				9E885B3C1EDB104E00D3324E /* PoolListTableViewDataSource.swift in Sources */,
-				9E885B2C1EDB104E00D3324E /* Alamofire+RxSwift.swift in Sources */,
 				9E885B381EDB104E00D3324E /* DashboardCollectionViewCell.swift in Sources */,
-				9EB132AA1EE73D3A005DE6AA /* CurrencyPickerViewController.swift in Sources */,
 				9EB132A61EE701DE005DE6AA /* RemotePoolURL.swift in Sources */,
 				9E885B2B1EDB104E00D3324E /* Color.swift in Sources */,
 				9E885B411EDB104E00D3324E /* WalletAddressViewController.swift in Sources */,
@@ -594,6 +568,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = RJA42UD9TG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -603,6 +578,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.dekablade01.eMiner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -614,6 +590,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = RJA42UD9TG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -623,6 +600,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.dekablade01.eMiner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
