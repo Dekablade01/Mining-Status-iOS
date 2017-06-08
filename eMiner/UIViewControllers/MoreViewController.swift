@@ -37,7 +37,7 @@ class MoreViewController: UIViewController
             "?subject=" + subject +
             "&body=" + body)!
         
-        UIApplication.shared.open(url)
+        UIApplication.shared.openURL(url)
         
     }
     @IBAction func sendPoolRequest(_ sender: Any) {
@@ -51,7 +51,8 @@ class MoreViewController: UIViewController
             "mailto:dekablade01@gmail.com" +
                 "?subject=" + subject +
                 "&body=" + body)!
-        UIApplication.shared.open(url)
+        
+        UIApplication.shared.openURL(url)
         
         
     }
