@@ -15,8 +15,7 @@ class RemoteCurrencyCalculator: NSObject
     
     var error: String?
     
-    static let toCurrency: String = UserDefaults.standard.value(forKey: "currencyCode") as? String ?? "USD"
-
+    static var toCurrency: String { return UserDefaults.standard.value(forKey: "currencyCode") as? String ?? "USD" }
     func convert(_ inputValue: Double,
                  from: String,
                  to: String = toCurrency, callback: ((Double, String?)->())?)
