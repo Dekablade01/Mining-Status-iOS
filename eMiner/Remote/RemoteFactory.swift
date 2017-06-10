@@ -22,9 +22,17 @@ enum API
     static let dashboard = API.server
     static let nicehashDashBoard = "https://www.nicehash.com/index.jsp?utm_source=NHM&p=miners&addr="
     static let ownNiceHash = API.server + "ownNiceHash/"
+    
+    static var niceHashStatProvider: String { return "https://api.nicehash.com/api?method=stats.provider&addr=" }
+    static var niceHashStatProviderWorkers:String { return "https://api.nicehash.com/api?method=stats.provider.workers&addr="}
+    
     static let walletValidator = API.server + "validateWallet/"
     static let poolURL = API.server + "pool-url/"
     static let currencies = API.server + "currencies/"
+    static var currencyCalculator: String { return "https://min-api.cryptocompare.com/data/price?fsym=" }
+    
+        
+        
 }
 
 class RemoteFactory: NSObject
@@ -36,7 +44,7 @@ class RemoteFactory: NSObject
     var remoteWalletValidator : RemoteWalletValidator
     var remotePoolURL: RemotePoolURL
     var remoteCurrency: RemoteCurrency
-    
+    var remoteCurrencyCalculator: RemoteCurrencyCalculator
     override init() {
         remoteService = RemoteService()
         remoteMiningDashBoard = RemoteMiningDashBoard()
@@ -44,6 +52,7 @@ class RemoteFactory: NSObject
         remoteWalletValidator = RemoteWalletValidator()
         remotePoolURL = RemotePoolURL()
         remoteCurrency = RemoteCurrency()
+        remoteCurrencyCalculator = RemoteCurrencyCalculator()
         
         super.init()
     }

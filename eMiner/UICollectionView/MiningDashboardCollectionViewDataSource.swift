@@ -14,67 +14,25 @@ class MiningDashboardCollectionViewDataSource: NSObject, UICollectionViewDataSou
     var contents: [CellContentModel] = []
     var didFinishLoadedHandler: (()->())?
     var service: ServiceModel! { didSet { loadData() } }
+    var error:String? //{ didSet { print("error : ", error!) } }
     
     func loadData ()
     {
-        let expectCurrency = UserDefaults.standard.string(forKey: "currencyCode") ?? "USD"
-        
-        RemoteFactory
-            .remoteFactory
-            .remoteMiningDashBoard
-            .loadDetail(poolname: service.poolname, coin: service.currency,
-                        address: service.address,
-                        expectedCurrency: expectCurrency){
-                            self.contents.removeAll()
-                            self.contents = $0
-                            if (self.service.poolname != "NiceHash")
-                            {
-                                self.didFinishLoadedHandler?()
-                            }
-                            else
-                            {
-                                RemoteFactory
-                                    .remoteFactory
-                                    .remoteNiceHash
-                                    .didFinishLoadingPayoutHandler = {
-                                        var payoutDate = ""
-                                        if ( $0 == "N/A")
-                                        {
-                                            payoutDate = $0
-                                            self.contents.append(CellContentModel(name: "Payout Date",
-                                                                                  value: payoutDate))
-                                        }
-                                        else if($0 == "")
-                                        {
-                                            
-                                        }
-                                        else
-                                        {
-                                            payoutDate = $0.substring(to: $0.index($0.startIndex,
-                                                                                   offsetBy: 10))
-                                            self.contents.append(CellContentModel(name: "Payout Date",
-                                                                                  value: payoutDate))
-                                        }
-                                        
-                                        
-                                        self.didFinishLoadedHandler?()
-                                        
-                                }
-                                
-                                RemoteFactory
-                                    .remoteFactory
-                                    .remoteNiceHash
-                                    .getPayoutDate(address: self.service.address)
-                                
-                                
-                            }
+        if (service.poolname == "NiceHash")
+        {
+            RemoteFactory
+                .remoteFactory
+                .remoteNiceHash
+                .getNicehashDetail(address: service.address) { contents in
+                    self.contents = contents.0
+                    self.error = contents.1
+                    self.didFinishLoadedHandler?() }
         }
-        
         
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        return contents.count + 1
+        return contents.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {

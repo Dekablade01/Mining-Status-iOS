@@ -12,6 +12,7 @@ import AlamofireObjectMapper
 import Alamofire
 
 class RemoteService: NSObject {
+    
 
     func loadService(_ callback: (([PoolModel])->())?)
     {
@@ -21,9 +22,6 @@ class RemoteService: NSObject {
                 else { return print("parsing poolModel Fail")}
             SingleonPools.singletonPools.pools = poolModels
             callback?(poolModels)
-
-            
-            
         }
     }
     

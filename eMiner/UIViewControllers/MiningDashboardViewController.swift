@@ -38,8 +38,9 @@ class MiningDashboardViewController: UIViewController
         super.viewDidLoad()
         self.title = serviceModel.poolname + " - " + serviceModel.currency
         self.navigationItem.leftBarButtonItem?.isEnabled = false
-        initialCollectionView(collectionView)
         
+        initialCollectionView(collectionView)
+        loadData()
     }
     override func viewDidDisappear(_ animated: Bool)
     {
@@ -100,17 +101,29 @@ class MiningDashboardViewController: UIViewController
         
         
         dataSource.didFinishLoadedHandler = {
-            collectionView.reloadData()
             self.actInd.stopAnimating()
             
-            self.navigationItem.leftBarButtonItem?.isEnabled = true
+            print(self.dataSource.contents.count)
             
-            UIView.animate(withDuration: 0.4)
+            if (self.dataSource.error == nil)
             {
-                collectionView.alpha = 1
+                UIView.animate(withDuration: 0.4)
+                {
+                    collectionView.reloadData()
+                    collectionView.alpha = 1
+                }
+            }
+            else
+            {
+
+                self.showAlert(title: "Something went Wrong",
+                               message: (self.dataSource.error)!,
+                               button: "OK")
+                self.navigationController?.popViewController(animated: true)
+
             }
         }
-        collectionView.dataSource = dataSource
+        collectionView.dataSource = self.dataSource
         
     }
     
@@ -121,6 +134,19 @@ class MiningDashboardViewController: UIViewController
         
     }
 
+    func showAlert(title: String, message: String, button: String)
+    {
+        let alert = UIAlertController(title: title,
+                                      message: message,
+                                      preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: button,
+                                      style: .default,
+                                      handler: nil))
+        self.present(alert,
+                     animated: true,
+                     completion: nil)
+    }
 
 
 

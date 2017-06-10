@@ -573,7 +573,7 @@
             </objects>
             <point key="canvasLocation" x="-890" y="1403"/>
         </scene>
-        <!--Currency Picker View Controller-->
+        <!--Calculate To-->
         <scene sceneID="P7z-Xv-iDe">
             <objects>
                 <viewController id="Trf-IK-DCP" customClass="CurrencyPickerViewController" customModule="eMiner" customModuleProvider="target" sceneMemberID="viewController">
@@ -586,7 +586,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="drW-zv-kzX">
+                    <navigationItem key="navigationItem" title="Calculate To" id="drW-zv-kzX">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="D1g-NE-VOV">
                             <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>

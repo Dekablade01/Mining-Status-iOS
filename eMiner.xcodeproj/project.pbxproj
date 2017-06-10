@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		6EC6CFB76AD44E10F95D15B2 /* Pods_eMiner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A601F4956E659FF35EADB6 /* Pods_eMiner.framework */; };
-		9E03276F1EE55E6A00AFBC1F /* SwiftSoup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E03276E1EE55E6A00AFBC1F /* SwiftSoup.framework */; };
-		9E0327701EE55E6A00AFBC1F /* SwiftSoup.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E03276E1EE55E6A00AFBC1F /* SwiftSoup.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9E0327721EE55E9900AFBC1F /* RemoteNiceHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0327711EE55E9900AFBC1F /* RemoteNiceHash.swift */; };
+		9E3C48661EEC57AD000A4F44 /* Array+RemoveDuplicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3C48651EEC57AD000A4F44 /* Array+RemoveDuplicate.swift */; };
+		9E3C48681EEC5C5B000A4F44 /* RemoteCurrencyCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3C48671EEC5C5B000A4F44 /* RemoteCurrencyCalculator.swift */; };
+		9E3C486B1EEC6ED4000A4F44 /* Double+roundTo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3C486A1EEC6ED4000A4F44 /* Double+roundTo.swift */; };
 		9E59ACD21EE7F3E700CE71A1 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E59ACD11EE7F3E700CE71A1 /* MoreViewController.swift */; };
 		9E885AEF1EDB0F3700D3324E /* Then.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E885AE51EDB0F3700D3324E /* Then.framework */; };
 		9E885AF01EDB0F3700D3324E /* Then.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E885AE51EDB0F3700D3324E /* Then.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -82,7 +83,6 @@
 				9E885AFE1EDB0F3700D3324E /* Realm.framework in Embed Frameworks */,
 				9E885AF81EDB0F3700D3324E /* ObjectMapper.framework in Embed Frameworks */,
 				9E885AF01EDB0F3700D3324E /* Then.framework in Embed Frameworks */,
-				9E0327701EE55E6A00AFBC1F /* SwiftSoup.framework in Embed Frameworks */,
 				9E885B021EDB0F3700D3324E /* RxCocoa.framework in Embed Frameworks */,
 				9E885AF61EDB0F3700D3324E /* AlamofireObjectMapper.framework in Embed Frameworks */,
 			);
@@ -93,8 +93,10 @@
 
 /* Begin PBXFileReference section */
 		01AB15959F5607184498BFCA /* Pods-eMiner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eMiner.release.xcconfig"; path = "Pods/Target Support Files/Pods-eMiner/Pods-eMiner.release.xcconfig"; sourceTree = "<group>"; };
-		9E03276E1EE55E6A00AFBC1F /* SwiftSoup.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftSoup.framework; path = Carthage/Build/iOS/SwiftSoup.framework; sourceTree = "<group>"; };
 		9E0327711EE55E9900AFBC1F /* RemoteNiceHash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteNiceHash.swift; sourceTree = "<group>"; };
+		9E3C48651EEC57AD000A4F44 /* Array+RemoveDuplicate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+RemoveDuplicate.swift"; path = "Extensions/Array/Array+RemoveDuplicate.swift"; sourceTree = "<group>"; };
+		9E3C48671EEC5C5B000A4F44 /* RemoteCurrencyCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteCurrencyCalculator.swift; sourceTree = "<group>"; };
+		9E3C486A1EEC6ED4000A4F44 /* Double+roundTo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Double+roundTo.swift"; path = "Extensions/Double/Double+roundTo.swift"; sourceTree = "<group>"; };
 		9E59ACD11EE7F3E700CE71A1 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		9E885AD01EDB0A4700D3324E /* eMiner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eMiner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E885ADF1EDB0A4700D3324E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -161,7 +163,6 @@
 				9E885AFB1EDB0F3700D3324E /* RealmSwift.framework in Frameworks */,
 				9E885B011EDB0F3700D3324E /* RxCocoa.framework in Frameworks */,
 				9E885AF31EDB0F3700D3324E /* SnapKit.framework in Frameworks */,
-				9E03276F1EE55E6A00AFBC1F /* SwiftSoup.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +184,31 @@
 				01AB15959F5607184498BFCA /* Pods-eMiner.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		9E3C48631EEC5778000A4F44 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9E3C48691EEC6E9F000A4F44 /* Double */,
+				9E3C48641EEC5785000A4F44 /* Array */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		9E3C48641EEC5785000A4F44 /* Array */ = {
+			isa = PBXGroup;
+			children = (
+				9E3C48651EEC57AD000A4F44 /* Array+RemoveDuplicate.swift */,
+			);
+			name = Array;
+			sourceTree = "<group>";
+		};
+		9E3C48691EEC6E9F000A4F44 /* Double */ = {
+			isa = PBXGroup;
+			children = (
+				9E3C486A1EEC6ED4000A4F44 /* Double+roundTo.swift */,
+			);
+			name = Double;
 			sourceTree = "<group>";
 		};
 		9E885AC71EDB0A4700D3324E = {
@@ -207,6 +233,7 @@
 		9E885AD21EDB0A4700D3324E /* eMiner */ = {
 			isa = PBXGroup;
 			children = (
+				9E3C48631EEC5778000A4F44 /* Extensions */,
 				9E885B051EDB104E00D3324E /* AppDelegate.swift */,
 				9E885B061EDB104E00D3324E /* Assets.xcassets */,
 				9E885B071EDB104E00D3324E /* Base.lproj */,
@@ -229,7 +256,6 @@
 		9E885B041EDB0F4000D3324E /* Carthage */ = {
 			isa = PBXGroup;
 			children = (
-				9E03276E1EE55E6A00AFBC1F /* SwiftSoup.framework */,
 				9E885AE51EDB0F3700D3324E /* Then.framework */,
 				9E885AE61EDB0F3700D3324E /* SwiftyJSON.framework */,
 				9E885AE71EDB0F3700D3324E /* SnapKit.framework */,
@@ -295,6 +321,7 @@
 				9EB132811EE60915005DE6AA /* RemoteWalletValidator.swift */,
 				9EB132A51EE701DE005DE6AA /* RemotePoolURL.swift */,
 				9EB132A71EE73723005DE6AA /* RemoteCurrency.swift */,
+				9E3C48671EEC5C5B000A4F44 /* RemoteCurrencyCalculator.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -497,11 +524,13 @@
 				9E885B361EDB104E00D3324E /* MiningDashboardCollectionViewDataSource.swift in Sources */,
 				9EB132821EE60915005DE6AA /* RemoteWalletValidator.swift in Sources */,
 				9EB132A21EE700B8005DE6AA /* MainForWebViewController.swift in Sources */,
+				9E3C48661EEC57AD000A4F44 /* Array+RemoveDuplicate.swift in Sources */,
 				9EB132A81EE73723005DE6AA /* RemoteCurrency.swift in Sources */,
 				9E885B3A1EDB104E00D3324E /* CurrencyListTableViewDataSource.swift in Sources */,
 				9E885B401EDB104E00D3324E /* SelectCoinFromPoolViewController.swift in Sources */,
 				9E885B2E1EDB104E00D3324E /* CellContentModel.swift in Sources */,
 				9E885B3D1EDB104E00D3324E /* AddServiceViewController.swift in Sources */,
+				9E3C48681EEC5C5B000A4F44 /* RemoteCurrencyCalculator.swift in Sources */,
 				9EB132A41EE7012F005DE6AA /* PoolWebViewController.swift in Sources */,
 				9E885B311EDB104E00D3324E /* RemoteFactory.swift in Sources */,
 				9E885B341EDB104E00D3324E /* AddServiceSingleton.swift in Sources */,
@@ -518,6 +547,7 @@
 				9E885B411EDB104E00D3324E /* WalletAddressViewController.swift in Sources */,
 				9E885B3B1EDB104E00D3324E /* MainTableViewDataSource.swift in Sources */,
 				9E59ACD21EE7F3E700CE71A1 /* MoreViewController.swift in Sources */,
+				9E3C486B1EEC6ED4000A4F44 /* Double+roundTo.swift in Sources */,
 				9E885B3E1EDB104E00D3324E /* MainForDashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

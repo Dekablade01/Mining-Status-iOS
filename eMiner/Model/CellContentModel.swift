@@ -21,9 +21,9 @@ class CellContentModel: Mappable
     required init?(map: Map) {
         
     }
-    init(name: String, value: String) {
+    init(name: String, value: Any) {
         self.name = name
-        self.value = value
+        self.value = "\(value)"
     }
 
 }
