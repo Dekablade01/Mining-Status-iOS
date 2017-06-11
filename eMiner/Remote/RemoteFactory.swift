@@ -17,7 +17,7 @@ enum Server
 
 enum API
 {
-    static let server = Server.localhost
+    static let server = Server.heroku
     static let poolList = API.server + "pool-list/"
     static let dashboard = API.server
     static let nicehashDashBoard = "https://www.nicehash.com/index.jsp?utm_source=NHM&p=miners&addr="
@@ -25,6 +25,8 @@ enum API
     
     static var niceHashStatProvider: String { return "https://api.nicehash.com/api?method=stats.provider&addr=" }
     static var niceHashStatProviderWorkers:String { return "https://api.nicehash.com/api?method=stats.provider.workers&addr="}
+    
+    static var nanoPoolGeneral: String { return "https://api.nanopool.org/v1/"}
     
     static let walletValidator = API.server + "validateWallet/"
     static let poolURL = API.server + "pool-url/"
@@ -38,21 +40,23 @@ enum API
 class RemoteFactory: NSObject
 {
     static var remoteFactory = RemoteFactory()
-    var remoteService: RemoteService
     var remoteMiningDashBoard: RemoteMiningDashBoard
     var remoteNiceHash: RemoteNiceHash
     var remoteWalletValidator : RemoteWalletValidator
     var remotePoolURL: RemotePoolURL
     var remoteCurrency: RemoteCurrency
     var remoteCurrencyCalculator: RemoteCurrencyCalculator
+    var remoteFlyPool: RemoteFlyPool
+    var remoteNanoPool: RemoteNanoPool
     override init() {
-        remoteService = RemoteService()
         remoteMiningDashBoard = RemoteMiningDashBoard()
         remoteNiceHash = RemoteNiceHash()
         remoteWalletValidator = RemoteWalletValidator()
         remotePoolURL = RemotePoolURL()
         remoteCurrency = RemoteCurrency()
         remoteCurrencyCalculator = RemoteCurrencyCalculator()
+        remoteFlyPool = RemoteFlyPool()
+        remoteNanoPool = RemoteNanoPool()
         
         super.init()
     }

@@ -12,6 +12,27 @@ class SingleonPools: NSObject
 {
     static var singletonPools = SingleonPools()
     
-    var pools: [PoolModel] = []
+    private var flyPool = PoolModel(name: Pool.flyPool,
+                                    currencies: [Currency.zec])
+    private var nanoPool = PoolModel(name: Pool.nanoPool,
+                                     currencies: [Currency.etc, Currency.eth, Currency.pasc, Currency.zec])
+    private var niceHash = PoolModel(name: Pool.niceHash,
+                                     currencies: [Currency.btc])
+    private var etherMine = PoolModel(name: Pool.etherMine,
+                                      currencies: [Currency.etc, Currency.eth])
+    
+    private var pools: [PoolModel] = []
+    
+    override init() {
+        pools.append(etherMine)
+        pools.append(flyPool)
+        pools.append(nanoPool)
+        pools.append(niceHash)
+    }
+    
+    func getPools() -> [PoolModel]
+    {
+        return pools
+    }
     
 }

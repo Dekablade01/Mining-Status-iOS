@@ -12,21 +12,37 @@ class MiningDashboardCollectionViewDataSource: NSObject, UICollectionViewDataSou
 {
     
     var contents: [CellContentModel] = []
-    var didFinishLoadedHandler: (()->())?
-    var service: ServiceModel! { didSet { loadData() } }
+    var didFinishLoadedHandler: ( () -> Void )?
+    var service: ServiceModel! { didSet { startLoadingHandler?() } }
     var error:String? //{ didSet { print("error : ", error!) } }
+    
+    
+    var startLoadingHandler: (()->())?
     
     func loadData ()
     {
-        if (service.poolname == "NiceHash")
+        if (service.poolname == Pool.niceHash)
         {
             RemoteFactory
                 .remoteFactory
                 .remoteNiceHash
-                .getNicehashDetail(address: service.address) { contents in
-                    self.contents = contents.0
-                    self.error = contents.1
+                .getNicehashDetail(address: service.address) {
+                    self.contents = $0.0
+                    self.error = $0.1
                     self.didFinishLoadedHandler?() }
+        }
+        else if (service.poolname == Pool.nanoPool)
+        {
+            RemoteFactory
+                .remoteFactory
+                .remoteNanoPool
+                .getNanoPool(address: service.address,
+                             coin: service.currency){
+                                
+                                self.contents = $0.0
+                                self.error = $0.1
+                                self.didFinishLoadedHandler?()
+            }
         }
         
     }

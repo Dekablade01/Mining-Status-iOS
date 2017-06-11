@@ -20,5 +20,10 @@ class PoolModel: Mappable
     required init?(map: Map) {
         
     }
+    init(name: String, currencies: [String])
+    {
+        self.name = name
+        self.currencies = currencies
+    }
     
 }

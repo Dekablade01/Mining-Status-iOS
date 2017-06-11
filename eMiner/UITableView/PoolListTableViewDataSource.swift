@@ -12,14 +12,11 @@ class PoolListTableViewDataSource: NSObject, UITableViewDataSource
 {
     var didFinishLoadedHandler : (()->())?
     
-    var pools: [PoolModel] { return SingleonPools.singletonPools.pools }
+    var pools: [PoolModel] { return SingleonPools.singletonPools.getPools() }
     
     func loadData()
     {
-        RemoteFactory
-            .remoteFactory
-            .remoteService
-            .loadService(){ SingleonPools.singletonPools.pools = $0; self.didFinishLoadedHandler?() }
+        didFinishLoadedHandler?()
             
     }
     

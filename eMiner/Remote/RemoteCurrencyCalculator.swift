@@ -16,10 +16,12 @@ class RemoteCurrencyCalculator: NSObject
     var error: String?
     
     static var toCurrency: String { return UserDefaults.standard.value(forKey: "currencyCode") as? String ?? "USD" }
+    
     func convert(_ inputValue: Double,
                  from: String,
                  to: String = toCurrency, callback: ((Double, String?)->())?)
     {
+        
         let from = from.uppercased()
         let to = to.uppercased()
         Alamofire.request(API.currencyCalculator + from + "&tsyms=" + to).responseJSON(){
@@ -30,6 +32,7 @@ class RemoteCurrencyCalculator: NSObject
                     let json = JSON(value)
                     if (json["Message"].string == nil) // correct api value
                     {
+                        self.error = nil
                         let currencyValue = json[to].doubleValue
                         
                         let calculated = inputValue * currencyValue

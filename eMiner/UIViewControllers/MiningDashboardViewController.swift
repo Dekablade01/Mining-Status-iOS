@@ -27,7 +27,8 @@ class MiningDashboardViewController: UIViewController
     
     var serviceModel: ServiceModel {
         get { return dataSource.service }
-        set { dataSource.service = newValue } 
+        set { dataSource.startLoadingHandler = { self.loadData() }
+            dataSource.service = newValue }
     }
     
     let actInd: UIActivityIndicatorView = UIActivityIndicatorView()
@@ -37,10 +38,8 @@ class MiningDashboardViewController: UIViewController
     {
         super.viewDidLoad()
         self.title = serviceModel.poolname + " - " + serviceModel.currency
-        self.navigationItem.leftBarButtonItem?.isEnabled = false
-        
         initialCollectionView(collectionView)
-        loadData()
+        
     }
     override func viewDidDisappear(_ animated: Bool)
     {
@@ -88,6 +87,8 @@ class MiningDashboardViewController: UIViewController
     }
     func initialCollectionView (_ collectionView: UICollectionView)
     {
+        
+        
         collectionView.alwaysBounceVertical = true
         refresher.addTarget(self, action: #selector(self.loadData), for: .valueChanged)
         collectionView.addSubview(refresher)
@@ -99,6 +100,7 @@ class MiningDashboardViewController: UIViewController
         collectionView.backgroundColor = .white
         collectionView.delegate = delegate
         
+
         
         dataSource.didFinishLoadedHandler = {
             self.actInd.stopAnimating()
@@ -120,9 +122,12 @@ class MiningDashboardViewController: UIViewController
                                message: (self.dataSource.error)!,
                                button: "OK")
                 self.navigationController?.popViewController(animated: true)
-
             }
         }
+        
+        
+       
+        
         collectionView.dataSource = self.dataSource
         
     }

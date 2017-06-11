@@ -13,7 +13,7 @@ class AddServiceViewController: UIViewController
     @IBOutlet weak var tableView: UITableView!
     var dataSource = PoolListTableViewDataSource()
     var delegate = AddPoolTableViewDelegate()
-    var pools:[PoolModel] { return SingleonPools.singletonPools.pools }
+    var pools:[PoolModel] { return SingleonPools.singletonPools.getPools() }
     
     var selectedPool: PoolModel!
     

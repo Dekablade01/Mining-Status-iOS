@@ -107,6 +107,7 @@ class RemoteNiceHash: NSObject
                     
                     if (json["result"]["error"].string == nil)
                     {
+                        self.error = nil 
                         let result = json["result"]
                         let address = result["addr"].stringValue
                         let stats = result["stats"].array ?? []
