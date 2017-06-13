@@ -26,8 +26,14 @@ class PoolListTableViewDataSource: NSObject, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell",
                                                        for: indexPath)
+    
+        var label = ""
+        if (pools[indexPath.item].name == Pool.etherMine || pools[indexPath.item].name == Pool.flyPool)
+        {
+            label = " (Not Support Dashboard)"
+        }
         
-        cell.textLabel?.text = pools[indexPath.item].name
+        cell.textLabel?.text = pools[indexPath.item].name + label
         var detail = ""
         
         for currency in pools[indexPath.item].currencies

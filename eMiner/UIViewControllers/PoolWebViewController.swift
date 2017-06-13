@@ -12,7 +12,7 @@ class PoolWebViewController: UIViewController {
     
     @IBOutlet weak var webView: UIWebView!
     
-    var urlString: String = "" { didSet { webView.loadRequest(urlRequest)} }
+    var urlString: String = ""
     
     var urlRequest: URLRequest { return URLRequest(url: URL(string: urlString + service.address)!) }
     
@@ -20,10 +20,9 @@ class PoolWebViewController: UIViewController {
     
     var service: ServiceModel!
     { didSet {
-        RemoteFactory
-            .remoteFactory
-            .remotePoolURL
-            .getURL(pool: service.poolname, currency: service.currency) { print("url", $0); self.urlString = $0 }
+        urlString = PoolURL.getPoolURL(poolname: service.poolname,
+                                      currency: service.currency)
+        print("urlString : ",urlString)
         self.title = service.poolname + " - " + service.currency
 
         }
@@ -40,6 +39,7 @@ class PoolWebViewController: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        webView.loadRequest(urlRequest)
         webView.scrollView.contentInset = UIEdgeInsetsMake(0, 0, toolBar.bounds.height, 0)
     }
     

@@ -15,4 +15,5 @@ enum Currency
     static var etc :String { return "ETC" }
     static var pasc :String { return "PASC" }
     static var btc :String { return "BTC" }
+    static var sia : String { return "SIA" } 
 }

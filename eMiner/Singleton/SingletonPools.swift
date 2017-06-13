@@ -15,7 +15,7 @@ class SingleonPools: NSObject
     private var flyPool = PoolModel(name: Pool.flyPool,
                                     currencies: [Currency.zec])
     private var nanoPool = PoolModel(name: Pool.nanoPool,
-                                     currencies: [Currency.etc, Currency.eth, Currency.pasc, Currency.zec])
+                                     currencies: [Currency.etc, Currency.eth, Currency.sia, Currency.zec])
     private var niceHash = PoolModel(name: Pool.niceHash,
                                      currencies: [Currency.btc])
     private var etherMine = PoolModel(name: Pool.etherMine,

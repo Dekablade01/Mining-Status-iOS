@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ObjectMapper
 
 class WorkerModel: NSObject
 {
@@ -15,13 +16,17 @@ class WorkerModel: NSObject
     var hashRate : Double
     var avgHashRate: Double
     var balance: Double
+    var algorithm: String
     
-    init(name: String, hashRate: Double = 0, avgHashRate: Double = 0, balance: Double = 0) {
+    init(name: String, algorithm: String = "",hashRate: Double = 0, avgHashRate: Double = 0, balance: Double = 0) {
         self.workerName = name
+        self.algorithm = algorithm
         self.hashRate = hashRate
         self.avgHashRate = avgHashRate
         self.balance = balance
     }
+
+    
     
     
 }

@@ -40,6 +40,7 @@ class MiningDashboardViewController: UIViewController
         self.title = serviceModel.poolname + " - " + serviceModel.currency
         initialCollectionView(collectionView)
         
+        
     }
     override func viewDidDisappear(_ animated: Bool)
     {

@@ -16,7 +16,6 @@ class MiningDashboardCollectionViewDataSource: NSObject, UICollectionViewDataSou
     var service: ServiceModel! { didSet { startLoadingHandler?() } }
     var error:String? //{ didSet { print("error : ", error!) } }
     
-    
     var startLoadingHandler: (()->())?
     
     func loadData ()
@@ -44,13 +43,29 @@ class MiningDashboardCollectionViewDataSource: NSObject, UICollectionViewDataSou
                                 self.didFinishLoadedHandler?()
             }
         }
+        else if(service.poolname == Pool.etherMine || service.poolname == Pool.flyPool)
+        {
+            RemoteFactory
+                .remoteFactory
+                .remoteFlyPool
+                .getFlyPool(address: service.address,
+                            coin: service.currency){
+                
+                                self.contents = $0.0
+                                self.error = $0.1
+                                self.didFinishLoadedHandler?()
+                                
+            }
+        }
         
     }
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
         return contents.count
     }
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
+    func collectionView(_ collectionView: UICollectionView,
+                        cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? DashboardCollectionViewCell
             else {

@@ -24,7 +24,7 @@ class RemoteCurrencyCalculator: NSObject
         
         let from = from.uppercased()
         let to = to.uppercased()
-        Alamofire.request(API.currencyCalculator + from + "&tsyms=" + to).responseJSON(){
+        Alamofire.request(APIs.currencyCalculator(from: from, to: to)).responseJSON(){
             if let value = $0.result.value
             {
                 if ($0.result.isSuccess) // call success

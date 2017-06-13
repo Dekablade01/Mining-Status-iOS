@@ -20,7 +20,11 @@ class DashboardCollectionViewCell: UICollectionViewCell
     
     lazy var headingLabel = UILabel().then(){
         $0.textColor = .white
-        $0.font = $0.font.withSize(14)
+        $0.font = $0.font.withSize(13)
+        $0.textAlignment = .center
+        $0.numberOfLines = 1
+
+
     }
     var heading: String {
         set { headingLabel.text = newValue }
@@ -33,8 +37,9 @@ class DashboardCollectionViewCell: UICollectionViewCell
     lazy var valueLabel = UILabel(frame: CGRect.zero).then(){
         $0.textColor = BootStrapColor.black
         $0.layer.borderColor = UIColor.black.cgColor
-        
-        $0.font = $0.font.withSize(14)
+        $0.numberOfLines = 1
+    $0.textAlignment = .center
+        $0.font = $0.font.withSize(13)
     }
     var contentValue: String {
         get { return valueLabel.text ?? "" }
@@ -44,6 +49,7 @@ class DashboardCollectionViewCell: UICollectionViewCell
     override init(frame: CGRect)
     {
         super.init(frame: frame)
+        
         commonInit()
     }
     required init?(coder aDecoder: NSCoder)
@@ -79,6 +85,7 @@ class DashboardCollectionViewCell: UICollectionViewCell
             }
             headingLabel.snp.makeConstraints(){
                 $0.center.equalTo(headingView)
+                $0.width.equalTo(headingView).multipliedBy(0.9)
             
             }
             valueView.snp.makeConstraints(){
@@ -89,6 +96,7 @@ class DashboardCollectionViewCell: UICollectionViewCell
             }
             valueLabel.snp.makeConstraints(){
                 $0.center.equalTo(valueView)
+                $0.width.equalTo(valueView).multipliedBy(0.9)
             }
             
             

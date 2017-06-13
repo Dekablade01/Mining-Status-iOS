@@ -26,9 +26,6 @@ class CurrencyPickerViewController: UIViewController {
         initialPickerView()
         self.view.addSubview(pickerView)
         
-        
-        
-        
         self.view.setNeedsUpdateConstraints()
         
     }

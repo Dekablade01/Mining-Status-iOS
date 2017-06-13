@@ -15,6 +15,8 @@ class MainTableViewDataSource: NSObject, UITableViewDataSource
     var didFinishLoadedHandler: (()->())?
     
     var services: [ServiceModel] = []
+    var filtered = false
+    var needToFilter = true
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
@@ -72,7 +74,18 @@ class MainTableViewDataSource: NSObject, UITableViewDataSource
         
         for service in result
         {
-            services.append(service)
+            
+            if (service.poolname != Pool.etherMine && service.poolname != Pool.flyPool && needToFilter == true)
+            {
+                services.append(service)
+            }
+            if (needToFilter == false)
+            {
+                services.append(service)
+
+            }
+            
+            filtered = true
         }
         didFinishLoadedHandler?()
     }

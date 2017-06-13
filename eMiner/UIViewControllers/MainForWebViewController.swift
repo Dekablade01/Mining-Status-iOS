@@ -31,6 +31,7 @@ class MainForWebViewController: UIViewController {
         dataSource.didFinishLoadedHandler = {
             self.tableView.reloadData()
         }
+        dataSource.needToFilter = false
         
         tableView.dataSource = dataSource
         tableView.delegate = self

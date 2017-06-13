@@ -17,7 +17,7 @@ class RemoteCurrency: NSObject {
 
     func loadCurrencies(callback: ( ([String],[String]) -> ())? )
     {
-        Alamofire.request(API.currencies).responseJSON(){
+        Alamofire.request(APIs.ownSupportedCurrencies()).responseJSON(){
             if let result = $0.result.value
             {
                 let json = JSON(result)

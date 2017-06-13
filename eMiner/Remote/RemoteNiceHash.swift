@@ -15,7 +15,7 @@ class RemoteNiceHash: NSObject
     var algorithmsDict: [String: String] = [:]
     var error: String?
     
-    var workers: [String] = []
+    var workers: [WorkerModel] = []
     var algos: [String] = []
     var unpaid: Double = 0.0
     var unpaidInCurrency: Double = 0.0
@@ -78,7 +78,7 @@ class RemoteNiceHash: NSObject
     {
         webView.delegate = self
         
-        let url = URL(string: API.nicehashDashBoard + address)!
+        let url = URL(string: APIs.niceHashDashboard(address: address))!
         
         let request = URLRequest(url: url)
         
@@ -97,7 +97,7 @@ class RemoteNiceHash: NSObject
         
         getPayoutDate(address: address)
         
-        Alamofire.request(API.niceHashStatProvider + address).responseJSON(){
+        Alamofire.request(APIs.niceHashStatProvider(address: address)).responseJSON(){
             
             if let value = $0.result.value
             {
@@ -112,12 +112,16 @@ class RemoteNiceHash: NSObject
                         let address = result["addr"].stringValue
                         let stats = result["stats"].array ?? []
                         var algos:[String] = []
+                        var hashRates: [Double] = []
                         
                         for stat in stats
                         {
                             self.unpaid += Double((stat["balance"].stringValue)) ?? 0.0
                             
                             let algo = String(stat["algo"].intValue)
+                            let hashrate = stat["accepted_speed"].doubleValue
+                            print("stat hashrate : ", hashrate)
+                            hashRates.append(hashrate)
                             algos.append(algo)
                         }
                         
@@ -145,6 +149,21 @@ class RemoteNiceHash: NSObject
                                                                                  value: self.unpaid.roundTo(places: 7)))
                                                 contents.append(CellContentModel(name: "In \(self.toCurrency)",
                                                     value: self.unpaidInCurrency.roundTo(places: 2)))
+                                                
+                                                for i in 0...algos.count-1
+                                                {
+                                                    if (hashRates[i] > 0)
+                                                    {
+                                                        let hashRateString = self.getNiceHashDivideOrTimeForStandard(hashrate: hashRates[i],
+                                                                                                                algo: Int(algos[i])!)
+                                                        
+                                                        print(hashRateString)
+
+                                                        contents.append(CellContentModel(name: self.algorithmsDict[algos[i]]!,
+                                                                                         value: hashRateString))
+                                                    }
+                                                    
+                                                }
                                                 
                                                 contents.append(CellContentModel(name: "Est. Payout",
                                                                                  value: self.payout))
@@ -177,14 +196,14 @@ class RemoteNiceHash: NSObject
     
     func getNicehashWorkers(address: String,
                             algos: [String],
-                            callback: (([String], [String], String?)->())?)
+                            callback: (([WorkerModel], [String], String?)->())?)
     {
         var receivedAlgorithm = 0
     
         for algo in algos
         {
             
-            Alamofire.request(API.niceHashStatProviderWorkers + address + "&algo=" + algo).responseJSON(){
+            Alamofire.request(APIs.niceHashStatProviderWorker(address: address, algo: algo)).responseJSON(){
                 if let value = $0.result.value
                 {
                     let json = JSON(value)
@@ -195,6 +214,7 @@ class RemoteNiceHash: NSObject
                         
                         let result = json["result"]
                         let workersJSON: [Any] = result["workers"].arrayValue
+                        let stats = json["result"]["stats"].array
                         if (workersJSON.count != 0)
                         {
                             let workersDetail = JSON(workersJSON)
@@ -205,7 +225,13 @@ class RemoteNiceHash: NSObject
                             for i in 0...workersDetail.count-1
                             {
                                 let workerName = workersDetail[i].first!.1.stringValue
-                                self.workers.append(workerName)
+                                let algorithm = self.algorithmsDict[algo] ?? ""
+                                let hashrate = json["result"]["stats"][i]["accepted_speed"].doubleValue
+                                let balance = json["result"]["stats"][i]["balance"].doubleValue
+                                
+                                let worker = WorkerModel(name: workerName,
+                                                         algorithm: algorithm)
+                                self.workers.append(worker)
                             }
                             
                         }
@@ -225,7 +251,54 @@ class RemoteNiceHash: NSObject
             }
             
         }
+    }
+    
+    func getNiceHashDivideOrTimeForStandard(hashrate: Double, algo: Int) -> String
+    {
+        var result = ""
+        let tera = [1]
+        let giga = [16,17,18,21,23,25,27]
+        let mega = [0,2,3,4,5,6,7,8,9,10,11,12,14,20,26]
+        let kilo = [13,15,19,22]
+        let hash = [24]
         
+        print(hashrate)
+        if ( tera.contains(algo) )
+        {
+            let value = (hashrate / 1000).roundTo(places: 1)
+            result = "\(value) TH/s"
+            return result
+
+        }
+         if (giga.contains(algo))
+        {
+            let value = (hashrate * 1).roundTo(places: 1)
+            result = "\(value) GH/s"
+            return result
+
+        }
+         if (mega.contains(algo))
+        {
+            let value = (hashrate * 1000).roundTo(places: 1)
+            result = "\(value) MH/s"
+            return result
+
+        }
+         if (kilo.contains(algo))
+        {
+            let value = (hashrate * 1000000).roundTo(places: 1)
+            result = "\(value) KH/s"
+            return result
+
+        }
+         if (hash.contains(algo))
+        {
+            let value = (hashrate * 1000000).roundTo(places: 1)
+            result = "\(value) Sol/s"
+            return result
+
+        }
+         else { return "" } 
     }
 
 }
@@ -255,15 +328,17 @@ extension RemoteNiceHash : UIWebViewDelegate
                 {
                     self.tryAgain = false
                 }
+                
+                return
             }
-            else if (self.tryAgain == nil)
+            
+            if (self.tryAgain == nil)
             {
                 self.didFinishLoadingPayoutHandler?("")
+                return
             }
-            else
-            {
-                self.didFinishLoadingPayoutHandler?(self.payout)
-            }
+        
+            self.didFinishLoadingPayoutHandler?(self.payout)
         }
     }
 }

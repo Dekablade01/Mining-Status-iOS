@@ -21,37 +21,44 @@ class WalletAddressViewController: UIViewController
     @IBAction func submit(_ sender: UIBarButtonItem)
     {
         
-        print("-- ", self.walletAddress)
-        RemoteFactory
-            .remoteFactory
-            .remoteWalletValidator
-            .validateWallet(coin: service.currency,
-                            address: self.walletAddress){
+        AddServiceSingleton
+            .sharedInstance
+            .serviceModel
+            .address = self.walletAddress
+        
+        self.addServiceToRealm(poolName: self.service.poolname,
+                               currency: self.service.currency,
+                               address: self.service.address)
+        
+//        RemoteFactory
+//            .remoteFactory
+//            .remoteWalletValidator
+//            .validateWallet(coin: service.currency,
+//                            address: self.walletAddress){
+//                                
+//                                if ($0 == true)
+//                                {
+//                                    AddServiceSingleton
+//                                        .sharedInstance
+//                                        .serviceModel
+//                                        .address = self.walletAddress
+//                                    
+//                                    self.addServiceToRealm(poolName: self.service.poolname,
+//                                                           currency: self.service.currency,
+//                                                           address: self.service.address)
+//                                }
+//                                else
+//                                {
+//                                    self.showAlert(
+//                                        title: "Something Went Wrong",
+//                                        message: "Please Input Your \(self.service.currency) Wallet Address" ,
+//                                        button: "OK")
+//                                }
                                 
                                 
-                                if ($0 == true)
-                                {
-                                    AddServiceSingleton
-                                        .sharedInstance
-                                        .serviceModel
-                                        .address = self.walletAddress
-                                    
-                                    self.addServiceToRealm(poolName: self.service.poolname,
-                                                           currency: self.service.currency,
-                                                           address: self.service.address)
-                                }
-                                else
-                                {
-                                    self.showAlert(
-                                        title: "Something Went Wrong",
-                                        message: "Please Input Your \(self.service.currency) Wallet Address" ,
-                                        button: "OK")
-                                }
                                 
                                 
-                                
-                                
-        }
+//        }
         
         
     }

@@ -21,7 +21,6 @@ class MainForDashboardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         initialTableView()
     }
 
@@ -31,6 +30,7 @@ class MainForDashboardViewController: UIViewController {
             self.tableView.reloadData()
         }
         
+        dataSource.needToFilter = true 
         tableView.dataSource = dataSource
         tableView.delegate = self
     }

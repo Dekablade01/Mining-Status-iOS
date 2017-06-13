@@ -17,7 +17,7 @@ class RemoteNanoPool: NSObject
     
     func getNanoPool(address: String, coin: String, callback: (([CellContentModel], String?)->())?)
     {
-        Alamofire.request(API.nanoPoolGeneral + coin.lowercased() + "/user/" + address).responseJSON()
+        Alamofire.request(APIs.nanoPoolGeneral(coin: coin, address: address)).responseJSON()
             {
                 if let value = $0.result.value
                 {
@@ -29,9 +29,37 @@ class RemoteNanoPool: NSObject
                         
                         let data = json["data"]
                         let address = data["account"].stringValue
-                        let hashRate = data["hashrate"].stringValue + " MH/s"
-                        let avgHashRate = data["avgHashrate"]["h1"].stringValue + " MH/s"
-                        let balance = data["balance"].doubleValue.roundTo(places: 7)
+                        var hashRateString = ""
+                        var avgHashRateString = ""
+
+                        
+                        if (coin == Currency.sia || coin == Currency.etc || coin == Currency.eth)
+                        {
+                            hashRateString = String((data["hashrate"].doubleValue / 1000).roundTo(places: 2)) + " GH/s"
+                            avgHashRateString = String((data["avgHashrate"]["h1"].doubleValue / 1000).roundTo(places: 2)) + " GH/s"
+                            
+                            
+                        }
+                        else if (coin == Currency.zec)
+                        {
+                            hashRateString = String((data["hashrate"].doubleValue / 1000).roundTo(places: 2)) + " KS/s"
+                            avgHashRateString = String((data["avgHashrate"]["h1"].doubleValue / 1000).roundTo(places: 2)) + " KS/s"
+                        }
+                        
+                        var balance = data["balance"].doubleValue
+                        print("balance : ", balance)
+                        if (balance > 0)
+                        {
+                            if (coin == Currency.sia)
+                            {
+                                balance = data["balance"].doubleValue.roundTo(places: 1)
+                            }
+                            else
+                            {
+                                balance = data["balance"].doubleValue.roundTo(places: 6)
+                                
+                            }
+                        }
                         
                         let workersDetail = data["workers"].arrayValue
                         
@@ -51,27 +79,26 @@ class RemoteNanoPool: NSObject
                         var contents: [CellContentModel] = []
                         contents.append(CellContentModel(name: "Address", value: address))
                         contents.append(CellContentModel(name: "Workers", value: activeWorkers.count))
-                        contents.append(CellContentModel(name: "HashRate", value: hashRate))
-                        contents.append(CellContentModel(name: "AvgHashRate", value: avgHashRate))
+                        contents.append(CellContentModel(name: "HashRate", value: hashRateString))
+                        contents.append(CellContentModel(name: "AvgHashRate", value: avgHashRateString))
                         contents.append(CellContentModel(name: "Unpaid", value: balance))
                         
+                        var coinForExchange = ""
+                        if (coin == Currency.sia) { coinForExchange = "SC" }
+                        else { coinForExchange = coin }
                         
                         RemoteFactory
                             .remoteFactory
                             .remoteCurrencyCalculator
                             .convert(balance,
-                                     from: coin.uppercased()){
+                                     from: coinForExchange.uppercased()){
+                                      
                                         self.error = $0.1
                                         contents.append(CellContentModel(name: "In \(RemoteCurrencyCalculator.toCurrency.uppercased())",
                                             value: $0.0.roundTo(places: 2)))
                                     
                                         callback?(contents, self.error)
-
                         }
-                        
-                        
-                        
-                        
                     }
                     else // api response error
                     {
@@ -93,6 +120,7 @@ class RemoteNanoPool: NSObject
                 }
                 else
                 {
+                    print($0.result.value)
                     self.error = "Server is unavailable right now."
                     print(self.error!)
                     callback?([], self.error!)
