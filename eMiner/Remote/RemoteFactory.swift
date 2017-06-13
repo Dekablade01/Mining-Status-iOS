@@ -11,20 +11,15 @@ import UIKit
 class RemoteFactory: NSObject
 {
     static var remoteFactory = RemoteFactory()
-    var remoteNiceHash: RemoteNiceHash
-    var remoteCurrency: RemoteCurrency
-    var remoteCurrencyCalculator: RemoteCurrencyCalculator
-    var remoteFlyPool: RemoteFlyPool
-    var remoteNanoPool: RemoteNanoPool
-    var remoteHardware: RemoteHardware
+    var remoteNiceHash = RemoteNiceHash()
+    var remoteCurrency = RemoteCurrency()
+    var remoteCurrencyCalculator = RemoteCurrencyCalculator()
+    var remoteFlyPool = RemoteFlyPool()
+    var remoteNanoPool = RemoteNanoPool()
+    var remoteHardware = RemoteHardware()
     
     override init() {
-        remoteNiceHash = RemoteNiceHash()
-        remoteCurrency = RemoteCurrency()
-        remoteCurrencyCalculator = RemoteCurrencyCalculator()
-        remoteFlyPool = RemoteFlyPool()
-        remoteNanoPool = RemoteNanoPool()
-        remoteHardware = RemoteHardware()
+
         
         super.init()
     }
