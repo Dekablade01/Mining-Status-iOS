@@ -14,8 +14,7 @@ class MiningDashboardCollectionViewDataSource: NSObject, UICollectionViewDataSou
     var contents: [CellContentModel] = []
     var didFinishLoadedHandler: ( () -> Void )?
     var service: ServiceModel! { didSet { startLoadingHandler?() } }
-    var error:String? //{ didSet { print("error : ", error!) } }
-    
+    var error:String?     
     var startLoadingHandler: (()->())?
     
     func loadData ()

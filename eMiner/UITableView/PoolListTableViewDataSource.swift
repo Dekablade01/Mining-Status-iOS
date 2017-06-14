@@ -30,7 +30,7 @@ class PoolListTableViewDataSource: NSObject, UITableViewDataSource
         var label = ""
         if (pools[indexPath.item].name == Pool.etherMine || pools[indexPath.item].name == Pool.flyPool)
         {
-            label = " (Not Support Dashboard)"
+            label = " (WebView Only)"
         }
         
         cell.textLabel?.text = pools[indexPath.item].name + label

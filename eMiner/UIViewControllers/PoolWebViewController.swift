@@ -22,7 +22,6 @@ class PoolWebViewController: UIViewController {
     { didSet {
         urlString = PoolURL.getPoolURL(poolname: service.poolname,
                                       currency: service.currency)
-        print("urlString : ",urlString)
         self.title = service.poolname + " - " + service.currency
 
         }

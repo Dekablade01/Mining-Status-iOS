@@ -12,7 +12,7 @@ class RemoteFactory: NSObject
 {
     static var remoteFactory = RemoteFactory()
     var remoteNiceHash = RemoteNiceHash()
-    var remoteCurrency = RemoteCurrency()
+    var remoteCurrencies = RemoteCurrencies()
     var remoteCurrencyCalculator = RemoteCurrencyCalculator()
     var remoteFlyPool = RemoteFlyPool()
     var remoteNanoPool = RemoteNanoPool()

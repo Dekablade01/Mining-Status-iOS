@@ -45,6 +45,7 @@ class MiningDashboardViewController: UIViewController
     override func viewDidDisappear(_ animated: Bool)
     {
         super.viewDidDisappear(animated)
+        RemoteFactory.remoteFactory.remoteNiceHash.tryAgain = false
         
     }
     func showIndicator ()
@@ -105,9 +106,7 @@ class MiningDashboardViewController: UIViewController
         
         dataSource.didFinishLoadedHandler = {
             self.actInd.stopAnimating()
-            
-            print(self.dataSource.contents.count)
-            
+                        
             if (self.dataSource.error == nil)
             {
                 UIView.animate(withDuration: 0.4)

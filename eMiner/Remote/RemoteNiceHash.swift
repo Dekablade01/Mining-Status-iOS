@@ -31,7 +31,7 @@ class RemoteNiceHash: NSObject
         unpaid = 0
         currencyValue = 0
     }
-
+    
     override init()
     {
         algorithmsDict["0"] = "Scrypt"
@@ -63,17 +63,17 @@ class RemoteNiceHash: NSObject
         algorithmsDict["26"] = "X11Gost"
         algorithmsDict["27"] = "Sia"
     }
-
+    
     let webView = UIWebView(frame: CGRect.zero)
     var payout = "" {
         didSet { if (payout == "N/A" && oldValue != ""){ payout = oldValue} }
     }
     
     var sec = 0
-    var tryAgain:Bool? = true
+    var tryAgain = true
     
     var didFinishLoadingPayoutHandler: ((String)->())?
-
+    
     func getPayoutDate(address: String)
     {
         webView.delegate = self
@@ -89,7 +89,7 @@ class RemoteNiceHash: NSObject
     {
         return algorithmsDict
     }
-
+    
     
     func getNicehashDetail(address: String,
                            callback: (([CellContentModel], String?)->())? )
@@ -107,7 +107,7 @@ class RemoteNiceHash: NSObject
                     
                     if (json["result"]["error"].string == nil)
                     {
-                        self.error = nil 
+                        self.error = nil
                         let result = json["result"]
                         let address = result["addr"].stringValue
                         let stats = result["stats"].array ?? []
@@ -120,7 +120,6 @@ class RemoteNiceHash: NSObject
                             
                             let algo = String(stat["algo"].intValue)
                             let hashrate = stat["accepted_speed"].doubleValue
-                            print("stat hashrate : ", hashrate)
                             hashRates.append(hashrate)
                             algos.append(algo)
                         }
@@ -137,7 +136,10 @@ class RemoteNiceHash: NSObject
                                             
                                             self.didFinishLoadingPayoutHandler = { payout in
                                                 
-                                                self.payout = (payout as NSString).substring(to: 10)
+                                                if(self.payout != "N/A")
+                                                {
+                                                    self.payout = (payout as NSString).substring(to: 10)
+                                                }
                                                 
                                                 var contents: [CellContentModel] = []
                                                 
@@ -155,10 +157,9 @@ class RemoteNiceHash: NSObject
                                                     if (hashRates[i] > 0)
                                                     {
                                                         let hashRateString = self.getNiceHashDivideOrTimeForStandard(hashrate: hashRates[i],
-                                                                                                                algo: Int(algos[i])!)
+                                                                                                                     algo: Int(algos[i])!)
                                                         
-                                                        print(hashRateString)
-
+                                                        
                                                         contents.append(CellContentModel(name: self.algorithmsDict[algos[i]]!,
                                                                                          value: hashRateString))
                                                     }
@@ -177,7 +178,7 @@ class RemoteNiceHash: NSObject
                     }
                     else
                     {
-                        self.error = json["result"]["error"].stringValue 
+                        self.error = json["result"]["error"].stringValue
                         callback?([], self.error)
                     }
                 }
@@ -191,7 +192,7 @@ class RemoteNiceHash: NSObject
                 callback?([], "Server is available right now.")
             }
         }
-
+        
     }
     
     func getNicehashWorkers(address: String,
@@ -199,7 +200,7 @@ class RemoteNiceHash: NSObject
                             callback: (([WorkerModel], [String], String?)->())?)
     {
         var receivedAlgorithm = 0
-    
+        
         for algo in algos
         {
             
@@ -218,7 +219,7 @@ class RemoteNiceHash: NSObject
                         if (workersJSON.count != 0)
                         {
                             let workersDetail = JSON(workersJSON)
-
+                            
                             self.algos.append(self.algorithmsDict[algo] ?? "")
                             
                             
@@ -244,7 +245,7 @@ class RemoteNiceHash: NSObject
                     }
                     else
                     {
-                         self.error = json["result"]["error"].stringValue
+                        self.error = json["result"]["error"].stringValue
                         callback?([],[], self.error)
                     }
                 }
@@ -268,39 +269,39 @@ class RemoteNiceHash: NSObject
             let value = (hashrate / 1000).roundTo(places: 1)
             result = "\(value) TH/s"
             return result
-
+            
         }
-         if (giga.contains(algo))
+        if (giga.contains(algo))
         {
             let value = (hashrate * 1).roundTo(places: 1)
             result = "\(value) GH/s"
             return result
-
+            
         }
-         if (mega.contains(algo))
+        if (mega.contains(algo))
         {
             let value = (hashrate * 1000).roundTo(places: 1)
             result = "\(value) MH/s"
             return result
-
+            
         }
-         if (kilo.contains(algo))
+        if (kilo.contains(algo))
         {
             let value = (hashrate * 1000000).roundTo(places: 1)
             result = "\(value) KH/s"
             return result
-
+            
         }
-         if (hash.contains(algo))
+        if (hash.contains(algo))
         {
             let value = (hashrate * 1000000).roundTo(places: 1)
             result = "\(value) Sol/s"
             return result
-
+            
         }
-         else { return "" } 
+        else { return "" }
     }
-
+    
 }
 
 extension RemoteNiceHash : UIWebViewDelegate
@@ -313,32 +314,35 @@ extension RemoteNiceHash : UIWebViewDelegate
     func getPayoutDateFromLoadingWebSite(_ wait: Int)
     {
         var jsString: String { return "document.querySelector('#next-payout-time').innerHTML" }
-        
+        print("tryagain : ", tryAgain)
         let deadlineTime = DispatchTime.now() + .seconds(wait)
         
         DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
             
             self.payout = self.webView.stringByEvaluatingJavaScript(from: jsString) ?? "no value"
-            if (self.payout == "N/A" && self.tryAgain == true )
+            if (self.sec == 4)
+            {
+                self.tryAgain = false
+            }
+            if (self.payout == "N/A" && self.tryAgain == true)
             {
                 self.getPayoutDateFromLoadingWebSite(1)
-                self.sec += wait
-                print(self.sec)
-                if (self.sec == 4)
-                {
-                    self.tryAgain = false
-                }
-                
+                self.sec += 1
+            }
+            
+            if (self.tryAgain == false)
+            {
+                print("payout : ", self.payout)
+                self.didFinishLoadingPayoutHandler?(self.payout)
+                return
+            }
+            if (self.payout != "N/A")
+            {
+                print("payout : ", self.payout)
+                self.didFinishLoadingPayoutHandler?(self.payout)
                 return
             }
             
-            if (self.tryAgain == nil)
-            {
-                self.didFinishLoadingPayoutHandler?("")
-                return
-            }
-        
-            self.didFinishLoadingPayoutHandler?(self.payout)
         }
     }
 }

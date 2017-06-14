@@ -37,8 +37,6 @@ class MainForDashboardViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool)
     {
         super.viewWillAppear(animated)
-        RemoteFactory.remoteFactory.remoteCurrency.loadCurrencies(){ _ in }
-
         dataSource.loadData()
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)

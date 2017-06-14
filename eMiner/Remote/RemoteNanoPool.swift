@@ -47,7 +47,6 @@ class RemoteNanoPool: NSObject
                         }
                         
                         var balance = data["balance"].doubleValue
-                        print("balance : ", balance)
                         if (balance > 0)
                         {
                             if (coin == Currency.sia)
@@ -70,7 +69,6 @@ class RemoteNanoPool: NSObject
                             let worker = WorkerModel(name: workerDetail["id"].stringValue,
                                                      hashRate: workerDetail["hashrate"].doubleValue,
                                                      avgHashRate: workerDetail["avg_h1"].doubleValue)
-                            print("name : \(worker.workerName), hashrate : \(worker.hashRate), avgHashRate : \(worker.avgHashRate)")
                             workers.append(worker)
                         }
                         
@@ -120,7 +118,6 @@ class RemoteNanoPool: NSObject
                 }
                 else
                 {
-                    print($0.result.value)
                     self.error = "Server is unavailable right now."
                     print(self.error!)
                     callback?([], self.error!)

@@ -24,10 +24,11 @@ class SingleonPools: NSObject
     private var pools: [PoolModel] = []
     
     override init() {
-        pools.append(etherMine)
-        pools.append(flyPool)
+
         pools.append(nanoPool)
         pools.append(niceHash)
+        pools.append(etherMine)
+        pools.append(flyPool)
     }
     
     func getPools() -> [PoolModel]
