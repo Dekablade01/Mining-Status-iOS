@@ -11,7 +11,7 @@ import UIKit
 class APIs: NSObject
 {
     
-    static var server: String { return  getRawValue(server: .heroku) }
+    static var server: String { return  getRawValue(server: .beta) }
     
     static func getRawValue(server: Server) -> String
     {
@@ -80,7 +80,7 @@ class APIs: NSObject
     }
     static func ownSupportedCurrencies() -> String
     {
-        return server + "currencies-list/"
+        return server + "currencies/"
     }
     
     
@@ -90,6 +90,6 @@ class APIs: NSObject
 enum Server: String
 {
     case localhost = "http://192.168.10.101:5000/api/"
-    case heroku = "https://eminer-server.herokuapp.com/api/"
-    case digitalOcean = "http://128.199.166.29:5000/api/"
+    case production = "https://eminer-server.herokuapp.com/api/"
+    case beta = "https://eminers-server-beta.herokuapp.com/api/"
 }
