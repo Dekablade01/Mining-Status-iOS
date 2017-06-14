@@ -12,6 +12,7 @@ class MoreViewController: UIViewController
 {
     
     @IBOutlet weak var tableView: UITableView!
+    let grayTextColor = #colorLiteral(red: 0.6251067519, green: 0.6256913543, blue: 0.6430284977, alpha: 1)
     
     
     override func viewDidLoad()
@@ -52,6 +53,7 @@ extension MoreViewController: UITableViewDataSource
             let cell = tableView.dequeueReusableCell(withIdentifier: "currencyCell")
             cell?.textLabel?.text = "Convert to"
             cell?.detailTextLabel?.text = RemoteCurrencyCalculator.toCurrency
+            cell?.detailTextLabel?.textColor = grayTextColor
             return cell!
         }
         if (indexPath.item == 1)
@@ -59,6 +61,8 @@ extension MoreViewController: UITableViewDataSource
             let cell = tableView.dequeueReusableCell(withIdentifier: "requestPoolCell")
             cell?.textLabel?.text = "Request more pools"
             cell?.detailTextLabel?.text = ""
+            cell?.detailTextLabel?.textColor = grayTextColor
+
             return cell!
         }
         if (indexPath.item == 2)
@@ -67,6 +71,8 @@ extension MoreViewController: UITableViewDataSource
             cell?.textLabel?.text = "Version"
             cell?.detailTextLabel?.text = "1.0.0"
             cell?.accessoryType = .disclosureIndicator
+            cell?.detailTextLabel?.textColor = grayTextColor
+
             cell?.accessoryView = UIView()
             return cell!
         }
