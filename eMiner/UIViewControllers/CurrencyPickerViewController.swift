@@ -12,8 +12,8 @@ import SnapKit
 
 class CurrencyPickerViewController: UIViewController {
     
-    var currenciesCode:[String] { return RemoteFactory.remoteFactory.remoteCurrency.currenciesSymbol }
-    var currenciesName:[String] { return RemoteFactory.remoteFactory.remoteCurrency.currenciesName }
+    var currenciesCode:[String] { return RemoteFactory.remoteFactory.remoteCurrencies.currenciesSymbol }
+    var currenciesName:[String] { return RemoteFactory.remoteFactory.remoteCurrencies.currenciesName }
     var isAddedConstraints = false
     var selectedCurrencyCode = ""
     var selectedFontSize: CGFloat { return 20 }

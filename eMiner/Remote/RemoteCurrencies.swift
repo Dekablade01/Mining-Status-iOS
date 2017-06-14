@@ -10,12 +10,12 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class RemoteCurrency: NSObject {
+class RemoteCurrencies: NSObject {
     
     var currenciesName:[String] = []
     var currenciesSymbol:[String] = []
-
-    func loadCurrencies(callback: ( ([String],[String]) -> ())? )
+    var error: String?
+    func loadCurrencies(callback: ( (String?) -> ())? )
     {
         Alamofire.request(APIs.ownSupportedCurrencies()).responseJSON(){
             if let result = $0.result.value
@@ -26,10 +26,16 @@ class RemoteCurrency: NSObject {
                 let currencySymbols = json["symbols"].arrayValue.map(){ $0.stringValue }
                 self.currenciesName = currencyNames
                 self.currenciesSymbol = currencySymbols
-                callback?(currencySymbols, currencyNames)
+                callback?(nil)
                 
                 
             }
+            else
+            {
+                self.error = "Alamofire Request Fail"
+                callback?(self.error)
+            }
+            
         }
     }
     
