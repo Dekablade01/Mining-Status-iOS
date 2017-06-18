@@ -98,7 +98,7 @@ class RemoteNanoPool: NSObject
                             contents
                                 .append(CellContentModel(
                                     name: "In \(RemoteCurrencyCalculator.toCurrency.uppercased())"
-                                    , value: price))
+                                    , value: (price * balance).roundTo(places: 2)))
                             observer.onNext(contents)
                             observer.onCompleted()
                         } ,
