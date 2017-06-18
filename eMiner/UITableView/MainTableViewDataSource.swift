@@ -26,8 +26,6 @@ class MainTableViewDataSource: NSObject, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.contentView.backgroundColor = Color.blue.darken1
-
         
         let service = services[indexPath.item]
         

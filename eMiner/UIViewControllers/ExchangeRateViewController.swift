@@ -159,13 +159,13 @@ class ExchangeRateViewController: BlueNavigationBarViewController {
     
     func setContainerColor()
     {
-        separatorView.backgroundColor = Color.blue.darken3
+        separatorView.backgroundColor = Color.blue.darken4
         
         fromContainerView.backgroundColor = Color.blue.darken1
         fromCurrencySymbolContainerView.backgroundColor = Color.blue.base
         
-        toContainerView.backgroundColor = Color.blue.lighten2
-        toCurrencySymbolContainerView.backgroundColor = Color.blue.lighten3
+        toContainerView.backgroundColor = Color.blue.base
+        toCurrencySymbolContainerView.backgroundColor = Color.blue.lighten1
         
     }
 }

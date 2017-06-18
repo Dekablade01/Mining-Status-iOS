@@ -21,7 +21,6 @@ class MainForDashboardViewController: BlueNavigationBarViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.backgroundColor = Color.blue.darken1
         initialTableView()
     }
 

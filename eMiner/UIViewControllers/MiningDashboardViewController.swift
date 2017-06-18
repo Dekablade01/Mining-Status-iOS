@@ -36,6 +36,7 @@ class MiningDashboardViewController: BlueNavigationBarViewController
     
     {
         super.viewDidLoad()
+        view.backgroundColor = Colors.grayBackground
         self.title = serviceModel.poolname + " - " + serviceModel.currency
         initialCollectionView(collectionView)
         
@@ -70,8 +71,6 @@ class MiningDashboardViewController: BlueNavigationBarViewController
     }
     func initialCollectionView (_ collectionView: UICollectionView)
     {
-        
-        
         collectionView.alwaysBounceVertical = true
         refresher.addTarget(self, action: #selector(self.loadData), for: .valueChanged)
         collectionView.addSubview(refresher)

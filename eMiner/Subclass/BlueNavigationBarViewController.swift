@@ -20,7 +20,7 @@ class BlueNavigationBarViewController: UIViewController
         self.view.backgroundColor = Colors.grayBackground
         self.navigationController?
             .navigationBar
-            .barTintColor = Color.blue.darken3 // bar oclor
+            .barTintColor = Color.blue.darken4 // bar oclor
         self.navigationController?
             .navigationBar
             .barStyle = .blackTranslucent // white text
