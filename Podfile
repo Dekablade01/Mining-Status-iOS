@@ -6,5 +6,7 @@ target 'eMiner' do
   use_frameworks!
 
 pod 'PickerView'
+pod 'Material', '~> 2.0'
+
 
 end

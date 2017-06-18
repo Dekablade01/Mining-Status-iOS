@@ -8,52 +8,39 @@
 
 import UIKit
 import Alamofire
+import AlamofireObjectMapper
 import SwiftyJSON
+import RxSwift
+import RxCocoa
 
 class RemoteCurrencyCalculator: NSObject
 {
-    
-    var error: String?
-    
     static var toCurrency: String { return UserDefaults.standard.value(forKey: "currencyCode") as? String ?? "USD" }
     
-    func convert(_ inputValue: Double,
+    func convert(_ inputValue: Double = 1,
                  from: String,
-                 to: String = toCurrency, callback: ((Double, String?)->())?)
+                 to: String = toCurrency) -> Observable<Double>
     {
-        
-        let from = from.uppercased()
-        let to = to.uppercased()
-        Alamofire.request(APIs.currencyCalculator(from: from, to: to)).responseJSON(){
-            if let value = $0.result.value
-            {
-                if ($0.result.isSuccess) // call success
+        return Observable.create(){ observer in
+            
+            Alamofire
+                .request(APIs.currencyCalculator(from: from,
+                                                      to: to))
+                .responseJSON(){
+                if let value = $0.result.value
                 {
                     let json = JSON(value)
-                    if (json["Message"].string == nil) // correct api value
-                    {
-                        self.error = nil
-                        let currencyValue = json[to].doubleValue
-                        
-                        let calculated = inputValue * currencyValue
-                        
-                        callback?(calculated, self.error)
-        
-                    }
-                    else
-                    {
-                        self.error = json["Message"].string
-                        callback?(0.0, self.error)
-                        print("error : ", self.error!)
-                    }
+                    let price = json["\(to)"].doubleValue
+                    print("price from remote :", price)
+                    observer.onNext(price)
+                    observer.onCompleted()
                 }
-                
+                else
+                {
+                    observer.onError($0.error!)
+                }
             }
-            else
-            {
-                callback?(0.0, "Server is available right now.")
-                print("request remote currency error : ", $0.error ?? "")
-            }
+            return Disposables.create()
         }
     }
 }

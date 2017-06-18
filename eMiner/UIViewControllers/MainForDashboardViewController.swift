@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import Material
 
-class MainForDashboardViewController: UIViewController {
+class MainForDashboardViewController: BlueNavigationBarViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -20,7 +21,7 @@ class MainForDashboardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tableView.backgroundColor = Color.blue.darken1
         initialTableView()
     }
 
@@ -28,6 +29,7 @@ class MainForDashboardViewController: UIViewController {
     {
         dataSource.didFinishLoadedHandler = {
             self.tableView.reloadData()
+            
         }
         
         dataSource.needToFilter = true 

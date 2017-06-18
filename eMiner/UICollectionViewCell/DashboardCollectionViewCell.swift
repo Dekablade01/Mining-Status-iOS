@@ -15,7 +15,7 @@ class DashboardCollectionViewCell: UICollectionViewCell
     var isAddedConstraints = false
     
     lazy var headingView = UIView(frame: CGRect.zero).then(){
-        $0.backgroundColor = BootStrapColor.blue
+        $0.backgroundColor = Colors.bootStrapBlue
     }
     
     lazy var headingLabel = UILabel().then(){
@@ -35,7 +35,7 @@ class DashboardCollectionViewCell: UICollectionViewCell
         $0.layer.borderWidth = 1
     }
     lazy var valueLabel = UILabel(frame: CGRect.zero).then(){
-        $0.textColor = BootStrapColor.black
+        $0.textColor = .black
         $0.layer.borderColor = UIColor.black.cgColor
         $0.numberOfLines = 1
     $0.textAlignment = .center

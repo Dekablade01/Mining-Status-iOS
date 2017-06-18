@@ -9,7 +9,7 @@
 
 import UIKit
 
-class MainForWebViewController: UIViewController {
+class MainForWebViewController: BlueNavigationBarViewController {
     
     @IBOutlet weak var tableView: UITableView!
     var openWebSegueIdentifier: String { return "OpenWeb" }

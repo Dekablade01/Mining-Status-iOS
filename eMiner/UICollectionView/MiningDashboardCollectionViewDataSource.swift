@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class MiningDashboardCollectionViewDataSource: NSObject, UICollectionViewDataSource
 {
@@ -14,47 +16,45 @@ class MiningDashboardCollectionViewDataSource: NSObject, UICollectionViewDataSou
     var contents: [CellContentModel] = []
     var didFinishLoadedHandler: ( () -> Void )?
     var service: ServiceModel! { didSet { startLoadingHandler?() } }
-    var error:String?     
+    var errorHandler: ((Error)->())?
+
     var startLoadingHandler: (()->())?
+    var disposeBag = DisposeBag()
     
     func loadData ()
     {
         if (service.poolname == Pool.niceHash)
         {
+            RemoteFactory.remoteFactory.remoteNiceHash.clearValue()
+            
             RemoteFactory
                 .remoteFactory
                 .remoteNiceHash
-                .getNicehashDetail(address: service.address) {
-                    self.contents = $0.0
-                    self.error = $0.1
-                    self.didFinishLoadedHandler?() }
+                .getNicehashDetail(address: service.address)
+                .subscribe(onNext: { self.contents = $0 },
+                           onError: { self.errorHandler?($0)  },
+                           onCompleted: { self.didFinishLoadedHandler?() } )
+                .addDisposableTo(disposeBag)
+
         }
         else if (service.poolname == Pool.nanoPool)
         {
+            
             RemoteFactory
                 .remoteFactory
                 .remoteNanoPool
                 .getNanoPool(address: service.address,
-                             coin: service.currency){
-                                
-                                self.contents = $0.0
-                                self.error = $0.1
-                                self.didFinishLoadedHandler?()
-            }
+                             coin: service.currency)
+                .subscribe(onNext: { self.contents = $0 },
+                           onError: { self.errorHandler?($0) },
+                           onCompleted: { self.didFinishLoadedHandler?() } )
+                .addDisposableTo(disposeBag)
         }
         else if(service.poolname == Pool.etherMine || service.poolname == Pool.flyPool)
         {
-            RemoteFactory
-                .remoteFactory
-                .remoteFlyPool
-                .getFlyPool(address: service.address,
-                            coin: service.currency){
-                
-                                self.contents = $0.0
-                                self.error = $0.1
-                                self.didFinishLoadedHandler?()
-                                
-            }
+
+            
+            
         }
         
     }

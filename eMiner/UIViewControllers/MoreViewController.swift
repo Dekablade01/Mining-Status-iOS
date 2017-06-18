@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MoreViewController: UIViewController
+class MoreViewController: BlueNavigationBarViewController
 {
     
     @IBOutlet weak var tableView: UITableView!
@@ -51,7 +51,7 @@ extension MoreViewController: UITableViewDataSource
         if (indexPath.item == 0) {
         
             let cell = tableView.dequeueReusableCell(withIdentifier: "currencyCell")
-            cell?.textLabel?.text = "Convert to"
+            cell?.textLabel?.text = "Calculate to"
             cell?.detailTextLabel?.text = RemoteCurrencyCalculator.toCurrency
             cell?.detailTextLabel?.textColor = grayTextColor
             return cell!
@@ -61,7 +61,7 @@ extension MoreViewController: UITableViewDataSource
             let cell = tableView.dequeueReusableCell(withIdentifier: "requestPoolCell")
             cell?.textLabel?.text = "Request more pools"
             cell?.detailTextLabel?.text = ""
-            cell?.detailTextLabel?.textColor = grayTextColor
+            cell?.detailTextLabel?.textColor = Colors.grayTextLabel
 
             return cell!
         }
@@ -71,7 +71,7 @@ extension MoreViewController: UITableViewDataSource
             cell?.textLabel?.text = "Version"
             cell?.detailTextLabel?.text = "1.0.0"
             cell?.accessoryType = .disclosureIndicator
-            cell?.detailTextLabel?.textColor = grayTextColor
+            cell?.detailTextLabel?.textColor = Colors.grayTextLabel
 
             cell?.accessoryView = UIView()
             return cell!

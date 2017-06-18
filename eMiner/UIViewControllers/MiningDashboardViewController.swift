@@ -9,12 +9,13 @@
 import UIKit
 import SnapKit
 
-class MiningDashboardViewController: UIViewController
+class MiningDashboardViewController: BlueNavigationBarViewController
 {
     let delegate = MiningDashboardCollectionViewDelegate()
     let dataSource = MiningDashboardCollectionViewDataSource()
     
     var ableToload = true
+    
     
     
     var isAddedConstraint = false
@@ -31,8 +32,6 @@ class MiningDashboardViewController: UIViewController
             dataSource.service = newValue }
     }
     
-    let actInd: UIActivityIndicatorView = UIActivityIndicatorView()
-
     override func viewDidLoad()
     
     {
@@ -45,27 +44,13 @@ class MiningDashboardViewController: UIViewController
     override func viewDidDisappear(_ animated: Bool)
     {
         super.viewDidDisappear(animated)
-        RemoteFactory.remoteFactory.remoteNiceHash.tryAgain = false
-        
     }
-    func showIndicator ()
-    {
-        actInd.frame = CGRect(x: view.center.x, y: view.center.y, width: 80, height: 80)
-        actInd.center = self.view.center
-        actInd.hidesWhenStopped = true
-        actInd.activityIndicatorViewStyle = .whiteLarge
-        actInd.layer.cornerRadius = 10
-        actInd.backgroundColor = .black
-        actInd.alpha = 0.7
-        self.view.addSubview(actInd)
-        
-        actInd.startAnimating()
-    }
+
     func loadData(){
         
         if (ableToload == true)
         {
-            showIndicator()
+            startActivityIndicator()
             dataSource.loadData()
             stopRefresher()
             ableToload = false
@@ -75,12 +60,8 @@ class MiningDashboardViewController: UIViewController
         }
         else
         {
-            showIndicator()
             stopRefresher()
-            actInd.stopAnimating()
         }
-        
-        
     }
     
     func stopRefresher()
@@ -101,27 +82,24 @@ class MiningDashboardViewController: UIViewController
         collectionView.register(DashboardCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         collectionView.backgroundColor = .white
         collectionView.delegate = delegate
-        
-
-        
+    
         dataSource.didFinishLoadedHandler = {
+            
             self.actInd.stopAnimating()
-                        
-            if (self.dataSource.error == nil)
-            {
+
                 UIView.animate(withDuration: 0.4)
                 {
                     collectionView.reloadData()
                     collectionView.alpha = 1
                 }
-            }
-            else
-            {
 
-                self.showAlert(title: "Something went Wrong",
-                               message: (self.dataSource.error)!,
-                               button: "OK")
-                self.navigationController?.popViewController(animated: true)
+        }
+        dataSource.errorHandler = {
+            self.stopActivityIndicator()
+            self.showAlert(title: "Something went wrong",
+                      message: $0.localizedDescription,
+                      button: "OK"){
+                        self.navigationController?.popViewController(animated: true)
             }
         }
         
@@ -131,28 +109,6 @@ class MiningDashboardViewController: UIViewController
         collectionView.dataSource = self.dataSource
         
     }
-    
-    func delayFor(second: Int, then: (()->())? )
-    {
-        let when = DispatchTime.now() + .seconds(second)
-        DispatchQueue.main.asyncAfter(deadline: when) { then?() }
-        
-    }
-
-    func showAlert(title: String, message: String, button: String)
-    {
-        let alert = UIAlertController(title: title,
-                                      message: message,
-                                      preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: button,
-                                      style: .default,
-                                      handler: nil))
-        self.present(alert,
-                     animated: true,
-                     completion: nil)
-    }
-
 
 
 }

@@ -1,0 +1,88 @@
+//
+//  TabBarViewController.swift
+//  eMiner
+//
+//  Created by Issarapong Poesua on 6/17/2560 BE.
+//  Copyright © 2560 Issarapong Poesua. All rights reserved.
+//
+
+import UIKit
+import Material
+
+class TabBarViewController: UITabBarController {
+    
+    let actInd: UIActivityIndicatorView = UIActivityIndicatorView()
+    
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        
+        self.view.backgroundColor = Colors.grayBackground
+        self.navigationController?
+            .navigationBar
+            .barTintColor = Color.blue.darken3 // bar oclor
+        self.navigationController?
+            .navigationBar
+            .barStyle = .blackTranslucent // white text
+        self.navigationController?
+            .navigationBar
+            .tintColor = .white // button color
+        self.navigationController?
+            .navigationBar
+            .isTranslucent = false
+        
+        self.view.isUserInteractionEnabled = false
+        startActivityIndicator()
+        
+        loadCurrencies()
+        
+    }
+    private func loadCurrencies()
+    {
+        _ = RemoteFactory
+            .remoteFactory
+            .remoteCurrencies
+            .loadCurrencies()
+            .subscribe(onNext: { _ in self.stopActivityIndicator() } ,
+                       onError: { self.showAlert(title: "Something went wrong",
+                                                 message: $0.localizedDescription,
+                                                 button: "OK") } ,
+                       onCompleted: { self.view.isUserInteractionEnabled = true })
+    }
+    
+    
+    func startActivityIndicator()
+    {
+        actInd.frame = CGRect(x: view.center.x,
+                              y: view.center.y + 64,
+                              width: 80,
+                              height: 80)
+        actInd.center = self.view.center
+        actInd.hidesWhenStopped = true
+        actInd.activityIndicatorViewStyle = .whiteLarge
+        actInd.layer.cornerRadius = 10
+        actInd.backgroundColor = .black
+        actInd.alpha = 0.7
+        self.view.addSubview(actInd)
+        actInd.startAnimating()
+    }
+    func stopActivityIndicator()
+    {
+        actInd.stopAnimating()
+    }
+    func showAlert(title: String, message: String, button: String, completion: (()->())? = nil )
+    {
+        let alert = UIAlertController(title: title,
+                                      message: message,
+                                      preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: button,
+                                      style: .default,
+                                      handler: { _ in completion?() }))
+        self.present(alert,
+                     animated: true,
+                     completion: nil)
+    }
+    
+    
+}

@@ -1,12 +1,17 @@
 PODS:
+  - Material (2.6.3):
+    - Material/Core (= 2.6.3)
+  - Material/Core (2.6.3)
   - PickerView (0.3.1)
 
 DEPENDENCIES:
+  - Material (~> 2.0)
   - PickerView
 
 SPEC CHECKSUMS:
+  Material: af607a7ec0e9978ef85cf189a3d8ceeeb650400f
   PickerView: 13713136c7db291e6ada509f0ba6de242ee0627d
 
-PODFILE CHECKSUM: efc984720b6c38e1262f721847e148c9b3a65a51
+PODFILE CHECKSUM: de6e30567725b88a265c52fa0eeb4acd80bca0d5
 
 COCOAPODS: 1.2.1

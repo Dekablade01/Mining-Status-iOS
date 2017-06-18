@@ -9,34 +9,46 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import RxSwift
+import RxCocoa
 
 class RemoteCurrencies: NSObject {
     
-    var currenciesName:[String] = []
-    var currenciesSymbol:[String] = []
-    var error: String?
-    func loadCurrencies(callback: ( (String?) -> ())? )
+    var currencies: [CurrencyModel] = []{
+        didSet { print("currencies : ", currencies)}
+    }
+    
+    func loadCurrencies() -> Observable<[CurrencyModel]>
     {
-        Alamofire.request(APIs.ownSupportedCurrencies()).responseJSON(){
-            if let result = $0.result.value
-            {
-                let json = JSON(result)
-            
-                let currencyNames = json["fullNames"].arrayValue.map(){ $0.stringValue }
-                let currencySymbols = json["symbols"].arrayValue.map(){ $0.stringValue }
-                self.currenciesName = currencyNames
-                self.currenciesSymbol = currencySymbols
-                callback?(nil)
+        return Observable.create(){ observer in
+            Alamofire
+                .request(APIs.ownSupportedCurrencies())
+                .responseObject(){ (response : DataResponse<CurrenciesDataResponse>) in
                 
-                
+                    guard let value = response.result.value else { observer.onError(response.error!); return }
+                    
+                    if (value.status == false)
+                    {
+                        observer.onError(response.result.error!)
+                    }
+                    
+                    self.currencies = value.currencies
+                    observer.onNext(value.currencies)
+                    observer.onCompleted()
+                    
             }
-            else
-            {
-                self.error = "Alamofire Request Fail"
-                callback?(self.error)
-            }
-            
+            return Disposables.create()
         }
+    }
+    func isAtIndex(symbol: String) -> Int
+    {
+        for  i in 0...currencies.count-1 {
+            if (symbol  == currencies[i].symbol)
+            {
+                return i
+            }
+        }
+        return 0
     }
     
 }

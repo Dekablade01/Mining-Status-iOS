@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PoolWebViewController: UIViewController {
+class PoolWebViewController: BlueNavigationBarViewController {
     
     @IBOutlet weak var webView: UIWebView!
     

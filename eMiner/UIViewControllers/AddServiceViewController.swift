@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddServiceViewController: UIViewController
+class AddServiceViewController: BlueNavigationBarViewController
 {
     @IBOutlet weak var tableView: UITableView!
     var dataSource = PoolListTableViewDataSource()

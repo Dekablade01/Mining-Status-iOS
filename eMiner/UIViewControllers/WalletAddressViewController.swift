@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class WalletAddressViewController: UIViewController
+class WalletAddressViewController: BlueNavigationBarViewController
 {
     var service: ServiceModel {
         get {return AddServiceSingleton.sharedInstance.serviceModel }
@@ -29,38 +29,6 @@ class WalletAddressViewController: UIViewController
         self.addServiceToRealm(poolName: self.service.poolname,
                                currency: self.service.currency,
                                address: self.service.address)
-        
-//        RemoteFactory
-//            .remoteFactory
-//            .remoteWalletValidator
-//            .validateWallet(coin: service.currency,
-//                            address: self.walletAddress){
-//                                
-//                                if ($0 == true)
-//                                {
-//                                    AddServiceSingleton
-//                                        .sharedInstance
-//                                        .serviceModel
-//                                        .address = self.walletAddress
-//                                    
-//                                    self.addServiceToRealm(poolName: self.service.poolname,
-//                                                           currency: self.service.currency,
-//                                                           address: self.service.address)
-//                                }
-//                                else
-//                                {
-//                                    self.showAlert(
-//                                        title: "Something Went Wrong",
-//                                        message: "Please Input Your \(self.service.currency) Wallet Address" ,
-//                                        button: "OK")
-//                                }
-                                
-                                
-                                
-                                
-//        }
-        
-        
     }
     
     override func viewDidLoad()
@@ -72,20 +40,6 @@ class WalletAddressViewController: UIViewController
         
         walletAddressTextField.becomeFirstResponder()
         
-    }
-    
-    func showAlert(title: String, message: String, button: String)
-    {
-        let alert = UIAlertController(title: title,
-                                      message: message,
-                                      preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: button,
-                                      style: .default,
-                                      handler: nil))
-        self.present(alert,
-                     animated: true,
-                     completion: nil)
     }
     
     func addServiceToRealm(poolName: String, currency: String, address: String)
