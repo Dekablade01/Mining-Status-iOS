@@ -16,10 +16,7 @@ class ExpectCurrencyPickerViewController: BlueNavigationBarViewController {
     
     private var isAddedConstraints = false
     var selectedCurrencyCode = ""
-    
-    
-    
-    
+
     let pickerView = PickerView(frame: CGRect.zero)
     let dataSource = CurrencyPickerDataSource()
     let delegate = ExpectCurrencyPickerViewDelegate()
@@ -63,10 +60,9 @@ class ExpectCurrencyPickerViewController: BlueNavigationBarViewController {
         {
             self.startActivityIndicator()
         }
-        dataSource.errorHandler = {
-            self.showAlert(title: "Somthing Wrong",
-                           message: $0.localizedDescription,
-                           button: "OK")
+
+        delegate.didSelectHandler = {
+            self.selectedCurrencyCode = $0.symbol
         }
         
         pickerView.delegate = delegate
@@ -77,19 +73,24 @@ class ExpectCurrencyPickerViewController: BlueNavigationBarViewController {
         pickerView.backgroundColor = Colors.grayBackground
         
         var currentCurrency = UserDefaults.standard.string(forKey: "currencyCode") ?? "USD"
-        if (currentCurrency == "" ) { currentCurrency = "USD" }
+        
+        if (currentCurrency == "" )
+        { currentCurrency = "USD" }
         
         pickerView.currentSelectedRow = RemoteFactory
             .remoteFactory
             .remoteCurrencies
             .isAtIndex(symbol: currentCurrency)
+        
     }
     
     
     @IBAction func didPressOnOKButton(_ sender: UIBarButtonItem)
     {
+
         UserDefaults.standard.set(selectedCurrencyCode, forKey: "currencyCode")
         UserDefaults.standard.synchronize()
+        
         self.dismiss(animated: true, completion: nil)
     }
     
