@@ -10,29 +10,31 @@ import UIKit
 import Alamofire
 import AlamofireObjectMapper
 import JavaScriptCore
+import RxSwift
+import RxCocoa
 class RemoteHardware: NSObject
 {
-    var error: String?
-    func getHardwareList(callback: (([HardwareModel], String?) -> ())? )
+    var hardwares: [HardwareModel] = []
+    
+    func getHardwaresList() -> Observable<[HardwareModel]>
     {
-        Alamofire.request(APIs.ownNiceHashHardwareList()).responseArray() { (res: DataResponse<[HardwareModel]>) in
+        return Observable.create(){ observer in
             
-            if let hardwares = res.result.value
-            {
+            Alamofire.request(APIs.ownNiceHashHardwareList()).responseArray() { (res: DataResponse<[HardwareModel]>) in
                 
-                callback?(hardwares, nil)
+                if let hardwares = res.result.value
+                {
+                    self.hardwares = hardwares
+                    observer.onNext(hardwares)
+                }
+                else
+                {
+                    observer.onError(res.error!)
+                }
             }
-            else
-            {
-                self.error = "Server is unavailable right now."
-                
-                callback?([], self.error!)
-            }
+            return Disposables.create()
         }
         
     }
-    
-
-    
     
 }
