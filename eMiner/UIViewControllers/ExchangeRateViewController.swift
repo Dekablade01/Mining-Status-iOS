@@ -48,7 +48,6 @@ class ExchangeRateViewController: BlueNavigationBarViewController {
         setContainerColor()
         result = SingletonExchangeRate.sharedInstance.price
         amountNumberTextField.delegate = self
-        amountNumberTextField.becomeFirstResponder()
         
         SingletonExchangeRate.sharedInstance.fromCurrencyDidChangeHandler = {
             self.updateFromTextField(fromSymbol: $0)
@@ -82,6 +81,7 @@ class ExchangeRateViewController: BlueNavigationBarViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        amountNumberTextField.becomeFirstResponder()
 
     }
     override func prepare(for segue: UIStoryboardSegue,
