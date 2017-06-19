@@ -18,6 +18,9 @@ class ExchangeRateViewController: BlueNavigationBarViewController {
     @IBOutlet weak var fromCurrencySymbolContainerView: UIView!
     private var didPerformedFirstSegueFromStoryboard = false
     
+    var fromSymbol = "BTC"
+    var toSymbol = "USD"
+    
     var openFromCurrencySegue: String { return "openFromCurrencySegue"}
     var openToCurrencySegue:String { return "openToCurrencySegue" }
     
@@ -45,20 +48,27 @@ class ExchangeRateViewController: BlueNavigationBarViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        self.view.isUserInteractionEnabled = false
         setContainerColor()
+        loadCurrencies()
+
         result = SingletonExchangeRate.sharedInstance.price
         amountNumberTextField.delegate = self
         
         SingletonExchangeRate.sharedInstance.fromCurrencyDidChangeHandler = {
-            self.updateFromTextField(fromSymbol: $0)
-        }
+            self.fromSymbol = $0
+            _ = self.getFromIndex(fromSymbol: $0)
+            self.fromCurrencyLabel.text = self.fromSymbol + " ▼"
+                   }
         SingletonExchangeRate.sharedInstance.toCurrencyDidChangeHandler = {
-            
-            self.updateToTextField(toSymbol: $0)
-            
+            self.toSymbol = $0
+            self.toCurrencyLabel.text = self.toSymbol + " ▼"
+            _ = self.getToIndex(toSymbol: $0)
         }
-        let fromSymbol = "BTC"
-        let toSymbol = "USD"
+        
+        fromCurrencyLabel.text = fromSymbol + " ▼"
+        toCurrencyLabel.text = toSymbol + " ▼"
+        
         RemoteFactory
             .remoteFactory
             .remoteCurrencyCalculator
@@ -67,22 +77,39 @@ class ExchangeRateViewController: BlueNavigationBarViewController {
                 .sharedInstance.price = $0 } )
             .addDisposableTo(disposeBag)
         
-        
         amountNumberTextField
             .addTarget(self,
                        action: #selector(ExchangeRateViewController.valueDidChange),
                        for: .editingChanged)
         
- 
-        
-        updateFromTextField(fromSymbol: fromSymbol)
-        updateToTextField(toSymbol: toSymbol)
+
+    }
+    private func loadCurrencies()
+    {
+        startActivityIndicator()
+        _ = RemoteFactory
+            .remoteFactory
+            .remoteCurrencies
+            .loadCurrencies()
+            .subscribe(onNext: { _ in self.stopActivityIndicator()
+                _ = self.getFromIndex(fromSymbol: self.fromSymbol)
+                _ = self.getToIndex(toSymbol: self.toSymbol)
+                self.amountNumberTextField.becomeFirstResponder()
+                self.view.isUserInteractionEnabled = false
+
+            
+            
+            } ,
+                       onError: { self.showAlert(title: "Something went wrong",
+                                                 message: $0.localizedDescription,
+                                                 button: "OK") } ,
+                       onCompleted: { self.view.isUserInteractionEnabled = true })
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool)
+    {
         super.viewDidAppear(animated)
-        amountNumberTextField.becomeFirstResponder()
-
+        
     }
     override func prepare(for segue: UIStoryboardSegue,
                           sender: Any?)
@@ -95,8 +122,8 @@ class ExchangeRateViewController: BlueNavigationBarViewController {
             
             let viewController = navigationController?.viewControllers.first as? ExchangeRateCurrencyPickerViewController
             
-            
             viewController?.didDismissViewControllerHandler = {
+                self.amountNumberTextField.becomeFirstResponder()
                 self.calculate()
             }
             self.didPerformedFirstSegueFromStoryboard = false
@@ -133,7 +160,6 @@ class ExchangeRateViewController: BlueNavigationBarViewController {
         SingletonExchangeRate
             .sharedInstance
             .currencyExchangeRateCaller = .from
-        
     }
 
     @IBAction func pressedToCurrency(_ sender: UIButton)
@@ -142,19 +168,21 @@ class ExchangeRateViewController: BlueNavigationBarViewController {
             .sharedInstance
             .currencyExchangeRateCaller  = .to
     }
-    func updateFromTextField(fromSymbol: String)
+    func getFromIndex(fromSymbol: String) -> Int
     {
         let fromIndex = RemoteFactory.remoteFactory.remoteCurrencies.isAtIndex(symbol: fromSymbol)
         
-        fromCurrencyLabel.text = currencies[fromIndex].symbol + " ▼"
+ 
+
+        return fromIndex
     }
     
-    func updateToTextField(toSymbol: String)
+    func getToIndex(toSymbol: String) -> Int
     {
-        
         let toIndex = RemoteFactory.remoteFactory.remoteCurrencies.isAtIndex(symbol: toSymbol)
         
-        toCurrencyLabel.text = currencies[toIndex].symbol + " ▼"
+        
+        return toIndex
     }
     
     func setContainerColor()
