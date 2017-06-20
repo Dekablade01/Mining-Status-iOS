@@ -12,7 +12,7 @@ import RxSwift
 import RxCocoa
 
 class ExchangeRateViewController: BlueNavigationBarViewController {
-
+    
     @IBOutlet weak var fromContainerView: UIView!
     @IBOutlet weak var toContainerView: UIView!
     @IBOutlet weak var fromCurrencySymbolContainerView: UIView!
@@ -42,16 +42,15 @@ class ExchangeRateViewController: BlueNavigationBarViewController {
     
     @IBOutlet weak var fromCurrencyLabel: UILabel!
     @IBOutlet weak var toCurrencyLabel: UILabel!
-    var currencies: [CurrencyModel] { return RemoteFactory.remoteFactory.remoteCurrencies.currencies } 
-
+    var currencies: [CurrencyModel] { return RemoteFactory.remoteFactory.remoteCurrencies.currencies }
+    
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        self.view.isUserInteractionEnabled = false
         setContainerColor()
         loadCurrencies()
-
+        
         result = SingletonExchangeRate.sharedInstance.price
         amountNumberTextField.delegate = self
         
@@ -59,7 +58,7 @@ class ExchangeRateViewController: BlueNavigationBarViewController {
             self.fromSymbol = $0
             _ = self.getFromIndex(fromSymbol: $0)
             self.fromCurrencyLabel.text = self.fromSymbol + " ▼"
-                   }
+        }
         SingletonExchangeRate.sharedInstance.toCurrencyDidChangeHandler = {
             self.toSymbol = $0
             self.toCurrencyLabel.text = self.toSymbol + " ▼"
@@ -82,39 +81,55 @@ class ExchangeRateViewController: BlueNavigationBarViewController {
                        action: #selector(ExchangeRateViewController.valueDidChange),
                        for: .editingChanged)
         
-
+        
     }
     private func loadCurrencies()
     {
-        startActivityIndicator()
-        _ = RemoteFactory
-            .remoteFactory
-            .remoteCurrencies
-            .loadCurrencies()
-            .subscribe(onNext: { _ in self.stopActivityIndicator()
-                _ = self.getFromIndex(fromSymbol: self.fromSymbol)
-                _ = self.getToIndex(toSymbol: self.toSymbol)
-                self.amountNumberTextField.becomeFirstResponder()
-                self.view.isUserInteractionEnabled = false
+        self.view.isUserInteractionEnabled = false
 
+        if (RemoteFactory.remoteFactory.remoteCurrencies.currencies.count == 0)
+        {
+            startActivityIndicator()
+            _ = RemoteFactory
+                .remoteFactory
+                .remoteCurrencies
+                .loadCurrencies()
+                .subscribe(onNext: { _ in self.stopActivityIndicator()
+                    _ = self.getFromIndex(fromSymbol: self.fromSymbol)
+                    _ = self.getToIndex(toSymbol: self.toSymbol)
+                    self.amountNumberTextField.becomeFirstResponder()
+                    self.view.isUserInteractionEnabled = false
+                    
+                    
+                    
+                } ,
+                           onError: { self.showAlert(title: "Something went wrong",
+                                                     message: $0.localizedDescription,
+                                                     button: "OK") } ,
+                           onCompleted: { self.view.isUserInteractionEnabled = true })
             
-            
-            } ,
-                       onError: { self.showAlert(title: "Something went wrong",
-                                                 message: $0.localizedDescription,
-                                                 button: "OK") } ,
-                       onCompleted: { self.view.isUserInteractionEnabled = true })
+        }
+        else
+        {
+
+            self.view.isUserInteractionEnabled = true
+        }
+        
     }
     
     override func viewDidAppear(_ animated: Bool)
     {
         super.viewDidAppear(animated)
+        if (RemoteFactory.remoteFactory.remoteCurrencies.currencies.count > 0)
+        {
+            self.amountNumberTextField.becomeFirstResponder()
+        }
         
     }
     override func prepare(for segue: UIStoryboardSegue,
                           sender: Any?)
     {
-    
+        
         if (segue.identifier == openToCurrencySegue ||
             segue.identifier == openFromCurrencySegue)
         {
@@ -127,7 +142,7 @@ class ExchangeRateViewController: BlueNavigationBarViewController {
                 self.calculate()
             }
             self.didPerformedFirstSegueFromStoryboard = false
-
+            
         }
     }
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
@@ -139,7 +154,7 @@ class ExchangeRateViewController: BlueNavigationBarViewController {
         }
         else { return true }
     }
-
+    
     func valueDidChange(textField: UITextField)
     {
         calculate()
@@ -148,7 +163,7 @@ class ExchangeRateViewController: BlueNavigationBarViewController {
     func calculate()
     {
         let price = SingletonExchangeRate.sharedInstance.price
-                
+        
         let result = price * amount
         
         self.result = result
@@ -161,7 +176,7 @@ class ExchangeRateViewController: BlueNavigationBarViewController {
             .sharedInstance
             .currencyExchangeRateCaller = .from
     }
-
+    
     @IBAction func pressedToCurrency(_ sender: UIButton)
     {
         SingletonExchangeRate
@@ -172,8 +187,8 @@ class ExchangeRateViewController: BlueNavigationBarViewController {
     {
         let fromIndex = RemoteFactory.remoteFactory.remoteCurrencies.isAtIndex(symbol: fromSymbol)
         
- 
-
+        
+        
         return fromIndex
     }
     

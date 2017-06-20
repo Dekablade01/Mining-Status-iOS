@@ -11,18 +11,31 @@ import PickerView
 
 class ExchangeRatePickerViewDelegate: ExpectCurrencyPickerViewDelegate
 {    
-    var currencyExchangeRateCaller: CurrencyExchangeRateCaller  { return SingletonExchangeRate.sharedInstance.currencyExchangeRateCaller }
+    private var currencyExchangeRateCaller: CurrencyExchangeRateCaller  { return SingletonExchangeRate.sharedInstance.currencyExchangeRateCaller }
     
+    var fromCurrencyDidChange: ((String)->())?
+    var toCurrencyDidChange: ((String)->())?
+
+    private var fromCurrency = ""  { didSet { fromCurrencyDidChange?(fromCurrency) }  }
+    private var toCurrency = "" { didSet { toCurrencyDidChange?(toCurrency) }  }
     var didSelectHandlerWithSource: (((String), (CurrencyExchangeRateCaller))->())?
-    override func pickerView(_ pickerView: PickerView, didSelectRow row: Int, index: Int)
+    override func pickerView(_ pickerView: PickerView,
+                             didSelectRow row: Int, index: Int)
     {
         if currencyExchangeRateCaller == .from
         {
-            SingletonExchangeRate.sharedInstance.fromCurrency = currencies[index].symbol
+            fromCurrency = currencies[index].symbol
+
+            
         }
         if currencyExchangeRateCaller == .to
         {
-            SingletonExchangeRate.sharedInstance.toCurrency = currencies[index].symbol
+            
+            toCurrency = currencies[index].symbol
+            
+//            SingletonExchangeRate
+//                .sharedInstance
+//                .toCurrency = currencies[index].symbol
         }
     }
 }

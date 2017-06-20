@@ -75,6 +75,12 @@
 		9E885B411EDB104E00D3324E /* WalletAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E885B281EDB104E00D3324E /* WalletAddressViewController.swift */; };
 		9E885B451EDB10A400D3324E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E885B431EDB10A400D3324E /* LaunchScreen.storyboard */; };
 		9E885B461EDB10A400D3324E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E885B441EDB10A400D3324E /* Main.storyboard */; };
+		9EA6A95D1EF7E5F60041FA99 /* HardwarePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA6A95C1EF7E5F60041FA99 /* HardwarePickerViewController.swift */; };
+		9EA6A95F1EF8090E0041FA99 /* HardwarePickerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA6A95E1EF8090E0041FA99 /* HardwarePickerDataSource.swift */; };
+		9EA6A9611EF813D40041FA99 /* HardwarePickerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA6A9601EF813D40041FA99 /* HardwarePickerViewDelegate.swift */; };
+		9EA6A9631EF814250041FA99 /* ColoredPickerViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA6A9621EF814250041FA99 /* ColoredPickerViewDelegate.swift */; };
+		9EA6A9651EF83E450041FA99 /* RemoteProfitCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA6A9641EF83E450041FA99 /* RemoteProfitCalculator.swift */; };
+		9EA6A9671EF841FF0041FA99 /* ProfitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA6A9661EF841FF0041FA99 /* ProfitModel.swift */; };
 		9EB132A21EE700B8005DE6AA /* MainForWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB132A11EE700B8005DE6AA /* MainForWebViewController.swift */; };
 		9EB132A41EE7012F005DE6AA /* PoolWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB132A31EE7012F005DE6AA /* PoolWebViewController.swift */; };
 		9EB132A81EE73723005DE6AA /* RemoteCurrencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB132A71EE73723005DE6AA /* RemoteCurrencies.swift */; };
@@ -170,6 +176,12 @@
 		9E885B281EDB104E00D3324E /* WalletAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalletAddressViewController.swift; sourceTree = "<group>"; };
 		9E885B431EDB10A400D3324E /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E885B441EDB10A400D3324E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		9EA6A95C1EF7E5F60041FA99 /* HardwarePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HardwarePickerViewController.swift; sourceTree = "<group>"; };
+		9EA6A95E1EF8090E0041FA99 /* HardwarePickerDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HardwarePickerDataSource.swift; path = DataSource/HardwarePickerDataSource.swift; sourceTree = "<group>"; };
+		9EA6A9601EF813D40041FA99 /* HardwarePickerViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HardwarePickerViewDelegate.swift; path = Delegate/HardwarePickerViewDelegate.swift; sourceTree = "<group>"; };
+		9EA6A9621EF814250041FA99 /* ColoredPickerViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColoredPickerViewDelegate.swift; path = Subclass/ColoredPickerViewDelegate.swift; sourceTree = "<group>"; };
+		9EA6A9641EF83E450041FA99 /* RemoteProfitCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteProfitCalculator.swift; sourceTree = "<group>"; };
+		9EA6A9661EF841FF0041FA99 /* ProfitModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfitModel.swift; sourceTree = "<group>"; };
 		9EB132A11EE700B8005DE6AA /* MainForWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainForWebViewController.swift; sourceTree = "<group>"; };
 		9EB132A31EE7012F005DE6AA /* PoolWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoolWebViewController.swift; sourceTree = "<group>"; };
 		9EB132A71EE73723005DE6AA /* RemoteCurrencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteCurrencies.swift; sourceTree = "<group>"; };
@@ -233,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				9E0DF7511EF19A7500C1CDAC /* BlueNavigationBarViewController.swift */,
+				9EA6A9621EF814250041FA99 /* ColoredPickerViewDelegate.swift */,
 			);
 			name = Subclass;
 			sourceTree = "<group>";
@@ -241,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				9E0DF7591EF1A5F200C1CDAC /* CurrencyPickerDataSource.swift */,
+				9EA6A95E1EF8090E0041FA99 /* HardwarePickerDataSource.swift */,
 			);
 			name = DataSource;
 			sourceTree = "<group>";
@@ -250,6 +264,7 @@
 			children = (
 				9E0DF75D1EF1A6CB00C1CDAC /* ExpectCurrencyPickerViewDelegate.swift */,
 				9E0DF75F1EF1A9B800C1CDAC /* ExchangeRatePickerViewDelegate.swift */,
+				9EA6A9601EF813D40041FA99 /* HardwarePickerViewDelegate.swift */,
 			);
 			name = Delegate;
 			sourceTree = "<group>";
@@ -403,6 +418,7 @@
 				9EE6F9781EEDD10B005DCEB4 /* WorkerModel.swift */,
 				9EE6F97F1EEE5D1D005DCEB4 /* HardwareModel.swift */,
 				9E162C071EF5916F004D5AAA /* CurrencyModel.swift */,
+				9EA6A9661EF841FF0041FA99 /* ProfitModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -418,6 +434,7 @@
 				9EE6F97D1EEE5BF1005DCEB4 /* RemoteHardware.swift */,
 				9E3C48741EED338C000A4F44 /* RemoteNanoPool.swift */,
 				9E0327711EE55E9900AFBC1F /* RemoteNiceHash.swift */,
+				9EA6A9641EF83E450041FA99 /* RemoteProfitCalculator.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -476,6 +493,7 @@
 				9E885B271EDB104E00D3324E /* SelectCoinFromPoolViewController.swift */,
 				9E162C091EF59738004D5AAA /* TabBarViewController.swift */,
 				9E885B281EDB104E00D3324E /* WalletAddressViewController.swift */,
+				9EA6A95C1EF7E5F60041FA99 /* HardwarePickerViewController.swift */,
 			);
 			path = UIViewControllers;
 			sourceTree = "<group>";
@@ -635,7 +653,9 @@
 				9E885B361EDB104E00D3324E /* MiningDashboardCollectionViewDataSource.swift in Sources */,
 				9E3C48731EEC9EDE000A4F44 /* RemoteFlyPool.swift in Sources */,
 				9EE6F9831EEE6773005DCEB4 /* String+Chop.swift in Sources */,
+				9EA6A95F1EF8090E0041FA99 /* HardwarePickerDataSource.swift in Sources */,
 				9EB132A21EE700B8005DE6AA /* MainForWebViewController.swift in Sources */,
+				9EA6A9631EF814250041FA99 /* ColoredPickerViewDelegate.swift in Sources */,
 				9E0DF7451EF0480E00C1CDAC /* APIs.swift in Sources */,
 				9E0DF7561EF1A34900C1CDAC /* SingletonExchangeRate.swift in Sources */,
 				9E3C48661EEC57AD000A4F44 /* Array+RemoveDuplicate.swift in Sources */,
@@ -650,11 +670,13 @@
 				9EB132A41EE7012F005DE6AA /* PoolWebViewController.swift in Sources */,
 				9E885B311EDB104E00D3324E /* RemoteFactory.swift in Sources */,
 				9EE6F9791EEDD10B005DCEB4 /* WorkerModel.swift in Sources */,
+				9EA6A9671EF841FF0041FA99 /* ProfitModel.swift in Sources */,
 				9E885B341EDB104E00D3324E /* AddServiceSingleton.swift in Sources */,
 				9E0DF7521EF19A7500C1CDAC /* BlueNavigationBarViewController.swift in Sources */,
 				9E885B2F1EDB104E00D3324E /* PoolModel.swift in Sources */,
 				9E885B391EDB104E00D3324E /* AddPoolTableViewDelegate.swift in Sources */,
 				9E885B3C1EDB104E00D3324E /* PoolListTableViewDataSource.swift in Sources */,
+				9EA6A9651EF83E450041FA99 /* RemoteProfitCalculator.swift in Sources */,
 				9EE6F97E1EEE5BF1005DCEB4 /* RemoteHardware.swift in Sources */,
 				9E162C061EF59138004D5AAA /* CurrenciesDataResponse.swift in Sources */,
 				9E885B2C1EDB104E00D3324E /* Alamofire+RxSwift.swift in Sources */,
@@ -667,10 +689,12 @@
 				9E0DF75A1EF1A5F200C1CDAC /* CurrencyPickerDataSource.swift in Sources */,
 				9E885B371EDB104E00D3324E /* MiningDashboardCollectionViewDelegate.swift in Sources */,
 				9E885B2B1EDB104E00D3324E /* Color.swift in Sources */,
+				9EA6A95D1EF7E5F60041FA99 /* HardwarePickerViewController.swift in Sources */,
 				9E885B411EDB104E00D3324E /* WalletAddressViewController.swift in Sources */,
 				9E163E521EEEDAA400D50A8F /* PoolURL.swift in Sources */,
 				9E771CA41EF2832400CA1E46 /* ProfitCalculatorViewController.swift in Sources */,
 				9E885B3B1EDB104E00D3324E /* MainTableViewDataSource.swift in Sources */,
+				9EA6A9611EF813D40041FA99 /* HardwarePickerViewDelegate.swift in Sources */,
 				9E59ACD21EE7F3E700CE71A1 /* MoreViewController.swift in Sources */,
 				9E3C486B1EEC6ED4000A4F44 /* Double+roundTo.swift in Sources */,
 				9E885B3E1EDB104E00D3324E /* MainForDashboardViewController.swift in Sources */,

@@ -17,7 +17,8 @@ class HardwareModel: Mappable
     var power: Int = 0
     var speeds: [Double] = []
     
-    func mapping(map: Map) {
+    func mapping(map: Map)
+    {
         id <- map["id"]
         name <- map["name"]
         price <- map["price"]

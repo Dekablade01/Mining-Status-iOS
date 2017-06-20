@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eMiner/Remote/RemoteNiceHash.swift"
-            timestampString = "519406384.793747"
+            timestampString = "519627917.340248"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
-            landmarkName = "getNicehashDetail(address:)"
+            startingLineNumber = "309"
+            endingLineNumber = "309"
+            landmarkName = "getPayoutDateAndProfitFromLoadingWebSite(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eMiner/Remote/RemoteNiceHash.swift"
-            timestampString = "519406402.619532"
+            timestampString = "519628476.172708"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "168"
-            endingLineNumber = "168"
-            landmarkName = "getNicehashDetail(address:)"
+            startingLineNumber = "320"
+            endingLineNumber = "320"
+            landmarkName = "getPayoutDateAndProfitFromLoadingWebSite(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -42,7 +42,87 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "eMiner/Remote/RemoteNiceHash.swift"
-            timestampString = "519492973.502901"
+            timestampString = "519628476.172708"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "324"
+            endingLineNumber = "324"
+            landmarkName = "getPayoutDateAndProfitFromLoadingWebSite(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "eMiner/Remote/RemoteNiceHash.swift"
+            timestampString = "519628576.950136"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "334"
+            endingLineNumber = "334"
+            landmarkName = "getPayoutDateAndProfitFromLoadingWebSite(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "eMiner/Remote/RemoteNiceHash.swift"
+            timestampString = "519628255.40069"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "314"
+            endingLineNumber = "314"
+            landmarkName = "getPayoutDateAndProfitFromLoadingWebSite(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "eMiner.RemoteNiceHash.(getPayoutDateAndProfitFromLoadingWebSite (Swift.Int) -&gt; ()).(closure #1)"
+                  moduleName = "eMiner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dekablade01/Repositories/eMiner-iOS/eMiner/Remote/RemoteNiceHash.swift"
+                  timestampString = "519631056.074555"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "314"
+                  endingLineNumber = "314"
+                  offsetFromSymbolStart = "580">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "eMiner.RemoteNiceHash.(getPayoutDateAndProfitFromLoadingWebSite (Swift.Int) -&gt; ()).(closure #1).(implicit closure #1)"
+                  moduleName = "eMiner"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dekablade01/Repositories/eMiner-iOS/eMiner/Remote/RemoteNiceHash.swift"
+                  timestampString = "519631056.075953"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "314"
+                  endingLineNumber = "314"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "eMiner/Remote/RemoteNiceHash.swift"
+            timestampString = "519628476.172708"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "329"
@@ -57,46 +137,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "eMiner/Remote/RemoteCurrencyCalculator.swift"
-            timestampString = "519492409.867574"
+            filePath = "eMiner/Remote/RemoteNiceHash.swift"
+            timestampString = "519628804.06764"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "convert(_:from:to:)"
+            startingLineNumber = "301"
+            endingLineNumber = "301"
+            landmarkName = "getPayoutDateAndProfitFromLoadingWebSite(_:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "eMiner/Singleton/SingletonExchangeRate.swift"
-            timestampString = "519492261.863018"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "fromCurrency"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "eMiner/Singleton/SingletonExchangeRate.swift"
-            timestampString = "519492262.764317"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "toCurrency"
-            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

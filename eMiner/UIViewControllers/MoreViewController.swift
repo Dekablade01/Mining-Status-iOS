@@ -18,6 +18,7 @@ class MoreViewController: BlueNavigationBarViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        loadCurrencies()
         tableView.dataSource = self
         tableView.delegate = self
         tableView.tableFooterView = UIView()
@@ -39,6 +40,37 @@ class MoreViewController: BlueNavigationBarViewController
             UIApplication.shared.openURL(url)
         }
     }
+    
+    private func loadCurrencies()
+    {
+        self.view.isUserInteractionEnabled = false
+
+        if (RemoteFactory.remoteFactory.remoteCurrencies.currencies.count == 0)
+        {
+            startActivityIndicator()
+            _ = RemoteFactory
+                .remoteFactory
+                .remoteCurrencies
+                .loadCurrencies()
+                .subscribe(onNext: { _ in self.stopActivityIndicator()
+                    self.view.isUserInteractionEnabled = false
+                    
+                    
+                    
+                } ,
+                           onError: { self.showAlert(title: "Something went wrong",
+                                                     message: $0.localizedDescription,
+                                                     button: "OK") } ,
+                           onCompleted: { self.view.isUserInteractionEnabled = true })
+            
+        }
+        else
+        {
+            self.view.isUserInteractionEnabled = true
+        }
+        
+    }
+
 }
 
 extension MoreViewController: UITableViewDataSource

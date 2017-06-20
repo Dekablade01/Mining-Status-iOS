@@ -16,11 +16,15 @@ class ExchangeRateCurrencyPickerViewController: BlueNavigationBarViewController
 {
     
     
-    var currencies: [CurrencyModel] { return RemoteFactory.remoteFactory.remoteCurrencies.currencies }
+    var currencies: [CurrencyModel]
+    { return RemoteFactory.remoteFactory.remoteCurrencies.currencies }
     
-    var currencyExchangeRateCaller: CurrencyExchangeRateCaller { return SingletonExchangeRate.sharedInstance.currencyExchangeRateCaller }
+    var currencyExchangeRateCaller: CurrencyExchangeRateCaller
+    { return SingletonExchangeRate.sharedInstance.currencyExchangeRateCaller }
+    
     var didDismissViewControllerHandler: (()->())?
-    
+    var selectedFrom: String = SingletonExchangeRate.sharedInstance.fromCurrency
+    var selectedTo: String = SingletonExchangeRate.sharedInstance.toCurrency
     var pickerView = PickerView()
     
     var dataSource = CurrencyPickerDataSource()
@@ -28,14 +32,15 @@ class ExchangeRateCurrencyPickerViewController: BlueNavigationBarViewController
     var isAddedConstraints = false
     var disposeBag = DisposeBag()
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         initialPickerView()
         self.view.addSubview(pickerView)
-        
     }
     
-    override func updateViewConstraints() {
+    override func updateViewConstraints()
+    {
         if (isAddedConstraints == false)
         {
             pickerView.snp.makeConstraints(){
@@ -48,24 +53,20 @@ class ExchangeRateCurrencyPickerViewController: BlueNavigationBarViewController
         }
         super.updateViewConstraints()
     }
-    @IBAction func dissmissViewController(_ sender: Any) {
+    @IBAction func dissmissViewController(_ sender: Any)
+    {
         self.dismiss(animated: true, completion: nil)
-        self.didDismissViewControllerHandler?()
     }
     
     func initialPickerView()
     {
-        delegate.didSelectHandlerWithSource = {
-            
-            if($0.1 == CurrencyExchangeRateCaller.from)
-            {
-                SingletonExchangeRate.sharedInstance.fromCurrency = $0.0
-            }
-            if($0.1 == CurrencyExchangeRateCaller.to)
-            {
-                SingletonExchangeRate.sharedInstance.toCurrency = $0.0
-            }
+        delegate.fromCurrencyDidChange = {
+            self.selectedFrom = $0
         }
+        delegate.toCurrencyDidChange = {
+            self.selectedTo = $0
+        }
+        
         pickerView.delegate = delegate
         pickerView.dataSource = dataSource
         pickerView.scrollingStyle = .default
@@ -75,7 +76,6 @@ class ExchangeRateCurrencyPickerViewController: BlueNavigationBarViewController
         
         if (currencyExchangeRateCaller == .from)
         {
-            
             currentCurrency = SingletonExchangeRate.sharedInstance.fromCurrency
         }
         if (currencyExchangeRateCaller == .to)
@@ -89,9 +89,23 @@ class ExchangeRateCurrencyPickerViewController: BlueNavigationBarViewController
     @IBAction func submitButtonPressed(_ sender: UIBarButtonItem)
     {
         startActivityIndicator()
-        
+       
+        print("from :", selectedFrom)
+        print("to : ",selectedTo)
+        if (selectedFrom != "")
+        {
+            SingletonExchangeRate
+                .sharedInstance
+                .fromCurrency = selectedFrom
+        }
 
+        if (selectedTo != ""){
+        SingletonExchangeRate
+            .sharedInstance
+            .toCurrency = selectedTo }
+        
         setPrice()
+
     }
     func setPrice(completion: (()->())? = nil )
     {
@@ -108,7 +122,7 @@ class ExchangeRateCurrencyPickerViewController: BlueNavigationBarViewController
                 self.stopActivityIndicator()
                 self.dismiss(animated: true, completion: nil)
                 self.didDismissViewControllerHandler?()
-            
+                
             },
                        onError: { self.showAlert(title: "Something went wrong",
                                                  message: $0.localizedDescription,

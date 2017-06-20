@@ -16,11 +16,11 @@ class CurrencyPickerDataSource: NSObject, PickerViewDataSource {
     var currencies: [CurrencyModel]  { return RemoteFactory.remoteFactory.remoteCurrencies.currencies }
     private var disposeBag = DisposeBag()
     var errorHandler: ((Error)->())?
-    var didFinishLoadingHandler: (()->())?
 
     
     
-    func pickerViewNumberOfRows(_ pickerView: PickerView) -> Int {
+    func pickerViewNumberOfRows(_ pickerView: PickerView) -> Int
+    {
         return currencies.count
     }
     func pickerView(_ pickerView: PickerView, titleForRow row: Int, index: Int) -> String {

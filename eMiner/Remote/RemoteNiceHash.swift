@@ -74,6 +74,8 @@ class RemoteNiceHash: NSObject
         algorithmsDict["25"] = "Pascal"
         algorithmsDict["26"] = "X11Gost"
         algorithmsDict["27"] = "Sia"
+        algorithmsDict["28"] = "Blake2s"
+
     }
     
     
@@ -310,22 +312,25 @@ extension RemoteNiceHash : UIWebViewDelegate
             if (self.payout == "N/A")
             {
                 let payout = self.webView.stringByEvaluatingJavaScript(from: payoutJSString) ?? "N/A"
-                print("payout : ", payout)
                 let profitString = self.webView.stringByEvaluatingJavaScript(from: profitJSString) ?? "0.0"
                 let profit = Double(profitString) ?? 0.0
                 
-                if (self.sec == 4)
+                if (self.sec == 3)
                 {
                     self.tryAgain = false
                 }
-                if (self.tryAgain == true)
+                if (self.tryAgain == true && payout == "N/A")
                 {
                     self.getPayoutDateAndProfitFromLoadingWebSite(1)
                     self.sec += 1
                 }
+                if (payout != "N/A")
+                {
+                    self.tryAgain = false
+                }
                 if (self.tryAgain == false)
                 {
-                    
+                    self.payout = payout
                     self.didFinishLoadingPayoutHandler?(payout, profit)
                 }
             }

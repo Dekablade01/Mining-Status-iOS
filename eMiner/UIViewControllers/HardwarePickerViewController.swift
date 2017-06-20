@@ -7,29 +7,78 @@
 //
 
 import UIKit
+import PickerView
+class HardwarePickerViewController: BlueNavigationBarViewController
+{
 
-class HardwarePickerViewController: UIViewController {
-
+    private var isAddedConstraints = false
+    var selectedCurrencyCode = ""
+    
+    let pickerView = PickerView(frame: CGRect.zero)
+    let dataSource = HardwarePickerDataSource()
+    let delegate = HardwarePickerViewDelegate()
+    
+    var hardware: HardwareModel?
+    
+    var didDismissViewControllerHandler : ((HardwareModel)->())?
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        startActivityIndicator()
+        initialPickerView()
+        
+        self.view.backgroundColor = Colors.grayBackground
+        self.view.addSubview(pickerView)
+        
+        self.view.setNeedsUpdateConstraints()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func cancel(_ sender: UIBarButtonItem)
+    {
+        self.dismiss(animated: true, completion: nil)
     }
-    */
+    override func updateViewConstraints() {
+        if (isAddedConstraints == false)
+        {
+            pickerView.snp.makeConstraints(){
+                $0.height.equalTo(self.view)
+                $0.width.equalTo(self.view).multipliedBy(0.8)
+                $0.center.equalTo(self.view)
+            }
+            
+            isAddedConstraints = true
+        }
+        super.updateViewConstraints()
+    }
+    
+    
+    func initialPickerView()
+    {
+        delegate.didSelectHandler = {
+            self.hardware = $0
+        }
+
+        
+        pickerView.delegate = delegate 
+        pickerView.dataSource = dataSource
+        
+        
+        pickerView.scrollingStyle = .default
+        pickerView.selectionStyle  = .defaultIndicator
+        pickerView.backgroundColor = Colors.grayBackground
+        
+    }
+    
+    
+    @IBAction func didPressOnOKButton(_ sender: UIBarButtonItem)
+    {
+
+        
+        self.didDismissViewControllerHandler?(hardware!)
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
+    
 
 }

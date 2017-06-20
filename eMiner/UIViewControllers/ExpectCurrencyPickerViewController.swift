@@ -52,10 +52,6 @@ class ExpectCurrencyPickerViewController: BlueNavigationBarViewController {
     
     func initialPickerView()
     {
-        dataSource.didFinishLoadingHandler = {
-            self.pickerView.reloadPickerView()
-        }
-        
         if (dataSource.currencies.count == 0)
         {
             self.startActivityIndicator()

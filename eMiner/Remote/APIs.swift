@@ -82,6 +82,10 @@ class APIs: NSObject
     {
         return server + "currencies/"
     }
+    static func calculateProfit()-> String
+    {
+        return "https://api.nicehash.com/calc"
+    }
     
     
     
