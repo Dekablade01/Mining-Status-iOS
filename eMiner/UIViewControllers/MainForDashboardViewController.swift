@@ -8,12 +8,15 @@
 
 import UIKit
 import Material
-
+import GoogleMobileAds
 class MainForDashboardViewController: BlueNavigationBarViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     var dataSource = MainTableViewDataSource()
+    
+    var adsUnit = "ca-app-pub-4131462780297434/7553748902"
+    var interstitial: GADInterstitial!
     
     var selectedServiceModel: ServiceModel? = nil {
         didSet { performSegue(withIdentifier: "OpenDashboard", sender: self); selectedServiceModel = nil  }
@@ -22,8 +25,11 @@ class MainForDashboardViewController: BlueNavigationBarViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initialTableView()
+        
+        
     }
-
+    
+    
     func initialTableView ()
     {
         dataSource.didFinishLoadedHandler = {
@@ -31,7 +37,7 @@ class MainForDashboardViewController: BlueNavigationBarViewController {
             
         }
         
-        dataSource.needToFilter = true 
+        dataSource.needToFilter = true
         tableView.dataSource = dataSource
         tableView.delegate = self
     }
@@ -39,18 +45,22 @@ class MainForDashboardViewController: BlueNavigationBarViewController {
     {
         super.viewWillAppear(animated)
         dataSource.loadData()
+        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         if (segue.identifier == "OpenDashboard")
         {
             let viewController = segue.destination as? MiningDashboardViewController
-            
+            prepareAds()
             viewController?.serviceModel = selectedServiceModel!
+            viewController?.didPopViewControllerHandler = {
+                self.randomToShowAds()
+            }
         }
     }
-
-
+    
+    
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         
         if (identifier == "OpenDashboard")
@@ -69,6 +79,44 @@ class MainForDashboardViewController: BlueNavigationBarViewController {
             return true
         }
     }
+    func prepareAds()
+    {
+        interstitial = GADInterstitial(adUnitID: adsUnit)
+        
+        let request = GADRequest()
+        if(showAdsWhileDeveloping == true)
+        {
+            request.testDevices = devices
+
+        }
+        
+
+        interstitial.load(request)
+    }
+    
+    func showFullScreenAds() {
+        
+        if interstitial.isReady
+        {
+            interstitial.present(fromRootViewController: self)
+        } else
+        {
+            print("Ad wasn't ready" )
+        }
+        
+    }
+    
+    
+    func randomToShowAds()
+    {
+        let diceRoll = Int(arc4random_uniform(3)) // 0, 1, 2
+        
+        if (diceRoll > 0)
+        {
+            showFullScreenAds()
+        }
+        
+    }
 }
 
 extension MainForDashboardViewController: UITableViewDelegate
@@ -78,3 +126,4 @@ extension MainForDashboardViewController: UITableViewDelegate
         selectedServiceModel = dataSource.services[indexPath.item]
     }
 }
+

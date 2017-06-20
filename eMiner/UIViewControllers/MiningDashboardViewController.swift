@@ -16,8 +16,6 @@ class MiningDashboardViewController: BlueNavigationBarViewController
     
     var ableToload = true
     
-    
-    
     var isAddedConstraint = false
     let refresher = UIRefreshControl()
 
@@ -32,20 +30,30 @@ class MiningDashboardViewController: BlueNavigationBarViewController
             dataSource.service = newValue }
     }
     
-    override func viewDidLoad()
     
+    override func viewDidLoad()
     {
         super.viewDidLoad()
         view.backgroundColor = Colors.grayBackground
         self.title = serviceModel.poolname + " - " + serviceModel.currency
         initialCollectionView(collectionView)
+        self.view.backgroundColor = .white
         
         
+        self
+            .navigationController?
+            .popViewControllerWithHandler(completion: { print("poped") })
     }
     override func viewDidDisappear(_ animated: Bool)
     {
-        super.viewDidDisappear(animated)
+
+        if (self.navigationController?.viewControllers.count == nil )
+        {
+            didPopViewControllerHandler?()
+        }
     }
+    
+    var didPopViewControllerHandler: (()->())?
 
     func loadData(){
         
@@ -69,6 +77,7 @@ class MiningDashboardViewController: BlueNavigationBarViewController
     {
         refresher.endRefreshing()
     }
+
     func initialCollectionView (_ collectionView: UICollectionView)
     {
         collectionView.alwaysBounceVertical = true
@@ -101,12 +110,7 @@ class MiningDashboardViewController: BlueNavigationBarViewController
                         self.navigationController?.popViewController(animated: true)
             }
         }
-        
-        
-       
-        
         collectionView.dataSource = self.dataSource
-        
     }
 
 

@@ -144,11 +144,24 @@ class RemoteNiceHash: NSObject
                                         self.unpaidInCurrency = price * self.unpaid
                                         
                                         self.didFinishLoadingPayoutHandler = { response in
+
                                             
-                                            if(self.payout != "N/A")
+                                            print("response : ", response.0)
+                                            if(response.0.characters.count > 5)
                                             {
-                                                self.payout = (response.0 as NSString).substring(to: 10)
+                                                self.payout = (response.0 as NSString).substring(to: 10) 
                                             }
+                                            else if(self.payout.characters.count > 5)
+                                            {
+                                                
+                                            }
+
+                                            else
+                                            {
+                                                self.payout = "N/A"
+                                            }
+                                            
+                      
                                             
                                             var contents: [CellContentModel] = []
                                             
@@ -173,6 +186,9 @@ class RemoteNiceHash: NSObject
                                                                                      value: hashRateString))
                                                 }
                                             }
+                                            
+                                            
+                                            
                                             contents.append(CellContentModel(name: "Est. Payout",
                                                                              value: self.payout))
                                             observer.onNext(contents)
@@ -295,7 +311,7 @@ extension RemoteNiceHash : UIWebViewDelegate
     }
     func getPayoutDateAndProfitFromLoadingWebSite(_ wait: Int)
     {
-        var payoutJSString: String { return "document.querySelector('#next-payout-time').innerHTML" }
+        var payoutJSString: String { return "document.querySelector('#nextPayoutTime').innerHTML" }
         var profitJSString: String { return "document.querySelector('#total-profitability').innerHTML" }
         
         
