@@ -36,7 +36,7 @@ class WalletAddressViewController: BlueNavigationBarViewController
         
         super.viewDidLoad()
         
-        walletAddressTextField.placeholder = "Your \(service.currency) Wallet Address"
+        walletAddressTextField.placeholder = "Your \(service.currency) Identifier"
         
         walletAddressTextField.becomeFirstResponder()
         

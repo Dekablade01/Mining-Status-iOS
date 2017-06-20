@@ -9,13 +9,14 @@
 import UIKit
 import SnapKit
 import Then
+import Material
 
 class DashboardCollectionViewCell: UICollectionViewCell
 {
     var isAddedConstraints = false
     
     lazy var headingView = UIView(frame: CGRect.zero).then(){
-        $0.backgroundColor = Colors.bootStrapBlue
+        $0.backgroundColor = Color.blue.darken2
     }
     
     lazy var headingLabel = UILabel().then(){

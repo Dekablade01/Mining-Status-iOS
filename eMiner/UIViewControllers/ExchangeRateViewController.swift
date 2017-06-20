@@ -68,13 +68,7 @@ class ExchangeRateViewController: BlueNavigationBarViewController {
         fromCurrencyLabel.text = fromSymbol + " ▼"
         toCurrencyLabel.text = toSymbol + " ▼"
         
-        RemoteFactory
-            .remoteFactory
-            .remoteCurrencyCalculator
-            .convert(from: fromSymbol, to: toSymbol)
-            .subscribe(onNext: { SingletonExchangeRate
-                .sharedInstance.price = $0 } )
-            .addDisposableTo(disposeBag)
+        
         
         amountNumberTextField
             .addTarget(self,
@@ -86,7 +80,7 @@ class ExchangeRateViewController: BlueNavigationBarViewController {
     private func loadCurrencies()
     {
         self.view.isUserInteractionEnabled = false
-
+        
         if (RemoteFactory.remoteFactory.remoteCurrencies.currencies.count == 0)
         {
             startActivityIndicator()
@@ -94,27 +88,51 @@ class ExchangeRateViewController: BlueNavigationBarViewController {
                 .remoteFactory
                 .remoteCurrencies
                 .loadCurrencies()
-                .subscribe(onNext: { _ in self.stopActivityIndicator()
-                    _ = self.getFromIndex(fromSymbol: self.fromSymbol)
-                    _ = self.getToIndex(toSymbol: self.toSymbol)
-                    self.amountNumberTextField.becomeFirstResponder()
-                    self.view.isUserInteractionEnabled = false
-                    
-                    
-                    
+                .subscribe(onNext:
+                    { _ in
+                        _ = self.getFromIndex(fromSymbol: self.fromSymbol)
+                        _ = self.getToIndex(toSymbol: self.toSymbol)
+                        self.view.isUserInteractionEnabled = false
+                        self.checkPrice() {
+                            self.stopActivityIndicator()
+                            self.amountNumberTextField.becomeFirstResponder()
+
+                        }
+                        
                 } ,
                            onError: { self.showAlert(title: "Something went wrong",
                                                      message: $0.localizedDescription,
-                                                     button: "OK") } ,
+                                                     button: "OK") {
+                                                        
+                                                        self.delayFor(second: 5) { self.loadCurrencies()  }
+                            }
+                },
                            onCompleted: { self.view.isUserInteractionEnabled = true })
             
         }
         else
         {
-
+            checkPrice() {self.stopActivityIndicator() }
             self.view.isUserInteractionEnabled = true
         }
         
+        
+    }
+    func checkPrice(then: (()->())? = nil)
+    {
+        if (SingletonExchangeRate.sharedInstance.price == 0)
+        {
+            self.startActivityIndicator()
+            RemoteFactory
+                .remoteFactory
+                .remoteCurrencyCalculator
+                .convert(from: fromSymbol, to: toSymbol)
+                .subscribe(onNext:
+                    { SingletonExchangeRate.sharedInstance.price = $0
+                        then?()
+                } )
+                .addDisposableTo(disposeBag)
+        }
     }
     
     override func viewDidAppear(_ animated: Bool)
@@ -186,8 +204,6 @@ class ExchangeRateViewController: BlueNavigationBarViewController {
     func getFromIndex(fromSymbol: String) -> Int
     {
         let fromIndex = RemoteFactory.remoteFactory.remoteCurrencies.isAtIndex(symbol: fromSymbol)
-        
-        
         
         return fromIndex
     }

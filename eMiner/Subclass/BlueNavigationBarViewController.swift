@@ -30,15 +30,18 @@ class BlueNavigationBarViewController: UIViewController
         self.navigationController?
             .navigationBar
             .isTranslucent = false
+
             }
+    
     
     func startActivityIndicator()
     {
         actInd.frame = CGRect(x: view.center.x,
-                              y: view.center.y + 64,
+                              y: view.center.y,
                               width: 80,
                               height: 80)
         actInd.center = self.view.center
+        actInd.center.y -= 64
         actInd.hidesWhenStopped = true
         actInd.activityIndicatorViewStyle = .whiteLarge
         actInd.layer.cornerRadius = 10
