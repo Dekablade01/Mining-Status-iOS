@@ -1,17 +1,42 @@
 PODS:
+  - Firebase/AdMob (4.0.1):
+    - Firebase/Core
+    - Google-Mobile-Ads-SDK (= 7.20.0)
+  - Firebase/Core (4.0.1):
+    - FirebaseAnalytics (= 4.0.0)
+    - FirebaseCore (= 4.0.1)
+  - FirebaseAnalytics (4.0.0):
+    - FirebaseCore (~> 4.0)
+    - FirebaseInstanceID (~> 2.0)
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseCore (4.0.1):
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseInstanceID (2.0.0):
+    - FirebaseCore (~> 4.0)
+  - Google-Mobile-Ads-SDK (7.20.0)
+  - GoogleToolboxForMac/Defines (2.1.1)
+  - GoogleToolboxForMac/NSData+zlib (2.1.1):
+    - GoogleToolboxForMac/Defines (= 2.1.1)
   - Material (2.6.3):
     - Material/Core (= 2.6.3)
   - Material/Core (2.6.3)
   - PickerView (0.3.1)
 
 DEPENDENCIES:
+  - Firebase/AdMob
   - Material (~> 2.0)
   - PickerView
 
 SPEC CHECKSUMS:
+  Firebase: f984cd44a160be77ad0590f432e574562bfd4083
+  FirebaseAnalytics: 6f08e746f7d66f5452931bc2e822b5df9c66b64a
+  FirebaseCore: 06172c5a0744ab3dd14f778fd666c22855e20098
+  FirebaseInstanceID: 9fbf536668f4d3f0880e7438456dabd1376e294b
+  Google-Mobile-Ads-SDK: 168312cdc167fa22746d4ea8e839fc4825dd2966
+  GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   Material: af607a7ec0e9978ef85cf189a3d8ceeeb650400f
   PickerView: 13713136c7db291e6ada509f0ba6de242ee0627d
 
-PODFILE CHECKSUM: de6e30567725b88a265c52fa0eeb4acd80bca0d5
+PODFILE CHECKSUM: 4ba41fd7aca80f4ba407dfc75c4221d750bd1a21
 
 COCOAPODS: 1.2.1
