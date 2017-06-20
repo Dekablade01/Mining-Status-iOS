@@ -16,7 +16,8 @@ class PoolWebViewController: BlueNavigationBarViewController {
     
     var urlRequest: URLRequest { return URLRequest(url: URL(string: urlString + service.address)!) }
     
-    
+    var didPopViewControllerHandler: (()->())?
+
     var service: ServiceModel!
     { didSet {
         urlString = PoolURL.getPoolURL(poolname: service.poolname,
@@ -44,6 +45,15 @@ class PoolWebViewController: BlueNavigationBarViewController {
         webView.loadRequest(urlRequest)
 
     }
+    override func viewDidDisappear(_ animated: Bool)
+    {
+        
+        if (self.navigationController?.viewControllers.count == nil )
+        {
+            didPopViewControllerHandler?()
+        }
+    }
+    
     
     
 }

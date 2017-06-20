@@ -8,12 +8,13 @@
 
 
 import UIKit
-
+import GoogleMobileAds
 class MainForWebViewController: BlueNavigationBarViewController {
     
     @IBOutlet weak var tableView: UITableView!
     var openWebSegueIdentifier: String { return "OpenWeb" }
-    
+    var adsUnit = "ca-app-pub-4131462780297434/7553748902"
+    var interstitial: GADInterstitial!
     var dataSource = MainTableViewDataSource()
     
     var selectedServiceModel: ServiceModel? = nil {
@@ -48,10 +49,50 @@ class MainForWebViewController: BlueNavigationBarViewController {
         {
             let viewController = segue.destination as? PoolWebViewController
             
+            viewController?.didPopViewControllerHandler = {
+                self.randomToShowAds()
+            }
             viewController?.service = selectedServiceModel!
+            
         }
     }
+    func prepareAds()
+    {
+        interstitial = GADInterstitial(adUnitID: adsUnit)
+        
+        let request = GADRequest()
+        if(showAdsWhileDeveloping == true)
+        {
+            request.testDevices = devices
+            
+        }
+        
+        
+        interstitial.load(request)
+    }
     
+    func showFullScreenAds() {
+        
+        if interstitial.isReady
+        {
+            interstitial.present(fromRootViewController: self)
+        } else
+        {
+            print("Ad wasn't ready" )
+        }
+        
+    }
+    
+    func randomToShowAds()
+    {
+        let diceRoll = Int(arc4random_uniform(3)) // 0, 1, 2
+        
+        if (diceRoll > 0)
+        {
+            showFullScreenAds()
+        }
+        
+    }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         
