@@ -16,7 +16,6 @@ class PoolWebViewController: BlueNavigationBarViewController {
     
     var urlRequest: URLRequest { return URLRequest(url: URL(string: urlString + service.address)!) }
     
-    @IBOutlet weak var toolBar: UIToolbar!
     
     var service: ServiceModel!
     { didSet {
@@ -38,8 +37,12 @@ class PoolWebViewController: BlueNavigationBarViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        webView.scrollView.contentInset = UIEdgeInsetsMake(0,
+                                                           0,
+                                                           50,
+                                                           0)
         webView.loadRequest(urlRequest)
-        webView.scrollView.contentInset = UIEdgeInsetsMake(0, 0, toolBar.bounds.height, 0)
+
     }
     
     

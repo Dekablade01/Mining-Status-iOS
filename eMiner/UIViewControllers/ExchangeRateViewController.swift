@@ -5,21 +5,23 @@
 //  Created by Issarapong Poesua on 6/14/2560 BE.
 //  Copyright © 2560 Issarapong Poesua. All rights reserved.
 //
+import GoogleMobileAds
 
 import UIKit
 import Material
 import RxSwift
 import RxCocoa
 
-class ExchangeRateViewController: BlueNavigationBarViewController {
-    
+class ExchangeRateViewController: BlueNavigationBarViewController
+{
     @IBOutlet weak var fromContainerView: UIView!
     @IBOutlet weak var toContainerView: UIView!
     @IBOutlet weak var fromCurrencySymbolContainerView: UIView!
     private var didPerformedFirstSegueFromStoryboard = false
-    
+
     var fromSymbol = "BTC"
     var toSymbol = "USD"
+    
     
     var openFromCurrencySegue: String { return "openFromCurrencySegue"}
     var openToCurrencySegue:String { return "openToCurrencySegue" }
@@ -44,7 +46,6 @@ class ExchangeRateViewController: BlueNavigationBarViewController {
     @IBOutlet weak var toCurrencyLabel: UILabel!
     var currencies: [CurrencyModel] { return RemoteFactory.remoteFactory.remoteCurrencies.currencies }
     
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -67,7 +68,6 @@ class ExchangeRateViewController: BlueNavigationBarViewController {
         
         fromCurrencyLabel.text = fromSymbol + " ▼"
         toCurrencyLabel.text = toSymbol + " ▼"
-        
         
         
         amountNumberTextField
@@ -142,7 +142,6 @@ class ExchangeRateViewController: BlueNavigationBarViewController {
         {
             self.amountNumberTextField.becomeFirstResponder()
         }
-        
     }
     override func prepare(for segue: UIStoryboardSegue,
                           sender: Any?)
@@ -227,7 +226,16 @@ class ExchangeRateViewController: BlueNavigationBarViewController {
         toCurrencySymbolContainerView.backgroundColor = Color.blue.lighten1
         
     }
+    
+    
+
+    
+
+    
+
 }
+
+
 
 extension ExchangeRateViewController : UITextFieldDelegate
 {

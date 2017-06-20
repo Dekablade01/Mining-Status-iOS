@@ -73,7 +73,7 @@ class MoreViewController: BlueNavigationBarViewController
 extension MoreViewController: UITableViewDataSource
 {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
@@ -96,6 +96,17 @@ extension MoreViewController: UITableViewDataSource
         }
         if (indexPath.item == 2)
         {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "facebookCell")
+            
+            cell?.textLabel?.text = "Facebook Community"
+            cell?.detailTextLabel?.text = ""
+            cell?.detailTextLabel?.textColor = Colors.grayTextLabel
+            
+            return cell!
+            
+        }
+        if (indexPath.item == 3)
+        {
             let cell = tableView.dequeueReusableCell(withIdentifier: "versionCell")
             cell?.textLabel?.text = "Version"
             cell?.detailTextLabel?.text = "1.0.0"
@@ -106,9 +117,30 @@ extension MoreViewController: UITableViewDataSource
             return cell!
         }
         
-        return tableView.dequeueReusableCell(withIdentifier: "")!
+        return tableView.dequeueReusableCell(withIdentifier: "facebookCell")!
+    }
+    func openFacebookURL ()
+    {
+        
+        let groupID = "106803356556494"
+        let url = "fb://group/?id=\(groupID)"
         
         
+        if (UIApplication.shared.canOpenURL(URL(string: url)!) == true )
+        {
+            UIApplication.shared.openURL(URL(string: url)!)
+
+        }
+        else
+        {
+            let url = "https://m.facebook.com/groups/106803356556494/"
+            UIApplication.shared.openURL(URL(string: url)!)
+
+        }
+        
+        
+        
+
     }
 }
 extension MoreViewController: UITableViewDelegate
@@ -120,6 +152,11 @@ extension MoreViewController: UITableViewDelegate
         if(indexPath.item == 1)
         {
             openMailComposer()
+        }
+        if (indexPath.item == 2)
+        {
+            openFacebookURL()
+            
         }
     }
 }

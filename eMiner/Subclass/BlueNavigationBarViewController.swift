@@ -8,13 +8,18 @@
 
 import UIKit
 import Material
+import GoogleMobileAds
 
-class BlueNavigationBarViewController: UIViewController
+class BlueNavigationBarViewController: UIViewController, GADBannerViewDelegate
 {
-
-    let actInd: UIActivityIndicatorView = UIActivityIndicatorView()
-
     
+    open let actInd: UIActivityIndicatorView = UIActivityIndicatorView()
+    private let bannerView = GADBannerView(adSize: kGADAdSizeBanner)
+    
+    open var showAdsWhileDeveloping = true
+    open var showAds = true
+    open var devices: [Any] = [kGADSimulatorID, "b4a8f9d85e3c256698a9768737785995"]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = Colors.grayBackground
@@ -30,10 +35,27 @@ class BlueNavigationBarViewController: UIViewController
         self.navigationController?
             .navigationBar
             .isTranslucent = false
-
-            }
+        prepareBanner()
+        
+    }
     
-    
+    func prepareBanner()
+    {
+        let request = GADRequest()
+        
+        if (showAdsWhileDeveloping == true)
+        {
+            request.testDevices = devices
+        }
+        bannerView.adUnitID = "ca-app-pub-4131462780297434/9228958504"
+        bannerView.rootViewController = self
+        bannerView.delegate = self
+        bannerView.load(request)
+        
+        self.view.addSubview(bannerView)
+        self.bannerView.zPosition = 1
+        
+    }
     func startActivityIndicator()
     {
         actInd.frame = CGRect(x: view.center.x,
@@ -74,7 +96,25 @@ class BlueNavigationBarViewController: UIViewController
         DispatchQueue.main.asyncAfter(deadline: when) { then?() }
         
     }
+    override func updateViewConstraints()
+    {
+        var offset:CGFloat = 0.0
+        if (self.tabBarController != nil)
+        {
+            offset = CGFloat((self.tabBarController?.tabBar.height)! * -1)
+        }
 
 
-
+            bannerView.snp.makeConstraints(){
+                $0.width.equalTo(self.view)
+                $0.height.equalTo(50)
+                $0.bottom.equalTo(self.view).offset(offset)
+                $0.centerX.equalTo(self.view)
+            }
+            
+        
+        super.updateViewConstraints()
+    
+    }
+    
 }

@@ -7,6 +7,6 @@ target 'eMiner' do
 
 pod 'PickerView'
 pod 'Material', '~> 2.0'
-
+pod 'Google-Mobile-Ads-SDK'
 
 end

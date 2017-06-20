@@ -5,7 +5,7 @@
 //  Created by Issarapong Poesua on 5/24/2560 BE.
 //  Copyright © 2560 Issarapong Poesua. All rights reserved.
 //
-
+import GoogleMobileAds
 import UIKit
 
 @UIApplicationMain
@@ -17,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
     {
+        
+        GADMobileAds.configure(withApplicationID: "ca-app-pub-4131462780297434~8048543708")
+
         return true
     }
 

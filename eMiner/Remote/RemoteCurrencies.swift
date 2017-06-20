@@ -14,10 +14,7 @@ import RxCocoa
 
 class RemoteCurrencies: NSObject {
     
-    var currencies: [CurrencyModel] = []{
-        didSet { print("currencies : ", currencies)}
-    }
-    
+    var currencies: [CurrencyModel] = []    
     func loadCurrencies() -> Observable<[CurrencyModel]>
     {
         return Observable.create(){ observer in
