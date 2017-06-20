@@ -7,6 +7,7 @@
 //
 import GoogleMobileAds
 import UIKit
+import Siren
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +21,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         GADMobileAds.configure(withApplicationID: "ca-app-pub-4131462780297434~8048543708")
 
+        
+        let siren = Siren.shared
+                
+
+        siren.alertType = .force
+        
+        //
+        siren.showAlertAfterCurrentVersionHasBeenReleasedForDays = 3
+        
+
+        siren.checkVersion(checkType: .immediately)
+        
         return true
     }
 
@@ -34,11 +47,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+        Siren.shared.checkVersion(checkType: .immediately)
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        Siren.shared.checkVersion(checkType: .daily)
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
