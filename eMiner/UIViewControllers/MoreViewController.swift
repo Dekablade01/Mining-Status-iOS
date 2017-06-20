@@ -52,15 +52,10 @@ class MoreViewController: BlueNavigationBarViewController
                 .remoteFactory
                 .remoteCurrencies
                 .loadCurrencies()
-                .subscribe(onNext: { _ in self.stopActivityIndicator()
-                    self.view.isUserInteractionEnabled = false
-                    
-                    
-                    
-                } ,
+                .subscribe(onNext: { _ in self.stopActivityIndicator() } ,
                            onError: { self.showAlert(title: "Something went wrong",
                                                      message: $0.localizedDescription,
-                                                     button: "OK") } ,
+                                                     button: "OK") { self.delayFor(second: 5, then: { self.loadCurrencies() } ) }  } ,
                            onCompleted: { self.view.isUserInteractionEnabled = true })
             
         }
@@ -70,6 +65,8 @@ class MoreViewController: BlueNavigationBarViewController
         }
         
     }
+
+    
 
 }
 
