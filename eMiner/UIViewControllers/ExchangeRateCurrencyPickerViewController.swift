@@ -89,21 +89,7 @@ class ExchangeRateCurrencyPickerViewController: BlueNavigationBarViewController
     @IBAction func submitButtonPressed(_ sender: UIBarButtonItem)
     {
         startActivityIndicator()
-       
-        print("from :", selectedFrom)
-        print("to : ",selectedTo)
-        if (selectedFrom != "")
-        {
-            SingletonExchangeRate
-                .sharedInstance
-                .fromCurrency = selectedFrom
-        }
 
-        if (selectedTo != ""){
-        SingletonExchangeRate
-            .sharedInstance
-            .toCurrency = selectedTo }
-        
         setPrice()
 
     }
@@ -113,18 +99,30 @@ class ExchangeRateCurrencyPickerViewController: BlueNavigationBarViewController
             .remoteFactory
             .remoteCurrencyCalculator
             .convert(
-                from: SingletonExchangeRate.sharedInstance.fromCurrency,
-                to: SingletonExchangeRate.sharedInstance.toCurrency)
+                from: selectedFrom,
+                to: selectedTo)
             .subscribe(onNext: {
                 
                 SingletonExchangeRate.sharedInstance.price = $0
+                
+                SingletonExchangeRate
+                    .sharedInstance
+                    .fromCurrency = self.selectedFrom
+                
+                SingletonExchangeRate
+                    .sharedInstance
+                    .toCurrency = self.selectedTo
+                
                 
                 self.stopActivityIndicator()
                 self.dismiss(animated: true, completion: nil)
                 self.didDismissViewControllerHandler?()
                 
             },
-                       onError: { self.showAlert(title: "Something went wrong",
+                       onError: {
+                        
+                        self.stopActivityIndicator()
+                        self.showAlert(title: "Something went wrong",
                                                  message: $0.localizedDescription,
                                                  button: "OK") }).addDisposableTo(disposeBag)
     }
