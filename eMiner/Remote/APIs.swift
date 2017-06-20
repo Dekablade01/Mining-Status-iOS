@@ -11,7 +11,7 @@ import UIKit
 class APIs: NSObject
 {
     
-    static var server: String { return getRawValue(server: .beta) }
+    static var server: String { return getRawValue(server: .production) }
     
     static func getRawValue(server: Server) -> String
     {

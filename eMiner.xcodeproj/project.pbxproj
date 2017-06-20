@@ -811,6 +811,7 @@
 			baseConfigurationReference = C62276AF7A6D43CC1B5FCD6B /* Pods-eMiner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 9MNXJ5TVF7;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -832,6 +833,7 @@
 			baseConfigurationReference = 01AB15959F5607184498BFCA /* Pods-eMiner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 9MNXJ5TVF7;
 				FRAMEWORK_SEARCH_PATHS = (
