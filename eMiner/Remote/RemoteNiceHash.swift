@@ -148,7 +148,7 @@ class RemoteNiceHash: NSObject
                                         self.didFinishLoadingPayoutHandler = { response in
 
                                             
-                                            print("response : ", response.0)
+
                                             if(response.0.characters.count > 5)
                                             {
                                                 self.payout = (response.0 as NSString).substring(to: 10) 
@@ -223,7 +223,7 @@ class RemoteNiceHash: NSObject
                     let result = json["result"]
                     let workersJSON: [Any] = result["workers"].arrayValue
 
-                    print(json)
+
                     
                     if (workersJSON.count != 0)
                     {
@@ -321,7 +321,7 @@ extension RemoteNiceHash : UIWebViewDelegate
         var profitJSString: String { return "document.querySelector('#total-profitability').innerHTML" }
         
         
-        print("tryagain : ", tryAgain)
+
         
         let deadlineTime = DispatchTime.now() + .seconds(wait)
         
