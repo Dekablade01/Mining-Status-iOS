@@ -49,6 +49,7 @@ class MainForWebViewController: BlueNavigationBarViewController {
         {
             let viewController = segue.destination as? PoolWebViewController
             
+            prepareAds()
             viewController?.didPopViewControllerHandler = {
                 self.randomToShowAds()
             }
