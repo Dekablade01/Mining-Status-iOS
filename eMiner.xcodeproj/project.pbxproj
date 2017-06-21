@@ -544,8 +544,8 @@
 				9E885ACE1EDB0A4700D3324E /* Resources */,
 				4E49977CE482FBD9BB8EEF59 /* [CP] Embed Pods Frameworks */,
 				63282BFEF3C1436D872C2F03 /* [CP] Copy Pods Resources */,
-				9E1E6AC21EF99D280075D5CE /* Carthage */,
 				9E1E6AE71EF9A2260075D5CE /* Embed Frameworks */,
+				9E1E6AC21EF99D280075D5CE /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -669,6 +669,7 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Material.framework",
 			);
 			name = Carthage;
 			outputPaths = (
@@ -863,6 +864,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -884,6 +886,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.dekablade01.eMiner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
