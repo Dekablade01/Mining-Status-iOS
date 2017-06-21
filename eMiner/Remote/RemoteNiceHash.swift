@@ -132,7 +132,9 @@ class RemoteNiceHash: NSObject
                         .remoteNiceHash
                         .getNicehashWorkers(address: address,
                                             algos: algos)
-                        .subscribe(onNext: { workers in
+                        .subscribe(onNext: { workerNames in
+                            
+
                             
                             RemoteFactory
                                 .remoteFactory
@@ -168,7 +170,7 @@ class RemoteNiceHash: NSObject
                                             contents.append(CellContentModel(name: "Address",
                                                                              value: address))
                                             contents.append(CellContentModel(name: "Workers",
-                                                                             value: self.workers.count))
+                                                                             value: workerNames.count))
                                             contents.append(CellContentModel(name: "Unpaid",
                                                                              value: self.unpaid.roundTo(places: 7)))
                                             contents.append(CellContentModel(name: "In \(self.toCurrency)",
@@ -206,7 +208,7 @@ class RemoteNiceHash: NSObject
     
     
     
-    func getNicehashWorkers(address: String, algos: [String]) -> Observable<[WorkerModel]>
+    func getNicehashWorkers(address: String, algos: [String]) -> Observable<[String]>
     {
         var receivedAlgorithm = 0
         
@@ -220,7 +222,9 @@ class RemoteNiceHash: NSObject
                     
                     let result = json["result"]
                     let workersJSON: [Any] = result["workers"].arrayValue
-                    //                    let stats = json["result"]["stats"].array
+
+                    print(json)
+                    
                     if (workersJSON.count != 0)
                     {
                         let workersDetail = JSON(workersJSON)
@@ -243,8 +247,10 @@ class RemoteNiceHash: NSObject
                     }
                     if (receivedAlgorithm == algos.count)
                     {
-                        self.workers = self.workers.uniqueElements
-                        observer.onNext(self.workers)
+                        
+                        var workerNames = self.workers.map() { $0.workerName }
+                        workerNames = workerNames.uniqueElements
+                        observer.onNext(workerNames)
                     }
                 }
             }
