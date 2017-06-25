@@ -23,4 +23,9 @@ class CurrencyModel: Mappable
     required init?(map: Map) {
         
     }
+    init (name: String, symbol: String)
+    {
+        self.name = name
+        self.symbol = symbol
+    }
 }
